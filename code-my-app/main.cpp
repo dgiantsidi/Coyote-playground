@@ -258,9 +258,14 @@ int main(int argc, char *argv[]) {
         struct ibvSendWr wr1;
 
         memset(&sg1, 0, sizeof(sg1));
+#if 0
         sg1.type.rdma.local_offs = max_size * 4 - 1;
         sg1.type.rdma.remote_offs = max_size * 4 - 1;
         sg1.type.rdma.len = max_size * 4;
+#endif
+        sg1.type.rdma.local_offs = max_size/2 - 1;
+        sg1.type.rdma.remote_offs = max_size/2 - 1;
+        sg1.type.rdma.len = max_size/2;
 
         memset(&wr1, 0, sizeof(wr1));
         wr1.sg_list = &sg1;
