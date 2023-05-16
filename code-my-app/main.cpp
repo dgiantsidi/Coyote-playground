@@ -43,7 +43,7 @@ constexpr auto const defNBenchRuns = 1;
 constexpr auto const defNRepsThr = 0;
 constexpr auto const defNRepsLat = 1;
 constexpr auto const defMinSize = 64;
-constexpr auto const defMaxSize = 64 * 10;
+constexpr auto const defMaxSize = 64 * 12;
 constexpr auto const defOper = 1; /* RDMA_WRITE */
 
 int main(int argc, char *argv[]) {
@@ -142,7 +142,8 @@ int main(int argc, char *argv[]) {
 
 
   // local-mem to be send/written by RDMA-ops
-  uint64_t *hMem = (uint64_t *)iqp->getQpairStruct()->local.vaddr;
+  // uint64_t *hMem = (uint64_t *)iqp->getQpairStruct()->local.vaddr;
+  int *hMem = reinterpret_cast<int*>(iqp->getQpairStruct()->local.vaddr);
   iqp->ibvSync(mstr);
 
   // Fill the data
@@ -159,7 +160,7 @@ int main(int argc, char *argv[]) {
   // 99999 ... 9
   // 99999 ... 9
   // ...
-  uint64_t fill = (mstr) ? 3 : 9;
+  int fill = (mstr) ? 3 : 9;
   int k = 3;
   for (auto idx = 0; idx < max_size; idx++) {
     if (mstr) {
@@ -188,14 +189,16 @@ int main(int argc, char *argv[]) {
     struct ibvSendWr wr;
 
     memset(&sg, 0, sizeof(sg));
-#if 0
-    sg.type.rdma.local_offs = min_size * 8;
-    sg.type.rdma.remote_offs = min_size * 8;
-    sg.type.rdma.len = size * 8;
+#if 1
+    sg.type.rdma.local_offs = min_size * sizeof(int);
+    sg.type.rdma.remote_offs = min_size * sizeof(int);
+    sg.type.rdma.len = size * sizeof(int);
 #endif
+#if 0
     sg.type.rdma.local_offs = min_size;
     sg.type.rdma.remote_offs = min_size;
     sg.type.rdma.len = size;
+#endif
 
     memset(&wr, 0, sizeof(wr));
     wr.sg_list = &sg;
@@ -258,14 +261,16 @@ int main(int argc, char *argv[]) {
         struct ibvSendWr wr1;
 
         memset(&sg1, 0, sizeof(sg1));
-#if 0
-        sg1.type.rdma.local_offs = max_size * 4;
-        sg1.type.rdma.remote_offs = max_size * 4;
-        sg1.type.rdma.len = max_size * 4;
+#if 1
+        sg1.type.rdma.local_offs = max_size * sizeof(int) /2;
+        sg1.type.rdma.remote_offs = max_size * sizeof(int) / 2;
+        sg1.type.rdma.len = max_size * sizeof(int) /2;
 #endif
+#if 0
         sg1.type.rdma.local_offs = max_size/2;
         sg1.type.rdma.remote_offs = max_size/2;
         sg1.type.rdma.len = max_size/2;
+#endif
 
         memset(&wr1, 0, sizeof(wr1));
         wr1.sg_list = &sg1;
@@ -288,8 +293,8 @@ int main(int argc, char *argv[]) {
       sg1.type.rdma.local_offs = 0;
       sg1.type.rdma.remote_offs = 0;
       sg1.type.rdma.len = max_size;
-#if 0
-      sg1.type.rdma.len = max_size * 8;
+#if 1
+      sg1.type.rdma.len = max_size * sizeof(int);
 #endif
 
       memset(&wr1, 0, sizeof(wr1));
