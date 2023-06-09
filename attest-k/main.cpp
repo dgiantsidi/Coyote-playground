@@ -2609,7 +2609,6 @@ int crypto_eddsa_check(const u8 signature[64], const u8 public_key[32],
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-
 #ifndef _cbmc_
 #define __CPROVER_assume(...)                                                  \
   do {                                                                         \
@@ -2891,13 +2890,14 @@ constexpr int wordSize = wireWidth / byteWidth;
 
 void test_sign(uint8_t signature[64], const uint8_t secret_key[64],
                const uint8_t *message, size_t message_size) {
+  // TODO: add the cnt tooo here!
   uint8_t hash[32];
   sha256(message, message_size, hash);
   crypto_eddsa_sign(signature, secret_key, hash, 32);
   for (auto i = 0ULL; i < 64; i++) {
-	  std::cout << static_cast<int>(signature[i]);
+    std::cout << static_cast<int>(signature[i]);
   }
-  std::cout << "\n" <<  __func__ << "\n";
+  std::cout << "\n" << __func__ << "\n";
 }
 
 void merge_byte(ap_uint<wireWidth> &data, int byteIndex,
@@ -2982,8 +2982,9 @@ void caesar(hls::stream<AXIS_DATA> &input, hls::stream<AXIS_DATA> &output) {
       size_t message_size = 128;
       test_sign(signature, secret_key, message, message_size);
       for (auto i = 0ULL; i < 64; i++) {
-	      constexpr int BYTE_WIDTH = 8;
-      	buffer[k - 1].tdata(BYTE_WIDTH * (i + 1) - 1, BYTE_WIDTH * i) = signature[i];
+        constexpr int BYTE_WIDTH = 8;
+        buffer[k - 1].tdata(BYTE_WIDTH * (i + 1) - 1, BYTE_WIDTH * i) =
+            signature[i];
       }
       for (int j = 0; j < k; j++) {
         output.write(buffer[j]);
@@ -2993,7 +2994,12 @@ void caesar(hls::stream<AXIS_DATA> &input, hls::stream<AXIS_DATA> &output) {
     }
 
     if (k == BUFFER_SIZE) {
-      buffer[k - 1].tdata = 0;
+      // buffer[k - 1].tdata = 0;
+      for (auto i = 0ULL; i < 64; i++) {
+        constexpr int BYTE_WIDTH = 8;
+        buffer[k - 1].tdata(BYTE_WIDTH * (i + 1) - 1, BYTE_WIDTH * i) =
+            signature[i];
+      }
       for (int j = 0; j < k; j++) {
         output.write(buffer[j]);
         //	std::cout << "j2=" << j << " " <<  buffer[j].tdata << " \n";
