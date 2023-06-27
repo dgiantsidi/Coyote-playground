@@ -34,7 +34,7 @@ parameter [0:0]
 reg[0:0] current_state, next_state;
 
 always @(posedge clock)
-    if (reset)
+    if (reset == 1'b0)
         current_state <= S0;
     else
 	    current_state <= next_state;
@@ -47,7 +47,7 @@ always @(*)
         
         case (current_state)
             S0: begin
-                    if (inp_last || i == 4)
+                    if ((inp_valid && inp_last) || i == 3)
                         next_state = S1;
                 end
             S1: begin
@@ -84,7 +84,7 @@ always@(*)
 
 always@(posedge clock)
     begin
-        if (reset || inp_last)
+        if (reset == 1'b0 || (inp_valid && inp_last))
             begin
                 i<=0;
             end
@@ -109,7 +109,7 @@ always@(posedge clock)
     end
 
 always@(posedge clock)
-    if (reset)
+    if (reset == 1'b0)
         begin
             bufferedTid <= 0;
             bufferedTlast <= 0;
@@ -123,8 +123,8 @@ always@(posedge clock)
                 end
             else
                 begin
-                    bufferedTid <= inp_id;
-                    bufferedTlast <= inp_last;
+                    bufferedTid <= bufferedTid;
+                    bufferedTlast <= bufferedTlast;
                 end
         end
 

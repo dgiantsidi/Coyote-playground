@@ -8,6 +8,7 @@ module data_chk_multiplexer
     output logic inp_ready,
     input logic [63:0] inp_keep,
     input logic [5:0] inp_id,
+    input logic inp_last,
 
     input logic [511:0] chk_data,
     input logic chk_valid,
@@ -28,15 +29,11 @@ module data_chk_multiplexer
 /// we don't care for out_ready for now
 // WE ASSUME THAT THE OUTPUT CAN ALWAYS HANGLE A NEW PACKET
 
-localparam [2:0]
-    S0 = 3'b000,
-    S1 = 3'b001,
-    S2 = 3'b010,
-    S3 = 3'b011,
-    S4 = 3'b100,
-    S5 = 3'b101;
+localparam [0:0]
+    S0 = 1'b0,
+    S1 = 1'b1;
 
-reg [2:0] current_state, next_state;
+reg [0:0] current_state, next_state;
 
 
 reg inp_ready;
@@ -47,17 +44,62 @@ reg [63:0] out_keep;
 reg [5:0] out_id;
 reg out_last;
 
-/* sequential logic */
-always @(posedge clock)
-    if (reset) 
-        begin
-            current_state <= S0;
-        end
-    else
-        begin
-            current_state <= next_state;
-        end
 
+logic [3:0] i;
+
+always@(posedge clock)
+    begin
+        if (reset == 1'b0 || (inp_valid && inp_last))
+            begin
+                i<=0;
+            end
+        else
+            begin
+                if(inp_valid)
+                    begin 
+                        if (i<4)
+                            begin
+                                i<=i + 1;
+                            end
+                        else 
+                            begin
+                                i<=0;
+                            end
+                    end
+                else 
+                    begin
+                        i<=i;
+                    end
+            end
+    end
+
+always @(posedge clock)
+    begin
+        if(reset == 1'b0) 
+            begin
+                current_state <= S0;
+            end
+        else
+            begin
+                current_state <= next_state;
+            end
+    end
+
+// choosing the next state
+always @(*)
+	begin
+		next_state = current_state;
+        
+        case (current_state)
+            S0: begin
+                    if ((inp_valid && inp_last) || i == 3)
+                        next_state = S1;
+                end
+            S1: begin
+                    next_state = S0;
+                end
+        endcase
+	end
 
 
 always @*
@@ -74,84 +116,25 @@ always @*
         out_id = 0;
         out_last = 0;
 
-        next_state = current_state; 
         //////////////////////////////
-        
         // case statement
         case (current_state)
             S0: begin
                     if (inp_valid) 
                         begin
-                            next_state = S1;
                             // send data
                             inp_ready = 1;
-                            out = inp_ready;
+                            out = inp_data;
                             out_valid = 1;
                             out_keep = inp_keep;
                             out_id = inp_id;
                             out_last = 0; // input is never last
-                        end
-                    else
-                        begin 
-                            next_state = S0;
                         end
                 end
             S1: begin
-                    if (inp_valid) 
-                        begin
-                            next_state = S2;
-                            // send data
-                            inp_ready = 1;
-                            out = inp_ready;
-                            out_valid = 1;
-                            out_keep = inp_keep;
-                            out_id = inp_id;
-                            out_last = 0; // input is never last
-                        end
-                    else
-                        begin 
-                            next_state = S1;
-                        end
-                end
-            S2: begin
-                    if (inp_valid) 
-                        begin
-                            next_state = S3;
-                            // send data
-                            inp_ready = 1;
-                            out = inp_ready;
-                            out_valid = 1;
-                            out_keep = inp_keep;
-                            out_id = inp_id;
-                            out_last = 0; // input is never last
-                        end
-                    else
-                        begin 
-                            next_state = S2;
-                        end
-                end
-            S3: begin
-                    if (inp_valid) 
-                        begin
-                            next_state = S4;
-                            // send data  
-                            inp_ready = 1;
-                            out = inp_ready;
-                            out_valid = 1;
-                            out_keep = inp_keep;
-                            out_id = inp_id;
-                            out_last = 0; // input is never last
-                        end
-                    else
-                        begin 
-                            next_state = S3;
-                        end
-                end
-            S4: begin
                     if (chk_valid) 
                         begin
-                            next_state = S0;
-                            // send checksum                            
+                            // send data
                             chk_ready = 1;
                             out = chk_data;
                             out_valid = 1;
@@ -159,16 +142,9 @@ always @*
                             out_id = chk_id;
                             out_last = chk_last;
                         end
-                    else
-                        begin 
-                            next_state = S4;
-                        end
-                end
-            default:
-                begin
-                    next_state = S0;
                 end
         endcase
+        //////////////////////////////
     end
 
 endmodule

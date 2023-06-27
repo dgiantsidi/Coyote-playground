@@ -26,16 +26,18 @@ module decaesar(
 logic [511:0] buffFlipFlopData;
 logic [63:0]  buffFlipFlopKeep;
 logic [5:0]  buffFlipFlopId;
+logic buffFlipFlopLast;
 
 logic [3:0] i;
 
 always@(posedge clock)
     begin
-        if (reset) 
+        if (reset == 1'b0) 
             begin
                 buffFlipFlopData <= 0;
                 buffFlipFlopKeep <= 0;
                 buffFlipFlopId <= 0;
+                buffFlipFlopLast <= 0;
             end
         else
             begin
@@ -44,19 +46,21 @@ always@(posedge clock)
                         buffFlipFlopData <= buffFlipFlopData;
                         buffFlipFlopKeep <= buffFlipFlopKeep;
                         buffFlipFlopId <= buffFlipFlopId;
+                        buffFlipFlopLast <= buffFlipFlopLast;
                     end
                 else 
                     begin
                         buffFlipFlopData <= inp_data;
                         buffFlipFlopKeep <= inp_keep;
                         buffFlipFlopId <= inp_id;
+                        buffFlipFlopLast <= inp_last;
                     end
             end
     end
 
 always@(posedge clock)
     begin
-        if (reset || inp_last)
+        if (reset == 1'b0 || (inp_valid && inp_last))
             begin
                 i<=0;
             end
@@ -99,11 +103,7 @@ always@(*)
                 out_keep = buffFlipFlopKeep;
                 out_id = buffFlipFlopId;
                 out = buffFlipFlopData;
-
-                if (inp_last)
-                    out_last = 1;
-                else
-                    out_last = 0;
+                out_last = buffFlipFlopLast;
             end
     end
 

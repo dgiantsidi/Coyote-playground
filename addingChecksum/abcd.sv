@@ -99,7 +99,7 @@ AXI4SR qq2CHECKSUMout();
 
 AXI4SR qq2CHECKSUMout2();
 
-axisr_data_fifo_512 fifo3 (
+axisr_data_fifo_512 fifo2 (
     .s_axis_aresetn(areset),
     .s_axis_aclk(aclk),
     .s_axis_tvalid(qq2CHECKSUMout.tvalid),
@@ -129,6 +129,7 @@ data_chk_multiplexer d1(
     .inp_ready(qq2DATA.tready),
     .inp_keep(qq2DATA.tkeep),
     .inp_id(qq2DATA.tid),
+    .inp_last(qq2DATA.tlast),
 
     .chk_data(qq2CHECKSUMout2.tdata),
     .chk_valid(qq2CHECKSUMout2.tvalid),
@@ -147,7 +148,7 @@ data_chk_multiplexer d1(
 
 
 
-axisr_data_fifo_512 fifo2 (
+axisr_data_fifo_512 fifo3 (
     .s_axis_aresetn(areset),
     .s_axis_aclk(aclk),
     .s_axis_tvalid(qq2.tvalid),
