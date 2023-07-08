@@ -49,27 +49,27 @@ logic [3:0] i;
 
 always@(posedge clock)
     begin
-        if (reset == 1'b0 || (inp_valid && inp_last))
+        if (reset == 1'b0)
             begin
                 i<=0;
             end
         else
             begin
-                if(inp_valid)
-                    begin 
-                        if (i<4)
-                            begin
-                                i<=i + 1;
-                            end
-                        else 
-                            begin
-                                i<=0;
-                            end
-                    end
-                else 
-                    begin
-                        i<=i;
-                    end
+                case(current_state)
+                    S0:
+                        begin
+                            if(inp_valid)
+                                begin
+                                    i<=i + 1;
+                                end
+                            else 
+                                begin
+                                    i<=i;
+                                end
+                        end
+                    S1:
+                        i<=0;
+                endcase
             end
     end
 
@@ -92,11 +92,12 @@ always @(*)
         
         case (current_state)
             S0: begin
-                    if ((inp_valid && inp_last) || i == 3)
+                    if ((inp_valid && inp_last) || (i == 3 && inp_valid))
                         next_state = S1;
                 end
             S1: begin
-                    next_state = S0;
+                    if (chk_valid)
+                        next_state = S0;
                 end
         endcase
 	end
@@ -125,7 +126,7 @@ always @*
                             // send data
                             inp_ready = 1;
                             out = inp_data;
-                            out_valid = 1;
+                            out_valid = inp_valid;
                             out_keep = inp_keep;
                             out_id = inp_id;
                             out_last = 0; // input is never last
