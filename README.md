@@ -23,3 +23,9 @@ flash fpga bitstream
 sudo bash sw/util/hot_reset.sh "e1:00.0"
 sudo insmod driver/coyote_drv.ko
 ```
+
+- Flash fpga bitstream
+```
+xilinx-shell
+vivado -mode tcl -source stream.tcl
+```
