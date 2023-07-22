@@ -13,3 +13,13 @@
 	- 261 (https://github.com/dgiantsidi/Coyote-playground/blob/3d735aef843420347ac65a6166a1fea56c91a86d/code-my-app/main.cpp#L261) 
 	- 291 (https://github.com/dgiantsidi/Coyote-playground/blob/3d735aef843420347ac65a6166a1fea56c91a86d/code-my-app/main.cpp#L291)
 - Else, if we use the intuitive code as it is now we get the results in `my_app-error`
+
+
+## Testing on NIXOS servers
+```
+sudo rmmod coyote_drv
+sudo bash sw/util/hot_reset.sh "e1:00.0"
+flash fpga bitstream
+sudo bash sw/util/hot_reset.sh "e1:00.0"
+sudo insmod driver/coyote_drv.ko
+```
