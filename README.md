@@ -29,3 +29,9 @@ sudo insmod driver/coyote_drv.ko
 xilinx-shell
 vivado -mode tcl -source stream.tcl
 ```
+
+```
+source /share/xilinx/Vivado/2022.1/settings64.sh
+dimitra@sakura:~/Coyote-latest/Coyote/hw/u280_kamil$ /usr/bin/cmake .. -DFDEV_NAME=u280 -DEXAMPLE=perf_rdma_host
+make shell -j
+```
