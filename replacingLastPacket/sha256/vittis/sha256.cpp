@@ -34,7 +34,7 @@ void sha256(hls::stream<AXIS_DATA>& input,
 	do {
 		input.read(currWord);
 		for (i=0; i<n; i++) {
-			seg_buf[n-1-i] = ((currWord.tdata >> (8*i))&0xff);
+			seg_buf[i] = currWord.tdata(8*(64-i)-1, 8*(64-1-i));
 //			std::cout<<"SEG BUF i: "<<i <<"  "<<seg_buf[n-1-i]<<std::endl;
 		}
 		sha256_update(&sha256ctx, seg_buf, n);
@@ -46,12 +46,13 @@ void sha256(hls::stream<AXIS_DATA>& input,
 	AXIS_DATA outWord;
 	outWord.tlast=1;
 	outWord.tdata=0;
-	outWord.tkeep=-1;
 	outWord.tid = currWord.tid;
+	int FIRST_BYTE_TO_POPULATE = 64;
 	for (i=0; i<32; i++) {
 #pragma HLS UNROLL
 		std::cout<<"SEG BUF I: "<<i <<"  "<<std::hex<<int(seg_buf[i])<<std::endl;
-		outWord.tdata |= ap_uint<512>(seg_buf[i]) <<(8*(32-1-i));
+		outWord.tdata(8*(FIRST_BYTE_TO_POPULATE-i)-1, 8*(FIRST_BYTE_TO_POPULATE-1-i)) = seg_buf[i];
+		outWord.tkeep((FIRST_BYTE_TO_POPULATE-i)-1, (FIRST_BYTE_TO_POPULATE-1-i)) = 1;
 	}
 	output.write(outWord);
 
