@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="sha256.cpp:108:20" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="sha256.cpp:108:20" LoopName="VITIS_LOOP_108_1" ParentFunc="sha256_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)"/>
+</VitisHLS:BurstInfo>
+

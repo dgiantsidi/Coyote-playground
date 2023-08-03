@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690414465809">
+  <ports id="1" name="signature" type="PortType" coreName="RAM" coreId="639657324" bitwidth="8" iftype="IfTypeRegister" arraysize="64">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_Val2_1_out" type="PortType" coreId="2676403344" bitwidth="512" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="61" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="65" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="69" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="70" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="71" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="79" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="83" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="155" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="176" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="177" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="178" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="179" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="180" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="181" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="182" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="183" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="184" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="185" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="186" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <blocks id="8" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc38</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="p_Val2_s" originalName="__Val2__" coreId="1702258035" bitwidth="512" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="1916886893" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i_write_ln0" coreId="2669783520" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_Val2_s_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln0" coreId="1599294536" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc38</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="55" name="for.cond.cleanup26.exitStub" type="BlockType">
+    <controlInputObjs>for.inc38</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="p_Val2_load" coreId="2658638224" bitwidth="512" opcode="load" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="p_Val2_1_out_write_ln0" coreId="2592378864" opcode="write" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>p_Val2_1_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln0" coreId="2592379136" opcode="ret" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="217" pipe_depth="2" RegionName="VITIS_LOOP_89_3">
+    <basic_blocks id="15" name="for.inc38" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc38.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.cond.cleanup26.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc38.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_7" lineNumber="90" originalName="i" fileName="sha256.cpp" fileDirectory=".." coreId="2589621056" contextFuncName="sha256" bitwidth="7" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="icmp_ln89" lineNumber="89" fileName="sha256.cpp" fileDirectory=".." rtlName="icmp_ln89_fu_91_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="sha256" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.59" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="89" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_8" lineNumber="90" originalName="i" fileName="sha256.cpp" fileDirectory=".." rtlName="i_8_fu_97_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256" bitwidth="7" opcode="add" m_display="0" m_delay="0.7" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln89" lineNumber="89" fileName="sha256.cpp" fileDirectory=".." coreId="2668832480" contextFuncName="sha256" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="89" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc38.split</controlInputObjs>
+        <controlInputObjs>for.cond.cleanup26.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="sha256.cpp">
+        <validLinenumbers>90</validLinenumbers>
+        <validLinenumbers>89</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="51" name="for.inc38.split" type="BlockType">
+      <controlInputObjs>for.inc38</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc38</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="p_Val2_load_1" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." coreId="2592394192" contextFuncName="operator_assign" bitwidth="512" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_8_cast" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." rtlName="i_8_cast_fu_103_p1" coreId="6775156" contextFuncName="sha256" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="signature_addr" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." coreId="2658638224" contextFuncName="sha256" bitwidth="6" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>signature</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="p_Repl2_s" lineNumber="90" originalName="op" fileName="sha256.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="sha256" bitwidth="8" opcode="load" nodeLatency="1" m_display="0" m_delay="0.66" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln90" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." rtlName="trunc_ln90_fu_108_p1" coreId="0" contextFuncName="sha256" bitwidth="6" opcode="trunc" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="add_ln90_1" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." rtlName="add_ln90_1_fu_120_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.7" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="shl_ln90_1" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." rtlName="shl_ln90_1_fu_125_p3" coreId="2671423656" contextFuncName="sha256" bitwidth="9" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="add_ln90_2" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." rtlName="add_ln90_2_fu_133_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256" bitwidth="9" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.71" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="shl_ln3" lineNumber="90" fileName="sha256.cpp" fileDirectory=".." rtlName="shl_ln3_fu_139_p3" coreId="2673150776" contextFuncName="sha256" bitwidth="9" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="90" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="zext_ln257" lineNumber="257" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln257_fu_146_p1" coreId="2665763104" contextFuncName="ap_int_base" bitwidth="512" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="257" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="ap_int_base"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="icmp_ln388_fu_150_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_assign" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.59" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln388_fu_156_p1" coreId="176" contextFuncName="operator_assign" bitwidth="10" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="zext_ln388_1" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln388_1_fu_160_p1" coreId="2671932976" contextFuncName="operator_assign" bitwidth="10" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="xor_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="xor_ln388_fu_164_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_assign" bitwidth="10" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="select_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="select_ln388_fu_170_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_assign" bitwidth="10" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="select_ln388_1" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="select_ln388_1_fu_178_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_assign" bitwidth="10" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="select_ln388_2" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="select_ln388_2_fu_186_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_assign" bitwidth="10" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="xor_ln388_1" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="xor_ln388_1_fu_194_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_assign" bitwidth="10" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="zext_ln388_2" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln388_2_fu_200_p1" coreId="176" contextFuncName="operator_assign" bitwidth="512" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="zext_ln388_3" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln388_3_fu_204_p1" coreId="1768715620" contextFuncName="operator_assign" bitwidth="512" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="zext_ln388_4" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln388_4_fu_208_p1" coreId="2634786864" contextFuncName="operator_assign" bitwidth="512" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>lshr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="shl_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="shl_ln388_fu_212_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_assign" bitwidth="512" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="0.74" m_topoIndex="35" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_fu_218_p4" coreId="2634787664" contextFuncName="operator_assign" bitwidth="512" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="select_ln388_3" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="select_ln388_3_fu_228_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_assign" bitwidth="512" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="shl_ln388_1" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="shl_ln388_1_fu_236_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_assign" bitwidth="512" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="lshr_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="lshr_ln388_fu_242_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="operator_assign" bitwidth="512" opcode="lshr" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="and_ln388" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="and_ln388_fu_248_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_assign" bitwidth="512" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.74" m_topoIndex="40" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataInputObjs>lshr</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="xor_ln388_2" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="xor_ln388_2_fu_254_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_assign" bitwidth="512" opcode="xor" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="and_ln388_1" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="and_ln388_1_fu_260_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_assign" bitwidth="512" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="and_ln388_2" lineNumber="388" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="and_ln388_2_fu_266_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_assign" bitwidth="512" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>and</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="p_Result_s" lineNumber="388" originalName="__Result__" fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="p_Result_s_fu_272_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_assign" bitwidth="512" opcode="or" nodeLabel="1.0" m_display="0" m_delay="0.57" m_topoIndex="44" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" linenumber="388" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="operator="/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>and</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="i_write_ln89" lineNumber="89" fileName="sha256.cpp" fileDirectory=".." coreId="2589617912" contextFuncName="sha256" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="89" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="p_Val2_s_write_ln89" lineNumber="89" fileName="sha256.cpp" fileDirectory=".." coreId="2658638224" contextFuncName="sha256" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.38" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="89" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln89" lineNumber="89" fileName="sha256.cpp" fileDirectory=".." coreId="2672197592" contextFuncName="sha256" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha256.cpp" linenumber="89" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256"/>
+        <controlInputObjs>for.inc38</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="sha256.cpp">
+        <validLinenumbers>90</validLinenumbers>
+        <validLinenumbers>89</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>257</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h">
+        <validLinenumbers>388</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="signature_addr_reg_305">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_295">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln90_reg_310">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_s_reg_287">
+    <nodeIds>3</nodeIds>
+  </regnodes>
+  <expressionNodes realName="and_ln388_fu_248">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln388_1_fu_194">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_s_fu_50">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln257_fu_146">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln388_1_fu_178">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln90_1_fu_120">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln388_2_fu_186">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_218">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln388_2_fu_266">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln388_1_fu_260">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_8_fu_97">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln388_fu_242">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln388_fu_164">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln388_3_fu_204">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln90_1_fu_125">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_54">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln388_4_fu_208">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_272">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln388_fu_156">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_8_cast_fu_103">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln388_3_fu_228">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln90_fu_108">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln388_2_fu_200">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln89_fu_91">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln90_2_fu_133">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln388_1_fu_160">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln388_fu_150">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="signature_addr_gep_fu_65">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln3_fu_139">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln388_1_fu_236">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln388_fu_212">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln388_fu_170">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln388_2_fu_254">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_83">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln89_store_fu_112">
+    <nodeIds>48</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln89_store_fu_278">
+    <nodeIds>49</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_78">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_7_load_fu_88">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_Val2_load_1_load_fu_117">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_58">
+    <nodeIds>53</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_Val2_load_load_fu_283">
+    <nodeIds>52</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="signature">
+    <nodeIds>20</nodeIds>
+  </memoryPorts>
+  <ioPorts name="p_Val2_1_out">
+    <contents name="write">
+      <nodeIds>53</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="signature(p0)">
+    <contents name="load">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="2" latency="2"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="2"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sha256_Pipeline_VITIS_LOOP_89_3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="66" mMaxLatency="66">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>8</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_89_3" mII="1" mDepth="2" mMinTripCount="64" mMaxTripCount="64" mMinLatency="64" mMaxLatency="64" mType="1">
+      <basicBlocks>15</basicBlocks>
+      <basicBlocks>51</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>55</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,119 @@
+
+
+================================================================
+== Synthesis Summary Report of 'sha256_verify'
+================================================================
++ General Information: 
+    * Date:           Wed Jul 26 16:30:17 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        shav
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+    |                   Modules                  | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |         |          |     |
+    |                   & Loops                  | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF   |    LUT   | URAM|
+    +--------------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+    |+ sha256_verify                             |     -|  7.30|        -|       -|         -|        -|     -|        no|     -|   -|  8 (~0%)|  71 (~0%)|    -|
+    | + sha256_verify_Pipeline_VITIS_LOOP_108_1  |     -|  7.30|        -|       -|         -|        -|     -|        no|     -|   -|  2 (~0%)|  20 (~0%)|    -|
+    |  o VITIS_LOOP_108_1                        |     -|  7.30|        -|       -|         1|        1|     -|       yes|     -|   -|        -|         -|    -|
+    +--------------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+--------+--------+
+| Interface | Register Mode | TDATA | TREADY | TVALID |
++-----------+---------------+-------+--------+--------+
+| input_r   | both          | 584   | 1      | 1      |
+| output_r  | both          | 8     | 1      | 1      |
++-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+------------------------+
+| Argument | Direction | Datatype               |
++----------+-----------+------------------------+
+| input    | in        | stream<axisIntf, 0>&   |
+| output   | out       | stream<ap_uint<1>, 0>& |
++----------+-----------+------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | input_r      | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------+--------------------------------------------------+
+| Type            | Options                              | Location                                         |
++-----------------+--------------------------------------+--------------------------------------------------+
+| interface       | ap_ctrl_none port=return             | sha1/sha2561.cpp:13 in sha2561_ver, return       |
+| interface       | axis register port = input           | sha1/sha2561.cpp:14 in sha2561_ver               |
+| interface       | axis register port = final_output    | sha1/sha2561.cpp:15 in sha2561_ver               |
+| aggregate       | variable=input bit                   | sha1/sha2561.cpp:16 in sha2561_ver, input        |
+| aggregate       | variable=final_output bit            | sha1/sha2561.cpp:17 in sha2561_ver, final_output |
+| array_partition | dim=1 type=complete variable=seg_buf | sha1/sha2561.cpp:21 in sha2561_ver, seg_buf      |
+| unroll          |                                      | sha1/sha2561.cpp:57 in sha2561_ver               |
+| interface       | ap_ctrl_none port=return             | sha1/sha2561.cpp:70 in sha2561, return           |
+| interface       | axis register port = input           | sha1/sha2561.cpp:71 in sha2561                   |
+| interface       | axis register port = final_output    | sha1/sha2561.cpp:72 in sha2561                   |
+| aggregate       | variable=input bit                   | sha1/sha2561.cpp:73 in sha2561, input            |
+| aggregate       | variable=final_output bit            | sha1/sha2561.cpp:74 in sha2561, final_output     |
+| array_partition | dim=1 type=complete variable=seg_buf | sha1/sha2561.cpp:78 in sha2561, seg_buf          |
+| unroll          |                                      | sha1/sha2561.cpp:111 in sha2561                  |
+| interface       | ap_ctrl_none port=return             | sha256.cpp:46 in sha256, return                  |
+| interface       | axis register port = input           | sha256.cpp:47 in sha256                          |
+| interface       | axis register port = output          | sha256.cpp:48 in sha256                          |
+| aggregate       | variable=input bit                   | sha256.cpp:49 in sha256, input                   |
+| aggregate       | variable=output bit                  | sha256.cpp:50 in sha256, output                  |
+| interface       | ap_ctrl_none port=return             | sha256.cpp:99 in sha256_verify, return           |
+| interface       | axis register port = input           | sha256.cpp:100 in sha256_verify                  |
+| interface       | axis register port = output          | sha256.cpp:101 in sha256_verify                  |
+| aggregate       | variable=input bit                   | sha256.cpp:102 in sha256_verify, input           |
+| aggregate       | variable=output bit                  | sha256.cpp:103 in sha256_verify, output          |
++-----------------+--------------------------------------+--------------------------------------------------+
+
+

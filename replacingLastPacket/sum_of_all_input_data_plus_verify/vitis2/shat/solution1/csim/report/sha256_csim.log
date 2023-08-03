@@ -1,0 +1,86 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../sha256.cpp in debug mode
+   Compiling ../../../../sha1/sha2561.cpp in debug mode
+In file included from ../../../../sha256.hpp:7,
+                 from ../../../../sha256.cpp:1:
+../../../../sha1/sha2561.hpp:16:28: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<512> axisIntf::tdata’
+     ap_uint<AXI_DATA_BITS> tdata;
+                            ^~~~~
+../../../../sha1/sha2561.hpp:17:30: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<64> axisIntf::tkeep’
+     ap_uint<AXI_DATA_BITS/8> tkeep;
+                              ^~~~~
+../../../../sha1/sha2561.hpp:18:23: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<6> axisIntf::tid’
+     ap_uint<PID_BITS> tid;
+                       ^~~
+../../../../sha1/sha2561.hpp:19:16: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<1> axisIntf::tlast’
+     ap_uint<1> tlast;
+                ^~~~~
+In file included from ../../../../sha1/sha2561.cpp:1:
+../../../../sha1/sha2561.hpp:16:28: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<512> axisIntf::tdata’
+     ap_uint<AXI_DATA_BITS> tdata;
+                            ^~~~~
+../../../../sha1/sha2561.hpp:17:30: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<64> axisIntf::tkeep’
+     ap_uint<AXI_DATA_BITS/8> tkeep;
+                              ^~~~~
+../../../../sha1/sha2561.hpp:18:23: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<6> axisIntf::tid’
+     ap_uint<PID_BITS> tid;
+                       ^~~
+../../../../sha1/sha2561.hpp:19:16: warning: ignoring packed attribute because of unpacked non-POD field ‘ap_uint<1> axisIntf::tlast’
+     ap_uint<1> tlast;
+                ^~~~~
+../../../../sha1/sha2561.cpp: In function ‘void sha2561(hls::stream<axisIntf>&, AXIS_DATA&, hls::stream<axisIntf>&)’:
+../../../../sha1/sha2561.cpp:98:2: error: expected ‘while’ before ‘}’ token
+  }while(currWord.tlast != 1);
+  ^
+../../../../sha1/sha2561.cpp:98:2: error: expected ‘(’ before ‘}’ token
+  }while(currWord.tlast != 1);
+  ^
+  (
+../../../../sha1/sha2561.cpp:98:2: error: expected primary-expression before ‘}’ token
+../../../../sha1/sha2561.cpp:97:4: error: expected ‘)’ before ‘}’ token
+   }
+    ^
+    )
+  }while(currWord.tlast != 1);
+  ~  
+../../../../sha1/sha2561.cpp:97:4: error: expected ‘;’ before ‘}’ token
+   }
+    ^
+    ;
+  }while(currWord.tlast != 1);
+  ~  
+../../../../sha1/sha2561.cpp: At global scope:
+../../../../sha1/sha2561.cpp:98:3: error: expected unqualified-id before ‘while’
+  }while(currWord.tlast != 1);
+   ^~~~~
+../../../../sha1/sha2561.cpp:101:14: error: expected constructor, destructor, or type conversion before ‘(’ token
+  sha256_final(&sha256ctx, seg_buf);
+              ^
+../../../../sha1/sha2561.cpp:104:2: error: ‘outWord’ does not name a type
+  outWord.tlast=1;
+  ^~~~~~~
+../../../../sha1/sha2561.cpp:105:2: error: ‘outWord’ does not name a type
+  outWord.tdata=0;
+  ^~~~~~~
+../../../../sha1/sha2561.cpp:106:2: error: ‘outWord’ does not name a type
+  outWord.tkeep=-1;
+  ^~~~~~~
+../../../../sha1/sha2561.cpp:107:2: error: ‘outWord’ does not name a type
+  outWord.tid = currWord.tid;
+  ^~~~~~~
+../../../../sha1/sha2561.cpp:108:2: error: expected unqualified-id before ‘for’
+  for (i=0; i<32; i++) {
+  ^~~
+../../../../sha1/sha2561.cpp:108:12: error: ‘i’ does not name a type
+  for (i=0; i<32; i++) {
+            ^
+../../../../sha1/sha2561.cpp:108:18: error: ‘i’ does not name a type
+  for (i=0; i<32; i++) {
+                  ^
+../../../../sha1/sha2561.cpp:115:1: error: expected declaration before ‘}’ token
+ }
+ ^
+make: *** [csim.mk:86: obj/sha2561.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

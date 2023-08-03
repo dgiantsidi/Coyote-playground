@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sha256.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis/sha256.cpp"/>
+    <originFiles name="sha256.hpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis/sha256.hpp"/>
+    <originFiles name="sha256_tb.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis/sha256_tb.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="sha256_tb.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis/sha256_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

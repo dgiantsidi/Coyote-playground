@@ -1,0 +1,1302 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu280-fsvh2892-2L-e</Part>
+        <TopModelName>sha256_verify</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.209</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_114_1>
+                <TripCount>20</TripCount>
+                <Latency>
+                    <range>
+                        <min>10400</min>
+                        <max>20740</max>
+                    </range>
+                </Latency>
+                <AbsoluteTimeLatency>
+                    <range>
+                        <min>104000</min>
+                        <max>207400</max>
+                    </range>
+                </AbsoluteTimeLatency>
+                <IterationLatency>
+                    <range>
+                        <min>520</min>
+                        <max>1037</max>
+                    </range>
+                </IterationLatency>
+                <InstanceList/>
+            </VITIS_LOOP_114_1>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>31255</FF>
+            <LUT>78031</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>sha256_verify</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>sha256_verify</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_TDATA</name>
+            <Object>input_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>584</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_TVALID</name>
+            <Object>input_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_TREADY</name>
+            <Object>input_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TDATA</name>
+            <Object>output_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TVALID</name>
+            <Object>output_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TREADY</name>
+            <Object>output_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="5">
+            <ModuleName>sha256_verify</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_sha2561_ver_fu_79</InstName>
+                    <ModuleName>sha2561_ver</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>79</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_sha2561_ver_Pipeline_VITIS_LOOP_36_2_fu_888</InstName>
+                            <ModuleName>sha2561_ver_Pipeline_VITIS_LOOP_36_2</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>888</ID>
+                            <BindInstances>add_ln36_fu_1852_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_sha2561_ver_Pipeline_VITIS_LOOP_90_1_fu_1021</InstName>
+                            <ModuleName>sha2561_ver_Pipeline_VITIS_LOOP_90_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>1021</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_sha256_transform_fu_828</InstName>
+                                    <ModuleName>sha256_transform</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>828</ID>
+                                    <BindInstances>add_ln37_1_fu_1140_p2 add_ln37_4_fu_1342_p2 add_ln37_7_fu_1522_p2 add_ln37_10_fu_1702_p2 add_ln37_13_fu_1882_p2 add_ln37_16_fu_2062_p2 add_ln37_19_fu_2236_p2 add_ln37_22_fu_2404_p2 add_ln37_25_fu_6354_p2 add_ln37_28_fu_3842_p2 add_ln37_31_fu_6518_p2 add_ln37_34_fu_4712_p2 add_ln37_37_fu_6682_p2 add_ln37_40_fu_5389_p2 add_ln37_43_fu_6852_p2 add_ln37_46_fu_6999_p2 add_ln37_49_fu_10596_p2 add_ln37_52_fu_7151_p2 add_ln37_55_fu_10747_p2 add_ln37_58_fu_7303_p2 add_ln37_61_fu_10898_p2 add_ln37_64_fu_7455_p2 add_ln37_67_fu_11055_p2 add_ln37_70_fu_11201_p2 add_ln37_73_fu_12487_p2 add_ln37_76_fu_11353_p2 add_ln37_79_fu_12638_p2 add_ln37_82_fu_11505_p2 add_ln37_85_fu_12789_p2 add_ln37_88_fu_11657_p2 add_ln37_91_fu_12946_p2 add_ln37_94_fu_13092_p2 add_ln37_97_fu_16285_p2 add_ln37_100_fu_13244_p2 add_ln37_103_fu_16436_p2 add_ln37_106_fu_13396_p2 add_ln37_109_fu_16587_p2 add_ln37_112_fu_13548_p2 add_ln37_115_fu_16744_p2 add_ln37_118_fu_16890_p2 add_ln37_121_fu_18083_p2 add_ln37_124_fu_17042_p2 add_ln37_127_fu_18234_p2 add_ln37_130_fu_17194_p2 add_ln37_133_fu_18385_p2 add_ln37_136_fu_17346_p2 add_ln54_fu_2614_p2 add_ln54_1_fu_2746_p2 add_ln54_2_fu_3116_p2 add_ln54_3_fu_3355_p2 add_ln54_4_fu_3573_p2 add_ln54_5_fu_4005_p2 add_ln54_6_fu_4245_p2 add_ln54_7_fu_4464_p2 add_ln54_8_fu_4887_p2 add_ln54_9_fu_5104_p2 add_ln54_10_fu_5522_p2 add_ln54_11_fu_5759_p2 add_ln54_12_fu_6001_p2 add_ln54_13_fu_7511_p2 add_ln54_14_fu_7747_p2 add_ln54_15_fu_7966_p2 add_ln54_16_fu_8217_p2 add_ln54_17_fu_8434_p2 add_ln54_18_fu_8689_p2 add_ln54_19_fu_8926_p2 add_ln54_20_fu_9144_p2 add_ln54_21_fu_9395_p2 add_ln54_22_fu_9634_p2 add_ln54_23_fu_9852_p2 add_ln54_24_fu_10103_p2 add_ln54_25_fu_10320_p2 add_ln54_26_fu_11790_p2 add_ln54_27_fu_12027_p2 add_ln54_28_fu_12245_p2 add_ln54_29_fu_13711_p2 add_ln54_30_fu_13950_p2 add_ln54_31_fu_14168_p2 add_ln54_32_fu_14419_p2 add_ln54_33_fu_14636_p2 add_ln54_34_fu_14891_p2 add_ln54_35_fu_15128_p2 add_ln54_36_fu_15346_p2 add_ln54_37_fu_15597_p2 add_ln54_38_fu_15836_p2 add_ln54_39_fu_16054_p2 add_ln54_40_fu_17590_p2 add_ln54_41_fu_17807_p2 add_ln54_42_fu_18739_p2 add_ln54_43_fu_18976_p2 add_ln54_44_fu_19194_p2 add_ln54_45_fu_19477_p2 add_ln54_46_fu_19716_p2 add_ln54_47_fu_19934_p2 add_ln54_48_fu_20185_p2 add_ln54_49_fu_20402_p2 add_ln54_50_fu_20657_p2 add_ln54_51_fu_20894_p2 add_ln54_52_fu_21112_p2 add_ln54_53_fu_21363_p2 add_ln54_54_fu_21602_p2 add_ln54_55_fu_21820_p2 add_ln54_56_fu_22071_p2 add_ln54_57_fu_22288_p2 add_ln54_58_fu_22543_p2 add_ln54_59_fu_22780_p2 add_ln54_60_fu_22998_p2 add_ln54_61_fu_23254_p2 add_ln49_248_fu_23371_p2 add_ln49_249_fu_23377_p2 add_ln49_253_fu_19293_p2 add_ln54_62_fu_23493_p2 add_ln49_256_fu_23611_p2 add_ln49_257_fu_23616_p2 add_ln49_260_fu_19309_p2 add_ln61_2_fu_23734_p2 add_ln62_fu_23739_p2 add_ln63_fu_23744_p2 add_ln64_fu_23749_p2 add_ln66_fu_23764_p2 add_ln67_fu_23769_p2 add_ln68_fu_23091_p2</BindInstances>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln90_fu_918_p2 add_ln92_fu_1454_p2 add_ln95_fu_1851_p2 add_ln95_1_fu_1865_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_sha256_final_fu_1164</InstName>
+                            <ModuleName>sha256_final</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>1164</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_sha256_final_Pipeline_VITIS_LOOP_115_2_fu_15308</InstName>
+                                    <ModuleName>sha256_final_Pipeline_VITIS_LOOP_115_2</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>15308</ID>
+                                    <BindInstances>i_7_fu_1882_p2 add_ln116_fu_2215_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_sha256_final_Pipeline_VITIS_LOOP_110_1_fu_15506</InstName>
+                                    <ModuleName>sha256_final_Pipeline_VITIS_LOOP_110_1</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>15506</ID>
+                                    <BindInstances>i_8_fu_1632_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_sha256_transform_fu_15679</InstName>
+                                    <ModuleName>sha256_transform</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>15679</ID>
+                                    <BindInstances>add_ln37_1_fu_1140_p2 add_ln37_4_fu_1342_p2 add_ln37_7_fu_1522_p2 add_ln37_10_fu_1702_p2 add_ln37_13_fu_1882_p2 add_ln37_16_fu_2062_p2 add_ln37_19_fu_2236_p2 add_ln37_22_fu_2404_p2 add_ln37_25_fu_6354_p2 add_ln37_28_fu_3842_p2 add_ln37_31_fu_6518_p2 add_ln37_34_fu_4712_p2 add_ln37_37_fu_6682_p2 add_ln37_40_fu_5389_p2 add_ln37_43_fu_6852_p2 add_ln37_46_fu_6999_p2 add_ln37_49_fu_10596_p2 add_ln37_52_fu_7151_p2 add_ln37_55_fu_10747_p2 add_ln37_58_fu_7303_p2 add_ln37_61_fu_10898_p2 add_ln37_64_fu_7455_p2 add_ln37_67_fu_11055_p2 add_ln37_70_fu_11201_p2 add_ln37_73_fu_12487_p2 add_ln37_76_fu_11353_p2 add_ln37_79_fu_12638_p2 add_ln37_82_fu_11505_p2 add_ln37_85_fu_12789_p2 add_ln37_88_fu_11657_p2 add_ln37_91_fu_12946_p2 add_ln37_94_fu_13092_p2 add_ln37_97_fu_16285_p2 add_ln37_100_fu_13244_p2 add_ln37_103_fu_16436_p2 add_ln37_106_fu_13396_p2 add_ln37_109_fu_16587_p2 add_ln37_112_fu_13548_p2 add_ln37_115_fu_16744_p2 add_ln37_118_fu_16890_p2 add_ln37_121_fu_18083_p2 add_ln37_124_fu_17042_p2 add_ln37_127_fu_18234_p2 add_ln37_130_fu_17194_p2 add_ln37_133_fu_18385_p2 add_ln37_136_fu_17346_p2 add_ln54_fu_2614_p2 add_ln54_1_fu_2746_p2 add_ln54_2_fu_3116_p2 add_ln54_3_fu_3355_p2 add_ln54_4_fu_3573_p2 add_ln54_5_fu_4005_p2 add_ln54_6_fu_4245_p2 add_ln54_7_fu_4464_p2 add_ln54_8_fu_4887_p2 add_ln54_9_fu_5104_p2 add_ln54_10_fu_5522_p2 add_ln54_11_fu_5759_p2 add_ln54_12_fu_6001_p2 add_ln54_13_fu_7511_p2 add_ln54_14_fu_7747_p2 add_ln54_15_fu_7966_p2 add_ln54_16_fu_8217_p2 add_ln54_17_fu_8434_p2 add_ln54_18_fu_8689_p2 add_ln54_19_fu_8926_p2 add_ln54_20_fu_9144_p2 add_ln54_21_fu_9395_p2 add_ln54_22_fu_9634_p2 add_ln54_23_fu_9852_p2 add_ln54_24_fu_10103_p2 add_ln54_25_fu_10320_p2 add_ln54_26_fu_11790_p2 add_ln54_27_fu_12027_p2 add_ln54_28_fu_12245_p2 add_ln54_29_fu_13711_p2 add_ln54_30_fu_13950_p2 add_ln54_31_fu_14168_p2 add_ln54_32_fu_14419_p2 add_ln54_33_fu_14636_p2 add_ln54_34_fu_14891_p2 add_ln54_35_fu_15128_p2 add_ln54_36_fu_15346_p2 add_ln54_37_fu_15597_p2 add_ln54_38_fu_15836_p2 add_ln54_39_fu_16054_p2 add_ln54_40_fu_17590_p2 add_ln54_41_fu_17807_p2 add_ln54_42_fu_18739_p2 add_ln54_43_fu_18976_p2 add_ln54_44_fu_19194_p2 add_ln54_45_fu_19477_p2 add_ln54_46_fu_19716_p2 add_ln54_47_fu_19934_p2 add_ln54_48_fu_20185_p2 add_ln54_49_fu_20402_p2 add_ln54_50_fu_20657_p2 add_ln54_51_fu_20894_p2 add_ln54_52_fu_21112_p2 add_ln54_53_fu_21363_p2 add_ln54_54_fu_21602_p2 add_ln54_55_fu_21820_p2 add_ln54_56_fu_22071_p2 add_ln54_57_fu_22288_p2 add_ln54_58_fu_22543_p2 add_ln54_59_fu_22780_p2 add_ln54_60_fu_22998_p2 add_ln54_61_fu_23254_p2 add_ln49_248_fu_23371_p2 add_ln49_249_fu_23377_p2 add_ln49_253_fu_19293_p2 add_ln54_62_fu_23493_p2 add_ln49_256_fu_23611_p2 add_ln49_257_fu_23616_p2 add_ln49_260_fu_19309_p2 add_ln61_2_fu_23734_p2 add_ln62_fu_23739_p2 add_ln63_fu_23744_p2 add_ln64_fu_23749_p2 add_ln66_fu_23764_p2 add_ln67_fu_23769_p2 add_ln68_fu_23091_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_sha256_final_Pipeline_VITIS_LOOP_118_3_fu_15819</InstName>
+                                    <ModuleName>sha256_final_Pipeline_VITIS_LOOP_118_3</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>15819</ID>
+                                    <BindInstances>add_ln118_fu_1610_p2</BindInstances>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_sha256_final_Pipeline_VITIS_LOOP_138_4_fu_15935</InstName>
+                                    <ModuleName>sha256_final_Pipeline_VITIS_LOOP_138_4</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>15935</ID>
+                                    <BindInstances>add_ln138_fu_1118_p2 sub_ln139_fu_1136_p2</BindInstances>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>i_fu_16105_p2 add_ln125_fu_16782_p2 add_ln125_1_fu_16836_p2 add_ln126_1_fu_16841_p2 add_ln126_2_fu_16847_p2 add_ln126_fu_16853_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+                <Instance>
+                    <InstName>grp_productMod_512_s_fu_85</InstName>
+                    <ModuleName>productMod_512_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>85</ID>
+                    <BindInstances>add_ln887_fu_504_p2 tmp_V_3_fu_2222_p2 tmp_V_4_fu_2252_p2 i_11_fu_2228_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_monProduct_512_s_fu_89</InstName>
+                    <ModuleName>monProduct_512_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>89</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_monProduct_512_Pipeline_MON_PRODUCT_MOD_fu_30</InstName>
+                            <ModuleName>monProduct_512_Pipeline_MON_PRODUCT_MOD</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>30</ID>
+                            <BindInstances>i_12_fu_102_p2 ret_V_fu_160_p2 s_V_fu_170_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln93_fu_58_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_monProduct_512_s_fu_96</InstName>
+                    <ModuleName>monProduct_512_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>96</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_monProduct_512_Pipeline_MON_PRODUCT_MOD_fu_30</InstName>
+                            <ModuleName>monProduct_512_Pipeline_MON_PRODUCT_MOD</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>30</ID>
+                            <BindInstances>i_12_fu_102_p2 ret_V_fu_160_p2 s_V_fu_170_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln93_fu_58_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>i_3_fu_198_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>sha2561_ver_Pipeline_VITIS_LOOP_36_2</Name>
+            <Loops>
+                <VITIS_LOOP_36_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.830</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>66</Best-caseLatency>
+                    <Average-caseLatency>66</Average-caseLatency>
+                    <Worst-caseLatency>66</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.660 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.660 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.660 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>66</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_36_2>
+                        <Name>VITIS_LOOP_36_2</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>64</Latency>
+                        <AbsoluteTimeLatency>0.640 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_36_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>521</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2805</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_36_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln36_fu_1852_p2" SOURCE="sha1/sha2561.cpp:36" URAM="0" VARIABLE="add_ln36"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_transform</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.175</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>24</Best-caseLatency>
+                    <Average-caseLatency>24</Average-caseLatency>
+                    <Worst-caseLatency>24</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.240 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.240 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.240 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>25</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>17505</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>53926</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>4</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_1_fu_1140_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_4_fu_1342_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_7_fu_1522_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_10_fu_1702_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_13_fu_1882_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_16_fu_2062_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_19_fu_2236_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_22_fu_2404_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_25_fu_6354_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_28_fu_3842_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_31_fu_6518_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_34_fu_4712_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_37_fu_6682_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_40_fu_5389_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_43_fu_6852_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_46_fu_6999_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_49_fu_10596_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_52_fu_7151_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_55_fu_10747_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_58_fu_7303_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_61_fu_10898_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_64_fu_7455_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_67_fu_11055_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_70_fu_11201_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_73_fu_12487_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_73"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_76_fu_11353_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_79_fu_12638_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_82_fu_11505_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_85_fu_12789_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_88_fu_11657_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_91_fu_12946_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_94_fu_13092_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_97_fu_16285_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_97"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_100_fu_13244_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_100"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_103_fu_16436_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_106_fu_13396_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_109_fu_16587_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_109"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_112_fu_13548_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_112"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_115_fu_16744_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_115"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_118_fu_16890_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_121_fu_18083_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_121"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_124_fu_17042_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_127_fu_18234_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_127"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_130_fu_17194_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_130"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_133_fu_18385_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_133"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_136_fu_17346_p2" SOURCE="sha1/sha256_impl1.cpp:37" URAM="0" VARIABLE="add_ln37_136"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_fu_2614_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_1_fu_2746_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_2_fu_3116_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_3_fu_3355_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_4_fu_3573_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_5_fu_4005_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_6_fu_4245_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_7_fu_4464_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_8_fu_4887_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_9_fu_5104_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_10_fu_5522_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_11_fu_5759_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_12_fu_6001_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_13_fu_7511_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_14_fu_7747_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_15_fu_7966_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_16_fu_8217_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_17_fu_8434_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_18_fu_8689_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_19_fu_8926_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_20_fu_9144_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_21_fu_9395_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_22_fu_9634_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_23_fu_9852_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_24_fu_10103_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_25_fu_10320_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_26_fu_11790_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_27_fu_12027_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_28_fu_12245_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_29_fu_13711_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_30_fu_13950_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_31_fu_14168_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_32_fu_14419_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_33_fu_14636_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_34_fu_14891_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_35_fu_15128_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_36_fu_15346_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_37_fu_15597_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_38_fu_15836_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_39_fu_16054_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_40_fu_17590_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_41_fu_17807_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_42_fu_18739_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_43_fu_18976_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_44_fu_19194_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_45_fu_19477_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_46_fu_19716_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_47_fu_19934_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_48_fu_20185_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_49_fu_20402_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_50_fu_20657_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_51_fu_20894_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_52_fu_21112_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_53_fu_21363_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_54_fu_21602_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_55_fu_21820_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_56_fu_22071_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_57_fu_22288_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_58_fu_22543_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_59_fu_22780_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_60_fu_22998_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_61_fu_23254_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_248_fu_23371_p2" SOURCE="sha1/sha256_impl1.cpp:49" URAM="0" VARIABLE="add_ln49_248"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_249_fu_23377_p2" SOURCE="sha1/sha256_impl1.cpp:49" URAM="0" VARIABLE="add_ln49_249"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_253_fu_19293_p2" SOURCE="sha1/sha256_impl1.cpp:49" URAM="0" VARIABLE="add_ln49_253"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_62_fu_23493_p2" SOURCE="sha1/sha256_impl1.cpp:54" URAM="0" VARIABLE="add_ln54_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_256_fu_23611_p2" SOURCE="sha1/sha256_impl1.cpp:49" URAM="0" VARIABLE="add_ln49_256"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_257_fu_23616_p2" SOURCE="sha1/sha256_impl1.cpp:49" URAM="0" VARIABLE="add_ln49_257"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_260_fu_19309_p2" SOURCE="sha1/sha256_impl1.cpp:49" URAM="0" VARIABLE="add_ln49_260"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_2_fu_23734_p2" SOURCE="sha1/sha256_impl1.cpp:61" URAM="0" VARIABLE="add_ln61_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_fu_23739_p2" SOURCE="sha1/sha256_impl1.cpp:62" URAM="0" VARIABLE="add_ln62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln63_fu_23744_p2" SOURCE="sha1/sha256_impl1.cpp:63" URAM="0" VARIABLE="add_ln63"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln64_fu_23749_p2" SOURCE="sha1/sha256_impl1.cpp:64" URAM="0" VARIABLE="add_ln64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_23764_p2" SOURCE="sha1/sha256_impl1.cpp:66" URAM="0" VARIABLE="add_ln66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_23769_p2" SOURCE="sha1/sha256_impl1.cpp:67" URAM="0" VARIABLE="add_ln67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_fu_23091_p2" SOURCE="sha1/sha256_impl1.cpp:68" URAM="0" VARIABLE="add_ln68"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha2561_ver_Pipeline_VITIS_LOOP_90_1</Name>
+            <Loops>
+                <VITIS_LOOP_90_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.175</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1603</Best-caseLatency>
+                    <Average-caseLatency>1603</Average-caseLatency>
+                    <Worst-caseLatency>1603</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>16.030 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>16.030 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>16.030 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1603</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_90_1>
+                        <Name>VITIS_LOOP_90_1</Name>
+                        <TripCount>64</TripCount>
+                        <Latency>1601</Latency>
+                        <AbsoluteTimeLatency>16.010 us</AbsoluteTimeLatency>
+                        <PipelineII>25</PipelineII>
+                        <PipelineDepth>27</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_sha256_transform_fu_828</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_90_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>38</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1428</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_90_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln90_fu_918_p2" SOURCE="sha1/sha256_impl1.cpp:90" URAM="0" VARIABLE="add_ln90"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_90_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_fu_1454_p2" SOURCE="sha1/sha256_impl1.cpp:92" URAM="0" VARIABLE="add_ln92"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_90_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_fu_1851_p2" SOURCE="sha1/sha256_impl1.cpp:95" URAM="0" VARIABLE="add_ln95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_90_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_1_fu_1865_p2" SOURCE="sha1/sha256_impl1.cpp:95" URAM="0" VARIABLE="add_ln95_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_final_Pipeline_VITIS_LOOP_115_2</Name>
+            <Loops>
+                <VITIS_LOOP_115_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.534</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_115_2>
+                        <Name>VITIS_LOOP_115_2</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_115_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>611</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>869</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_2" OPTYPE="add" PRAGMA="" RTLNAME="i_7_fu_1882_p2" SOURCE="sha1/sha256_impl1.cpp:116" URAM="0" VARIABLE="i_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_115_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln116_fu_2215_p2" SOURCE="sha1/sha256_impl1.cpp:116" URAM="0" VARIABLE="add_ln116"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_final_Pipeline_VITIS_LOOP_118_3</Name>
+            <Loops>
+                <VITIS_LOOP_118_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.093</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>58</Best-caseLatency>
+                    <Average-caseLatency>58</Average-caseLatency>
+                    <Worst-caseLatency>58</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.580 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.580 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.580 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>58</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_118_3>
+                        <Name>VITIS_LOOP_118_3</Name>
+                        <TripCount>56</TripCount>
+                        <Latency>56</Latency>
+                        <AbsoluteTimeLatency>0.560 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_118_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>456</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>556</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln118_fu_1610_p2" SOURCE="sha1/sha256_impl1.cpp:118" URAM="0" VARIABLE="add_ln118"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_final_Pipeline_VITIS_LOOP_110_1</Name>
+            <Loops>
+                <VITIS_LOOP_110_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.534</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_110_1>
+                        <Name>VITIS_LOOP_110_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_110_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>515</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>736</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_110_1" OPTYPE="add" PRAGMA="" RTLNAME="i_8_fu_1632_p2" SOURCE="sha1/sha256_impl1.cpp:111" URAM="0" VARIABLE="i_8"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_final_Pipeline_VITIS_LOOP_138_4</Name>
+            <Loops>
+                <VITIS_LOOP_138_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.760</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>6</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_138_4>
+                        <Name>VITIS_LOOP_138_4</Name>
+                        <TripCount>4</TripCount>
+                        <Latency>4</Latency>
+                        <AbsoluteTimeLatency>40.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_138_4>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>293</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>794</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_138_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln138_fu_1118_p2" SOURCE="sha1/sha256_impl1.cpp:138" URAM="0" VARIABLE="add_ln138"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_138_4" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln139_fu_1136_p2" SOURCE="sha1/sha256_impl1.cpp:139" URAM="0" VARIABLE="sub_ln139"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_final</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.175</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>3536</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>6057</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_16105_p2" SOURCE="sha1/sha256_impl1.cpp:109" URAM="0" VARIABLE="i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln125_fu_16782_p2" SOURCE="sha1/sha256_impl1.cpp:125" URAM="0" VARIABLE="add_ln125"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln125_1_fu_16836_p2" SOURCE="sha1/sha256_impl1.cpp:125" URAM="0" VARIABLE="add_ln125_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln126_1_fu_16841_p2" SOURCE="sha1/sha256_impl1.cpp:126" URAM="0" VARIABLE="add_ln126_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln126_2_fu_16847_p2" SOURCE="sha1/sha256_impl1.cpp:126" URAM="0" VARIABLE="add_ln126_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln126_fu_16853_p2" SOURCE="sha1/sha256_impl1.cpp:126" URAM="0" VARIABLE="add_ln126"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha2561_ver</Name>
+            <Loops>
+                <VITIS_LOOP_33_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.175</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_33_1>
+                        <Name>VITIS_LOOP_33_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>2</min>
+                                <max>1673</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>2 ~ 1673</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_sha2561_ver_Pipeline_VITIS_LOOP_36_2_fu_888</Instance>
+                            <Instance>grp_sha2561_ver_Pipeline_VITIS_LOOP_90_1_fu_1021</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_33_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>25036</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>65843</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>productMod_512_s</Name>
+            <Loops>
+                <PRODUCT_MOD/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.209</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1026</Best-caseLatency>
+                    <Average-caseLatency>1026</Average-caseLatency>
+                    <Worst-caseLatency>1026</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>10.260 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>10.260 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>10.260 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1026</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <PRODUCT_MOD>
+                        <Name>PRODUCT_MOD</Name>
+                        <TripCount>512</TripCount>
+                        <Latency>1024</Latency>
+                        <AbsoluteTimeLatency>10.240 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </PRODUCT_MOD>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>1553</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>5607</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="add_ln887_fu_504_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:887" URAM="0" VARIABLE="add_ln887"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="tmp_V_3_fu_2222_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="tmp_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="tmp_V_4_fu_2252_p2" SOURCE="./sha256.hpp:160" URAM="0" VARIABLE="tmp_V_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="i_11_fu_2228_p2" SOURCE="./sha256.hpp:152" URAM="0" VARIABLE="i_11"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>monProduct_512_Pipeline_MON_PRODUCT_MOD</Name>
+            <Loops>
+                <MON_PRODUCT_MOD/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.016</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>514</Best-caseLatency>
+                    <Average-caseLatency>514</Average-caseLatency>
+                    <Worst-caseLatency>514</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.140 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.140 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.140 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>514</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <MON_PRODUCT_MOD>
+                        <Name>MON_PRODUCT_MOD</Name>
+                        <TripCount>512</TripCount>
+                        <Latency>512</Latency>
+                        <AbsoluteTimeLatency>5.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </MON_PRODUCT_MOD>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>526</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1953</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MON_PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="i_12_fu_102_p2" SOURCE="./sha256.hpp:85" URAM="0" VARIABLE="i_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MON_PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="ret_V_fu_160_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1541" URAM="0" VARIABLE="ret_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="MON_PRODUCT_MOD" OPTYPE="add" PRAGMA="" RTLNAME="s_V_fu_170_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" URAM="0" VARIABLE="s_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>monProduct_512_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.016</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>517</Best-caseLatency>
+                    <Average-caseLatency>517</Average-caseLatency>
+                    <Worst-caseLatency>517</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.170 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.170 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.170 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>517</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>531</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>3092</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_fu_58_p2" SOURCE="./sha256.hpp:93" URAM="0" VARIABLE="add_ln93"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sha256_verify</Name>
+            <Loops>
+                <VITIS_LOOP_114_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.209</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_114_1>
+                        <Name>VITIS_LOOP_114_1</Name>
+                        <TripCount>20</TripCount>
+                        <Latency>10400 ~ 20740</Latency>
+                        <AbsoluteTimeLatency>0.104 ms ~ 0.207 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>520</min>
+                                <max>1037</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>520 ~ 1037</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_114_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>31255</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>78031</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_114_1" OPTYPE="add" PRAGMA="" RTLNAME="i_3_fu_198_p2" SOURCE="./sha256.hpp:114" URAM="0" VARIABLE="i_3"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="input" index="0" direction="in" srcType="stream&lt;axisIntf, 0&gt;&amp;" srcSize="592">
+            <hwRefs>
+                <hwRef type="interface" interface="input_r" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="output" index="1" direction="out" srcType="stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="output_r" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">input_r:output_r</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="input_r" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="584" portPrefix="input_r_">
+            <ports>
+                <port>input_r_TDATA</port>
+                <port>input_r_TREADY</port>
+                <port>input_r_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="input"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="output_r" type="axi4stream" busTypeName="axis" mode="master" dataWidth="8" portPrefix="output_r_">
+            <ports>
+                <port>output_r_TDATA</port>
+                <port>output_r_TREADY</port>
+                <port>output_r_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="output"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Register Mode, TDATA, TREADY, TVALID</keys>
+                    <column name="input_r">both, 584, 1, 1, , , , , , , </column>
+                    <column name="output_r">both, 8, 1, 1, , , , , , , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="input">in, stream&lt;axisIntf 0&gt;&amp;</column>
+                    <column name="output">out, stream&lt;ap_uint&lt;1&gt; 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="input">input_r, interface, , </column>
+                    <column name="output">output_r, interface, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="inline" location="./sha256.hpp:149" status="valid" parentFunction="productmod" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="./sha256.hpp:153" status="valid" parentFunction="productmod" variable="" isDirective="0" options="II=2"/>
+        <Pragma type="loop_tripcount" location="./sha256.hpp:283" status="valid" parentFunction="modularinv" variable="" isDirective="0" options="max = 256"/>
+        <Pragma type="loop_tripcount" location="./sha256.hpp:313" status="valid" parentFunction="modularinv" variable="" isDirective="0" options="max = 256"/>
+        <Pragma type="array_partition" location="sha1/sha256_impl1.cpp:33" status="valid" parentFunction="sha256_transform" variable="data" isDirective="0" options="variable=data dim=0 complete"/>
+        <Pragma type="interface" location="sha1/sha2561.cpp:13" status="valid" parentFunction="sha2561_ver" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="sha1/sha2561.cpp:14" status="valid" parentFunction="sha2561_ver" variable="" isDirective="0" options="axis register port = input"/>
+        <Pragma type="aggregate" location="sha1/sha2561.cpp:16" status="valid" parentFunction="sha2561_ver" variable="input" isDirective="0" options="variable=input bit"/>
+        <Pragma type="array_partition" location="sha1/sha2561.cpp:21" status="valid" parentFunction="sha2561_ver" variable="seg_buf" isDirective="0" options="dim=1 type=complete variable=seg_buf"/>
+        <Pragma type="unroll" location="sha1/sha2561.cpp:56" status="valid" parentFunction="sha2561_ver" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="sha1/sha2561.cpp:69" status="valid" parentFunction="sha2561" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="sha1/sha2561.cpp:70" status="valid" parentFunction="sha2561" variable="" isDirective="0" options="axis register port = input"/>
+        <Pragma type="interface" location="sha1/sha2561.cpp:71" status="valid" parentFunction="sha2561" variable="" isDirective="0" options="axis register port = final_output"/>
+        <Pragma type="aggregate" location="sha1/sha2561.cpp:72" status="valid" parentFunction="sha2561" variable="input" isDirective="0" options="variable=input bit"/>
+        <Pragma type="aggregate" location="sha1/sha2561.cpp:73" status="valid" parentFunction="sha2561" variable="final_output" isDirective="0" options="variable=final_output bit"/>
+        <Pragma type="array_partition" location="sha1/sha2561.cpp:77" status="valid" parentFunction="sha2561" variable="seg_buf" isDirective="0" options="dim=1 type=complete variable=seg_buf"/>
+        <Pragma type="unroll" location="sha1/sha2561.cpp:109" status="valid" parentFunction="sha2561" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="sha256.cpp:66" status="valid" parentFunction="sha256" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="sha256.cpp:67" status="valid" parentFunction="sha256" variable="" isDirective="0" options="axis register port = input"/>
+        <Pragma type="interface" location="sha256.cpp:68" status="valid" parentFunction="sha256" variable="" isDirective="0" options="axis register port = output"/>
+        <Pragma type="aggregate" location="sha256.cpp:69" status="valid" parentFunction="sha256" variable="input" isDirective="0" options="variable=input bit"/>
+        <Pragma type="aggregate" location="sha256.cpp:70" status="valid" parentFunction="sha256" variable="output" isDirective="0" options="variable=output bit"/>
+        <Pragma type="interface" location="sha256.cpp:97" status="valid" parentFunction="sha256_verify" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="sha256.cpp:98" status="valid" parentFunction="sha256_verify" variable="" isDirective="0" options="axis register port = input"/>
+        <Pragma type="interface" location="sha256.cpp:99" status="valid" parentFunction="sha256_verify" variable="" isDirective="0" options="axis register port = output"/>
+        <Pragma type="aggregate" location="sha256.cpp:100" status="valid" parentFunction="sha256_verify" variable="input" isDirective="0" options="variable=input bit"/>
+        <Pragma type="aggregate" location="sha256.cpp:101" status="valid" parentFunction="sha256_verify" variable="output" isDirective="0" options="variable=output bit"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,251 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sha2561_Pipeline_VITIS_LOOP_90_1'" level="0">
+<item name = "Date">Thu Jul 27 01:33:42 2023
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">shat</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.175 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3330, 3330, 33.300 us, 33.300 us, 3330, 3330, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_sha256_transform_fu_591">sha256_transform, 50, 50, 0.500 us, 0.500 us, 32, 32, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_90_1">3328, 3328, 52, 52, 1, 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 216, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 9362, 51523, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 397, -</column>
+<column name="Register">-, -, 70, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, 1, 11, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 3, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_647_8_1_1_U139">mux_647_8_1_1, 0, 0, 0, 273, 0</column>
+<column name="grp_sha256_transform_fu_591">sha256_transform, 0, 0, 9362, 51250, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln90_fu_619_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln92_fu_769_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln95_1_fu_855_p2">+, 0, 0, 39, 32, 10</column>
+<column name="add_ln95_fu_841_p2">+, 0, 0, 39, 32, 1</column>
+<column name="ap_predicate_op149_call_state2_state1">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln90_fu_613_p2">icmp, 0, 0, 11, 7, 8</column>
+<column name="icmp_ln93_fu_775_p2">icmp, 0, 0, 20, 32, 7</column>
+<column name="icmp_ln95_fu_835_p2">icmp, 0, 0, 20, 32, 11</column>
+<column name="select_ln95_fu_847_p3">select, 0, 0, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">229, 53, 1, 53</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i">9, 2, 7, 14</column>
+<column name="i_5_fu_190">9, 2, 7, 14</column>
+<column name="p_out1_o">9, 2, 32, 64</column>
+<column name="p_out2_o">14, 3, 32, 96</column>
+<column name="p_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_data_address0">14, 3, 6, 18</column>
+<column name="sha256ctx_data_ce0">14, 3, 1, 3</column>
+<column name="sha256ctx_data_ce1">9, 2, 1, 2</column>
+<column name="sha256ctx_state_0_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_1_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_2_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_3_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_4_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_5_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_6_1_out_o">9, 2, 32, 64</column>
+<column name="sha256ctx_state_7_1_out_o">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln90_reg_974">7, 0, 7, 0</column>
+<column name="ap_CS_fsm">52, 0, 52, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="grp_sha256_transform_fu_591_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_5_fu_190">7, 0, 7, 0</column>
+<column name="icmp_ln90_reg_970">1, 0, 1, 0</column>
+<column name="icmp_ln93_reg_979">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sha2561_Pipeline_VITIS_LOOP_90_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, sha2561_Pipeline_VITIS_LOOP_90_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sha2561_Pipeline_VITIS_LOOP_90_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sha2561_Pipeline_VITIS_LOOP_90_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sha2561_Pipeline_VITIS_LOOP_90_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sha2561_Pipeline_VITIS_LOOP_90_1, return value</column>
+<column name="conv73_reload">in, 8, ap_none, conv73_reload, scalar</column>
+<column name="conv71_reload">in, 8, ap_none, conv71_reload, scalar</column>
+<column name="conv69_reload">in, 8, ap_none, conv69_reload, scalar</column>
+<column name="conv67_reload">in, 8, ap_none, conv67_reload, scalar</column>
+<column name="conv65_reload">in, 8, ap_none, conv65_reload, scalar</column>
+<column name="conv63_reload">in, 8, ap_none, conv63_reload, scalar</column>
+<column name="conv61_reload">in, 8, ap_none, conv61_reload, scalar</column>
+<column name="conv59_reload">in, 8, ap_none, conv59_reload, scalar</column>
+<column name="conv57_reload">in, 8, ap_none, conv57_reload, scalar</column>
+<column name="conv55_reload">in, 8, ap_none, conv55_reload, scalar</column>
+<column name="conv53_reload">in, 8, ap_none, conv53_reload, scalar</column>
+<column name="conv51_reload">in, 8, ap_none, conv51_reload, scalar</column>
+<column name="conv49_reload">in, 8, ap_none, conv49_reload, scalar</column>
+<column name="conv47_reload">in, 8, ap_none, conv47_reload, scalar</column>
+<column name="conv45_reload">in, 8, ap_none, conv45_reload, scalar</column>
+<column name="conv43_reload">in, 8, ap_none, conv43_reload, scalar</column>
+<column name="conv41_reload">in, 8, ap_none, conv41_reload, scalar</column>
+<column name="conv39_reload">in, 8, ap_none, conv39_reload, scalar</column>
+<column name="conv37_reload">in, 8, ap_none, conv37_reload, scalar</column>
+<column name="conv35_reload">in, 8, ap_none, conv35_reload, scalar</column>
+<column name="conv33_reload">in, 8, ap_none, conv33_reload, scalar</column>
+<column name="conv31_reload">in, 8, ap_none, conv31_reload, scalar</column>
+<column name="conv29_reload">in, 8, ap_none, conv29_reload, scalar</column>
+<column name="conv27_reload">in, 8, ap_none, conv27_reload, scalar</column>
+<column name="conv25_reload">in, 8, ap_none, conv25_reload, scalar</column>
+<column name="conv23_reload">in, 8, ap_none, conv23_reload, scalar</column>
+<column name="conv21_reload">in, 8, ap_none, conv21_reload, scalar</column>
+<column name="conv19_reload">in, 8, ap_none, conv19_reload, scalar</column>
+<column name="conv17_reload">in, 8, ap_none, conv17_reload, scalar</column>
+<column name="conv15_reload">in, 8, ap_none, conv15_reload, scalar</column>
+<column name="conv13_reload">in, 8, ap_none, conv13_reload, scalar</column>
+<column name="conv11_reload">in, 8, ap_none, conv11_reload, scalar</column>
+<column name="seg_buf_96_reload">in, 8, ap_none, seg_buf_96_reload, scalar</column>
+<column name="seg_buf_97_reload">in, 8, ap_none, seg_buf_97_reload, scalar</column>
+<column name="seg_buf_98_reload">in, 8, ap_none, seg_buf_98_reload, scalar</column>
+<column name="seg_buf_99_reload">in, 8, ap_none, seg_buf_99_reload, scalar</column>
+<column name="seg_buf_100_reload">in, 8, ap_none, seg_buf_100_reload, scalar</column>
+<column name="seg_buf_101_reload">in, 8, ap_none, seg_buf_101_reload, scalar</column>
+<column name="seg_buf_102_reload">in, 8, ap_none, seg_buf_102_reload, scalar</column>
+<column name="seg_buf_103_reload">in, 8, ap_none, seg_buf_103_reload, scalar</column>
+<column name="seg_buf_104_reload">in, 8, ap_none, seg_buf_104_reload, scalar</column>
+<column name="seg_buf_105_reload">in, 8, ap_none, seg_buf_105_reload, scalar</column>
+<column name="seg_buf_106_reload">in, 8, ap_none, seg_buf_106_reload, scalar</column>
+<column name="seg_buf_107_reload">in, 8, ap_none, seg_buf_107_reload, scalar</column>
+<column name="seg_buf_108_reload">in, 8, ap_none, seg_buf_108_reload, scalar</column>
+<column name="seg_buf_109_reload">in, 8, ap_none, seg_buf_109_reload, scalar</column>
+<column name="seg_buf_110_reload">in, 8, ap_none, seg_buf_110_reload, scalar</column>
+<column name="seg_buf_111_reload">in, 8, ap_none, seg_buf_111_reload, scalar</column>
+<column name="seg_buf_112_reload">in, 8, ap_none, seg_buf_112_reload, scalar</column>
+<column name="seg_buf_113_reload">in, 8, ap_none, seg_buf_113_reload, scalar</column>
+<column name="seg_buf_114_reload">in, 8, ap_none, seg_buf_114_reload, scalar</column>
+<column name="seg_buf_115_reload">in, 8, ap_none, seg_buf_115_reload, scalar</column>
+<column name="seg_buf_116_reload">in, 8, ap_none, seg_buf_116_reload, scalar</column>
+<column name="seg_buf_117_reload">in, 8, ap_none, seg_buf_117_reload, scalar</column>
+<column name="seg_buf_118_reload">in, 8, ap_none, seg_buf_118_reload, scalar</column>
+<column name="seg_buf_119_reload">in, 8, ap_none, seg_buf_119_reload, scalar</column>
+<column name="seg_buf_120_reload">in, 8, ap_none, seg_buf_120_reload, scalar</column>
+<column name="seg_buf_121_reload">in, 8, ap_none, seg_buf_121_reload, scalar</column>
+<column name="seg_buf_122_reload">in, 8, ap_none, seg_buf_122_reload, scalar</column>
+<column name="seg_buf_123_reload">in, 8, ap_none, seg_buf_123_reload, scalar</column>
+<column name="seg_buf_124_reload">in, 8, ap_none, seg_buf_124_reload, scalar</column>
+<column name="seg_buf_125_reload">in, 8, ap_none, seg_buf_125_reload, scalar</column>
+<column name="seg_buf_126_reload">in, 8, ap_none, seg_buf_126_reload, scalar</column>
+<column name="seg_buf_127_reload">in, 8, ap_none, seg_buf_127_reload, scalar</column>
+<column name="sha256ctx_data_address0">out, 6, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_ce0">out, 1, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_we0">out, 1, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_d0">out, 8, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_q0">in, 8, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_address1">out, 6, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_ce1">out, 1, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_data_q1">in, 8, ap_memory, sha256ctx_data, array</column>
+<column name="sha256ctx_state_5_1_out_i">in, 32, ap_ovld, sha256ctx_state_5_1_out, pointer</column>
+<column name="sha256ctx_state_5_1_out_o">out, 32, ap_ovld, sha256ctx_state_5_1_out, pointer</column>
+<column name="sha256ctx_state_5_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_5_1_out, pointer</column>
+<column name="sha256ctx_state_4_1_out_i">in, 32, ap_ovld, sha256ctx_state_4_1_out, pointer</column>
+<column name="sha256ctx_state_4_1_out_o">out, 32, ap_ovld, sha256ctx_state_4_1_out, pointer</column>
+<column name="sha256ctx_state_4_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_4_1_out, pointer</column>
+<column name="sha256ctx_state_3_1_out_i">in, 32, ap_ovld, sha256ctx_state_3_1_out, pointer</column>
+<column name="sha256ctx_state_3_1_out_o">out, 32, ap_ovld, sha256ctx_state_3_1_out, pointer</column>
+<column name="sha256ctx_state_3_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_3_1_out, pointer</column>
+<column name="sha256ctx_state_2_1_out_i">in, 32, ap_ovld, sha256ctx_state_2_1_out, pointer</column>
+<column name="sha256ctx_state_2_1_out_o">out, 32, ap_ovld, sha256ctx_state_2_1_out, pointer</column>
+<column name="sha256ctx_state_2_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_2_1_out, pointer</column>
+<column name="sha256ctx_state_1_1_out_i">in, 32, ap_ovld, sha256ctx_state_1_1_out, pointer</column>
+<column name="sha256ctx_state_1_1_out_o">out, 32, ap_ovld, sha256ctx_state_1_1_out, pointer</column>
+<column name="sha256ctx_state_1_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_1_1_out, pointer</column>
+<column name="sha256ctx_state_0_1_out_i">in, 32, ap_ovld, sha256ctx_state_0_1_out, pointer</column>
+<column name="sha256ctx_state_0_1_out_o">out, 32, ap_ovld, sha256ctx_state_0_1_out, pointer</column>
+<column name="sha256ctx_state_0_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_0_1_out, pointer</column>
+<column name="sha256ctx_state_6_1_out_i">in, 32, ap_ovld, sha256ctx_state_6_1_out, pointer</column>
+<column name="sha256ctx_state_6_1_out_o">out, 32, ap_ovld, sha256ctx_state_6_1_out, pointer</column>
+<column name="sha256ctx_state_6_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_6_1_out, pointer</column>
+<column name="sha256ctx_state_7_1_out_i">in, 32, ap_ovld, sha256ctx_state_7_1_out, pointer</column>
+<column name="sha256ctx_state_7_1_out_o">out, 32, ap_ovld, sha256ctx_state_7_1_out, pointer</column>
+<column name="sha256ctx_state_7_1_out_o_ap_vld">out, 1, ap_ovld, sha256ctx_state_7_1_out, pointer</column>
+<column name="p_out_i">in, 32, ap_ovld, p_out, pointer</column>
+<column name="p_out_o">out, 32, ap_ovld, p_out, pointer</column>
+<column name="p_out_o_ap_vld">out, 1, ap_ovld, p_out, pointer</column>
+<column name="p_out1_i">in, 32, ap_ovld, p_out1, pointer</column>
+<column name="p_out1_o">out, 32, ap_ovld, p_out1, pointer</column>
+<column name="p_out1_o_ap_vld">out, 1, ap_ovld, p_out1, pointer</column>
+<column name="p_out2_i">in, 32, ap_ovld, p_out2, pointer</column>
+<column name="p_out2_o">out, 32, ap_ovld, p_out2, pointer</column>
+<column name="p_out2_o_ap_vld">out, 1, ap_ovld, p_out2, pointer</column>
+</table>
+</item>
+</section>
+</profile>

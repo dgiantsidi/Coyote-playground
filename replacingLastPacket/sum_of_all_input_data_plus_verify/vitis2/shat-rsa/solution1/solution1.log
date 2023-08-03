@@ -1,0 +1,918 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.231 GB.
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha256_impl1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha2561.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha256.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 11.8 seconds. CPU system time: 1.46 seconds. Elapsed time: 14.94 seconds; current allocated memory: 227.621 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_108_3' (sha1/sha2561.cpp:108:20) in function 'sha2561' completely with a factor of 32 (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:104:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:100:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::hex(std::ios_base&)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:1027:0)
+INFO: [HLS 214-178] Inlining function 'axisIntf::axisIntf()' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'sha256_init(SHA256_CTX*)' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'sha256_update(SHA256_CTX*, unsigned char*, unsigned int)' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<512> xf::security::internal::modularExp<512, 20>(ap_uint<512>, ap_uint<20>, ap_uint<512>, ap_uint<512>)' into 'xf::security::rsa<512, 20>::process(ap_uint<512>, ap_uint<512>&)' (./sha256.hpp:382:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::rsa<512, 20>::updateKey(ap_uint<512>, ap_uint<20>)' into 'sign_rsa(ap_uint<512>, ap_uint<512>&)' (sha256.cpp:42:0)
+INFO: [HLS 214-178] Inlining function 'axisIntf::axisIntf()' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (sha256.cpp:62:0)
+INFO: [HLS 214-178] Inlining function 'sign_rsa(ap_uint<512>, ap_uint<512>&)' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (sha256.cpp:62:0)
+INFO: [HLS 214-248] Applying array_partition to 'seg_buf': Complete partitioning on dimension 1. (sha1/sha2561.cpp:76:16)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'input' with compact=bit mode in 584-bits (sha256.cpp:62:0)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'output' with compact=bit mode in 584-bits (sha256.cpp:62:0)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i528.sl_s_struct.ap_uint<512>ss_struct.ap_uint<6>ss_struct.ap_uint<1>ss' into '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&) (.1)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i592.s_struct.axisIntfs' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i583.s_struct.axisIntfs.1' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.08 seconds. CPU system time: 1.18 seconds. Elapsed time: 9.41 seconds; current allocated memory: 228.879 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 228.879 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.56 seconds; current allocated memory: 250.031 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:825: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.49 seconds; current allocated memory: 268.629 MB.
+INFO: [XFORM 203-510] Pipelining loop 'MON_PRODUCT_MOD' in function 'xf::security::internal::monProduct<512>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_110_1' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_115_2' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_118_3' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_138_4' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'PRODUCT_MOD' in function 'xf::security::internal::productMod<512>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_90_1' (sha1/sha256_impl1.cpp:88) in function 'sha2561' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_92_2' (sha1/sha2561.cpp:76) in function 'sha2561' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (sha1/sha256_impl1.cpp:32:21).
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_34_1' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_36_2' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_3' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (sha1/sha256_impl1.cpp:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (sha1/sha2561.cpp:86) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (sha1/sha2561.cpp:86) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::security::rsa<512, 20>::process' into 'sha256' (sha256.cpp:57) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (./sha256.hpp:152:5) in function 'xf::security::internal::productMod<512>'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha1/sha256_impl1.cpp:35:26)...601 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha2561' (sha1/sha256_impl1.cpp:76:21)...30 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.43 seconds; current allocated memory: 321.801 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_89_1' (sha1/sha2561.cpp:78:6) in function 'sha2561' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:109:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:111:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:116:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:119:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:126:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:127:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:128:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:129:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:130:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:131:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:132:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:133:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'sha256ctx.data' (sha1/sha256_impl1.cpp:91:31)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 5.97 seconds. CPU system time: 0.06 seconds. Elapsed time: 6.04 seconds; current allocated memory: 456.715 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+WARNING: [SYN 201-103] Legalizing function name 'productMod<512>' to 'productMod_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'monProduct<512>_Pipeline_MON_PRODUCT_MOD' to 'monProduct_512_Pipeline_MON_PRODUCT_MOD'.
+WARNING: [SYN 201-103] Legalizing function name 'monProduct<512>' to 'monProduct_512_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561_Pipeline_VITIS_LOOP_92_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_92_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_92_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.83 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.94 seconds; current allocated memory: 463.453 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 463.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_1', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_3', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_17', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_19', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_43', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_55', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_61', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 51, function 'sha256_transform'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 26.75 seconds. CPU system time: 0.05 seconds. Elapsed time: 26.8 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6.55 seconds. CPU system time: 0.02 seconds. Elapsed time: 6.57 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561_Pipeline_VITIS_LOOP_90_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_90_1'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 32, distance = 1, offset = 1) between 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform' and 'store' operation ('sha256ctx_data_addr_write_ln91', sha1/sha256_impl1.cpp:91) of variable 'tmp_2', sha1/sha256_impl1.cpp:91 on array 'sha256ctx_data'.
+WARNING: [HLS 200-875] II = 33 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 34 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 35 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 36 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 37 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 38 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 39 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 40 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 41 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 42 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 43 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 44 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 45 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 46 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 47 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 48 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 49 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 50 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform' and 'store' operation ('sha256ctx_data_addr_write_ln91', sha1/sha256_impl1.cpp:91) of variable 'tmp_2', sha1/sha256_impl1.cpp:91 on array 'sha256ctx_data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 52, Depth = 52, loop 'VITIS_LOOP_90_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 10.18 seconds. CPU system time: 0.04 seconds. Elapsed time: 10.21 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.03 seconds. CPU system time: 0 seconds. Elapsed time: 3.02 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_115_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_115_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_115_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7.57 seconds. CPU system time: 0 seconds. Elapsed time: 7.57 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_118_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_118_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_110_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_110_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_138_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_138_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_138_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.99 seconds. CPU system time: 0.01 seconds. Elapsed time: 1 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.14 seconds. CPU system time: 0 seconds. Elapsed time: 4.15 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 8.39 seconds. CPU system time: 0 seconds. Elapsed time: 8.39 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 5.26 seconds. CPU system time: 0 seconds. Elapsed time: 5.26 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'productMod_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PRODUCT_MOD'.
+WARNING: [HLS 200-880] The II Violation in module 'productMod_512_s' (loop 'PRODUCT_MOD'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'icmp' operation ('icmp_ln1077_1') and 'add' operation ('add_ln887').
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'PRODUCT_MOD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 15.33 seconds. CPU system time: 0.02 seconds. Elapsed time: 15.34 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'monProduct_512_Pipeline_MON_PRODUCT_MOD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MON_PRODUCT_MOD'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'MON_PRODUCT_MOD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'monProduct_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 583.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 5.25 seconds. CPU system time: 0 seconds. Elapsed time: 5.25 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha2561_Pipeline_VITIS_LOOP_92_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha2561_Pipeline_VITIS_LOOP_92_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 15.57 seconds. CPU system time: 0.02 seconds. Elapsed time: 15.59 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_transform' pipeline 'sha256_transform' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.65 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.67 seconds; current allocated memory: 583.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha2561_Pipeline_VITIS_LOOP_90_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./shat-rsa/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256 sha256 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.231 GB.
+INFO: [HLS 200-10] Analyzing design file 'sha256.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha2561.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha256_impl1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 14.82 seconds. CPU system time: 1.21 seconds. Elapsed time: 15.16 seconds; current allocated memory: 227.867 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-210] Disaggregating variable 'sha256ctx' (sha1/sha2561.cpp:86:13)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_108_3' (sha1/sha2561.cpp:108:20) in function 'sha2561' completely with a factor of 32 (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'axisIntf::axisIntf()' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'sha256_init(SHA256_CTX*)' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'sha256_update(SHA256_CTX*, unsigned char*, unsigned int)' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<512> xf::security::internal::modularExp<512, 20>(ap_uint<512>, ap_uint<20>, ap_uint<512>, ap_uint<512>)' into 'xf::security::rsa<512, 20>::process(ap_uint<512>, ap_uint<512>&)' (./sha256.hpp:383:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::rsa<512, 20>::updateKey(ap_uint<512>, ap_uint<20>)' into 'sign_rsa(ap_uint<512>, ap_uint<512>&)' (sha256.cpp:42:0)
+INFO: [HLS 214-178] Inlining function 'axisIntf::axisIntf()' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (sha256.cpp:62:0)
+INFO: [HLS 214-178] Inlining function 'sign_rsa(ap_uint<512>, ap_uint<512>&)' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (sha256.cpp:62:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:104:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:100:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::hex(std::ios_base&)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:1027:0)
+INFO: [HLS 214-248] Applying array_partition to 'seg_buf': Complete partitioning on dimension 1. (sha1/sha2561.cpp:76:16)
+INFO: [HLS 214-248] Applying array_partition to 'sha256ctx.data': Complete partitioning on dimension 1. (sha1/sha2561.cpp:86:13)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'input' with compact=bit mode in 584-bits (sha256.cpp:62:0)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'output' with compact=bit mode in 584-bits (sha256.cpp:62:0)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i528.sl_s_struct.ap_uint<512>ss_struct.ap_uint<6>ss_struct.ap_uint<1>ss' into '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&) (.1)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i592.s_struct.axisIntfs' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i583.s_struct.axisIntfs.1' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.56 seconds. CPU system time: 0.85 seconds. Elapsed time: 8.42 seconds; current allocated memory: 229.035 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 229.035 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 252.426 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:825: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 271.766 MB.
+INFO: [XFORM 203-510] Pipelining loop 'MON_PRODUCT_MOD' in function 'xf::security::internal::monProduct<512>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_110_1' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_115_2' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_118_3' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_138_4' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_90_1' (sha1/sha256_impl1.cpp:88) in function 'sha2561' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_92_2' (sha1/sha2561.cpp:76) in function 'sha2561' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (sha1/sha256_impl1.cpp:32:21).
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_34_1' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_36_2' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_3' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (sha1/sha256_impl1.cpp:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (sha1/sha2561.cpp:86) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (sha1/sha2561.cpp:86) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::security::rsa<512, 20>::process' into 'sha256' (sha256.cpp:57) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./sha256.hpp:153:9) to (./sha256.hpp:152:5) in function 'xf::security::internal::productMod<512>'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha1/sha256_impl1.cpp:35)...601 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha2561' (sha1/sha256_impl1.cpp:76:21)...30 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.37 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.4 seconds; current allocated memory: 328.824 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_89_1' (sha1/sha2561.cpp:78:6) in function 'sha2561' more than one sub loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3.3 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.34 seconds; current allocated memory: 483.797 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+WARNING: [SYN 201-103] Legalizing function name 'productMod<512>' to 'productMod_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'monProduct<512>_Pipeline_MON_PRODUCT_MOD' to 'monProduct_512_Pipeline_MON_PRODUCT_MOD'.
+WARNING: [SYN 201-103] Legalizing function name 'monProduct<512>' to 'monProduct_512_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561_Pipeline_VITIS_LOOP_92_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_92_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_92_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.54 seconds; current allocated memory: 492.043 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 492.043 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, function 'sha256_transform'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5.85 seconds. CPU system time: 0.04 seconds. Elapsed time: 5.9 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.18 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561_Pipeline_VITIS_LOOP_90_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_90_1'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 0) between 'store' operation ('sha256ctx_state_7_1_out_write_ln97', sha1/sha256_impl1.cpp:97) of variable 'sha256ctx.state[7]', sha1/sha256_impl1.cpp:94 on local variable 'sha256ctx_state_7_1_out' and 'load' operation ('sha256ctx_state_7_1_out_load', sha1/sha256_impl1.cpp:94) on local variable 'sha256ctx_state_7_1_out'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 25, Depth = 27, loop 'VITIS_LOOP_90_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.5 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.52 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.29 seconds. CPU system time: 0 seconds. Elapsed time: 1.28 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_115_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_115_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_115_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.6 seconds. CPU system time: 0 seconds. Elapsed time: 3.61 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_118_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_118_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_110_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_110_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_138_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_138_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_138_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.23 seconds. CPU system time: 0 seconds. Elapsed time: 4.24 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.14 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.84 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.85 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'productMod_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PRODUCT_MOD'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'PRODUCT_MOD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7.33 seconds. CPU system time: 0 seconds. Elapsed time: 7.33 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'monProduct_512_Pipeline_MON_PRODUCT_MOD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MON_PRODUCT_MOD'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'MON_PRODUCT_MOD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'monProduct_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 602.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.54 seconds. CPU system time: 0 seconds. Elapsed time: 2.54 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha2561_Pipeline_VITIS_LOOP_92_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha2561_Pipeline_VITIS_LOOP_92_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.31 seconds. CPU system time: 0 seconds. Elapsed time: 7.34 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'sha256_transform' is 26336 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.59 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.61 seconds; current allocated memory: 602.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha2561_Pipeline_VITIS_LOOP_90_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha2561_Pipeline_VITIS_LOOP_90_1' pipeline 'VITIS_LOOP_90_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_647_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha2561_Pipeline_VITIS_LOOP_90_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.12 seconds. CPU system time: 0.09 seconds. Elapsed time: 12.23 seconds; current allocated memory: 652.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final_Pipeline_VITIS_LOOP_115_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_final_Pipeline_VITIS_LOOP_115_2' pipeline 'VITIS_LOOP_115_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final_Pipeline_VITIS_LOOP_115_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.01 seconds; current allocated memory: 652.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final_Pipeline_VITIS_LOOP_118_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final_Pipeline_VITIS_LOOP_118_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.73 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.75 seconds; current allocated memory: 657.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final_Pipeline_VITIS_LOOP_110_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_final_Pipeline_VITIS_LOOP_110_1' pipeline 'VITIS_LOOP_110_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final_Pipeline_VITIS_LOOP_110_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 666.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final_Pipeline_VITIS_LOOP_138_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final_Pipeline_VITIS_LOOP_138_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.6 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 674.191 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.16 seconds; current allocated memory: 701.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha2561' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'sha2561' is 28640, found 2 HDL expressions with this fanout: (1'b1 == ap_CS_fsm_state6), (1'b1 == ap_CS_fsm_state5)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha2561'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 5.07 seconds; current allocated memory: 730.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'productMod_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'productMod_512_s' pipeline 'PRODUCT_MOD' pipeline type 'loop pipeline'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./shat-rsa/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256 sha256 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.231 GB.
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha256_impl1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha2561.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha256.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 29.22 seconds. CPU system time: 2.69 seconds. Elapsed time: 30.38 seconds; current allocated memory: 227.707 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_108_3' (sha1/sha2561.cpp:108:20) in function 'sha2561' completely with a factor of 32 (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:104:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:100:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::hex(std::ios_base&)' (/share/xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/ios_base.h:1027:0)
+INFO: [HLS 214-178] Inlining function 'axisIntf::axisIntf()' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'sha256_init(SHA256_CTX*)' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'sha256_update(SHA256_CTX*, unsigned char*, unsigned int)' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&)' (sha1/sha2561.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<512> xf::security::internal::modularExp<512, 20>(ap_uint<512>, ap_uint<20>, ap_uint<512>, ap_uint<512>)' into 'xf::security::rsa<512, 20>::process(ap_uint<512>, ap_uint<512>&)' (./sha256.hpp:383:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::rsa<512, 20>::updateKey(ap_uint<512>, ap_uint<20>)' into 'sign_rsa(ap_uint<512>, ap_uint<512>&)' (sha256.cpp:42:0)
+INFO: [HLS 214-178] Inlining function 'axisIntf::axisIntf()' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (sha256.cpp:62:0)
+INFO: [HLS 214-178] Inlining function 'sign_rsa(ap_uint<512>, ap_uint<512>&)' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (sha256.cpp:62:0)
+INFO: [HLS 214-248] Applying array_partition to 'seg_buf': Complete partitioning on dimension 1. (sha1/sha2561.cpp:76:16)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'input' with compact=bit mode in 584-bits (sha256.cpp:62:0)
+INFO: [HLS 214-241] Aggregating axis (hls::stream) variable 'output' with compact=bit mode in 584-bits (sha256.cpp:62:0)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i528.sl_s_struct.ap_uint<512>ss_struct.ap_uint<6>ss_struct.ap_uint<1>ss' into '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1' into 'sha2561(hls::stream<axisIntf, 0>&, axisIntf&, hls::stream<axisIntf, 0>&) (.1)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i592.s_struct.axisIntfs' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i583.s_struct.axisIntfs.1' into 'sha256(hls::stream<axisIntf, 0>&, hls::stream<axisIntf, 0>&)' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 11.42 seconds. CPU system time: 1.31 seconds. Elapsed time: 12.74 seconds; current allocated memory: 228.934 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 228.934 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 250.027 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:825: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 268.961 MB.
+INFO: [XFORM 203-510] Pipelining loop 'MON_PRODUCT_MOD' in function 'xf::security::internal::monProduct<512>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_110_1' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_115_2' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_118_3' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_138_4' (sha1/sha256_impl1.cpp:103) in function 'sha256_final' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'PRODUCT_MOD' in function 'xf::security::internal::productMod<512>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_90_1' (sha1/sha256_impl1.cpp:88) in function 'sha2561' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_92_2' (sha1/sha2561.cpp:76) in function 'sha2561' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (sha1/sha256_impl1.cpp:32:21).
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_34_1' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_36_2' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_3' (sha1/sha256_impl1.cpp:32) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (sha1/sha256_impl1.cpp:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (sha1/sha2561.cpp:86) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (sha1/sha2561.cpp:86) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::security::rsa<512, 20>::process' into 'sha256' (sha256.cpp:57) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (./sha256.hpp:152:5) in function 'xf::security::internal::productMod<512>'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (sha1/sha256_impl1.cpp:35:26)...601 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha2561' (sha1/sha256_impl1.cpp:76:21)...30 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.6 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.63 seconds; current allocated memory: 322.629 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_89_1' (sha1/sha2561.cpp:78:6) in function 'sha2561' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:109:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:111:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:116:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:119:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:126:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:127:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:128:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:129:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:130:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:131:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:132:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'ctx_data' (sha1/sha256_impl1.cpp:133:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'sha256ctx.data' (sha1/sha256_impl1.cpp:91:31)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.78 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.82 seconds; current allocated memory: 456.867 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+WARNING: [SYN 201-103] Legalizing function name 'productMod<512>' to 'productMod_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'monProduct<512>_Pipeline_MON_PRODUCT_MOD' to 'monProduct_512_Pipeline_MON_PRODUCT_MOD'.
+WARNING: [SYN 201-103] Legalizing function name 'monProduct<512>' to 'monProduct_512_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561_Pipeline_VITIS_LOOP_92_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_92_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_92_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.94 seconds. CPU system time: 0.05 seconds. Elapsed time: 1 seconds; current allocated memory: 463.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 463.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_1', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_3', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_17', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_19', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_43', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_55', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'data'.
+WARNING: [HLS 200-885] The II Violation in module 'sha256_transform' (function 'sha256_transform'): Unable to schedule 'load' operation ('data_load_61', sha1/sha256_impl1.cpp:35) on array 'data' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 51, function 'sha256_transform'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.57 seconds. CPU system time: 0.05 seconds. Elapsed time: 12.62 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.11 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561_Pipeline_VITIS_LOOP_90_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_90_1'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 32, distance = 1, offset = 1) between 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform' and 'store' operation ('sha256ctx_data_addr_write_ln91', sha1/sha256_impl1.cpp:91) of variable 'tmp_2', sha1/sha256_impl1.cpp:91 on array 'sha256ctx_data'.
+WARNING: [HLS 200-875] II = 33 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 34 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 35 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 36 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 37 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 38 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 39 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 40 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 41 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 42 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 43 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 44 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 45 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 46 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 47 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 48 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 49 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-875] II = 50 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.
+WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform' and 'store' operation ('sha256ctx_data_addr_write_ln91', sha1/sha256_impl1.cpp:91) of variable 'tmp_2', sha1/sha256_impl1.cpp:91 on array 'sha256ctx_data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 52, Depth = 52, loop 'VITIS_LOOP_90_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.76 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.78 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.42 seconds. CPU system time: 0 seconds. Elapsed time: 1.42 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_115_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_115_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_115_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.53 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_118_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_118_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_110_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_110_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final_Pipeline_VITIS_LOOP_138_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_138_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_138_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.94 seconds. CPU system time: 0 seconds. Elapsed time: 1.94 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha2561' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.91 seconds. CPU system time: 0 seconds. Elapsed time: 3.92 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.45 seconds. CPU system time: 0 seconds. Elapsed time: 2.45 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'productMod_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PRODUCT_MOD'.
+WARNING: [HLS 200-880] The II Violation in module 'productMod_512_s' (loop 'PRODUCT_MOD'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'icmp' operation ('icmp_ln1077_1') and 'add' operation ('add_ln887').
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'PRODUCT_MOD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 7.17 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'monProduct_512_Pipeline_MON_PRODUCT_MOD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'MON_PRODUCT_MOD'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'MON_PRODUCT_MOD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'monProduct_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 583.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.45 seconds. CPU system time: 0 seconds. Elapsed time: 2.46 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha2561_Pipeline_VITIS_LOOP_92_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha2561_Pipeline_VITIS_LOOP_92_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.27 seconds. CPU system time: 0 seconds. Elapsed time: 7.27 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_transform' pipeline 'sha256_transform' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.79 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.8 seconds; current allocated memory: 583.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10]

@@ -1,0 +1,228 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sha2561'" level="0">
+<item name = "Date">Thu Jul 27 12:24:50 2023
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">shat</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.175 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_sha2561_Pipeline_VITIS_LOOP_92_2_fu_672">sha2561_Pipeline_VITIS_LOOP_92_2, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_sha2561_Pipeline_VITIS_LOOP_90_1_fu_805">sha2561_Pipeline_VITIS_LOOP_90_1, 3330, 3330, 33.300 us, 33.300 us, 3330, 3330, no</column>
+<column name="grp_sha256_final_fu_896">sha256_final, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_90_1">?, ?, 3401, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 20826, 109016, -</column>
+<column name="Memory">0, -, 8, 9, 0</column>
+<column name="Multiplexer">-, -, -, 262, -</column>
+<column name="Register">-, -, 2239, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, 2, 25, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 8, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_sha2561_Pipeline_VITIS_LOOP_90_1_fu_805">sha2561_Pipeline_VITIS_LOOP_90_1, 0, 0, 9786, 52158, 0</column>
+<column name="grp_sha2561_Pipeline_VITIS_LOOP_92_2_fu_672">sha2561_Pipeline_VITIS_LOOP_92_2, 0, 0, 521, 2805, 0</column>
+<column name="grp_sha256_final_fu_896">sha256_final, 0, 0, 10519, 54053, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="sha256ctx_data_U">sha2561_sha256ctx_data_RAM_AUTO_1R1W, 0, 8, 9, 0, 64, 8, 1, 512</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">43, 8, 1, 8</column>
+<column name="ap_return_0">9, 2, 256, 512</column>
+<column name="ap_return_1">9, 2, 6, 12</column>
+<column name="input_r_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="p_lcssa1215_fu_62">9, 2, 32, 64</column>
+<column name="p_lcssa1317_fu_66">9, 2, 32, 64</column>
+<column name="p_lcssa140_fu_326">9, 2, 32, 64</column>
+<column name="sha256ctx_data_address0">14, 3, 6, 18</column>
+<column name="sha256ctx_data_address1">14, 3, 6, 18</column>
+<column name="sha256ctx_data_ce0">14, 3, 1, 3</column>
+<column name="sha256ctx_data_ce1">14, 3, 1, 3</column>
+<column name="sha256ctx_data_d0">14, 3, 8, 24</column>
+<column name="sha256ctx_data_we0">14, 3, 1, 3</column>
+<column name="sha256ctx_data_we1">9, 2, 1, 2</column>
+<column name="sha256ctx_state_0_0_fu_338">9, 2, 32, 64</column>
+<column name="sha256ctx_state_1_0_fu_342">9, 2, 32, 64</column>
+<column name="sha256ctx_state_2_0_fu_346">9, 2, 32, 64</column>
+<column name="sha256ctx_state_3_0_fu_350">9, 2, 32, 64</column>
+<column name="sha256ctx_state_4_0_fu_354">9, 2, 32, 64</column>
+<column name="sha256ctx_state_5_0_fu_358">9, 2, 32, 64</column>
+<column name="sha256ctx_state_6_0_fu_334">9, 2, 32, 64</column>
+<column name="sha256ctx_state_7_0_fu_330">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="ap_return_0_preg">256, 0, 512, 256</column>
+<column name="ap_return_1_preg">6, 0, 6, 0</column>
+<column name="conv12_lcssa77_fu_198">8, 0, 8, 0</column>
+<column name="conv14_lcssa79_fu_202">8, 0, 8, 0</column>
+<column name="conv16_lcssa81_fu_206">8, 0, 8, 0</column>
+<column name="conv18_lcssa83_fu_210">8, 0, 8, 0</column>
+<column name="conv20_lcssa85_fu_214">8, 0, 8, 0</column>
+<column name="conv22_lcssa87_fu_218">8, 0, 8, 0</column>
+<column name="conv24_lcssa89_fu_222">8, 0, 8, 0</column>
+<column name="conv26_lcssa91_fu_226">8, 0, 8, 0</column>
+<column name="conv28_lcssa93_fu_230">8, 0, 8, 0</column>
+<column name="conv30_lcssa95_fu_234">8, 0, 8, 0</column>
+<column name="conv32_lcssa97_fu_238">8, 0, 8, 0</column>
+<column name="conv34_lcssa99_fu_242">8, 0, 8, 0</column>
+<column name="conv36_lcssa101_fu_246">8, 0, 8, 0</column>
+<column name="conv38_lcssa103_fu_250">8, 0, 8, 0</column>
+<column name="conv40_lcssa105_fu_254">8, 0, 8, 0</column>
+<column name="conv42_lcssa107_fu_258">8, 0, 8, 0</column>
+<column name="conv44_lcssa109_fu_262">8, 0, 8, 0</column>
+<column name="conv46_lcssa111_fu_266">8, 0, 8, 0</column>
+<column name="conv48_lcssa113_fu_270">8, 0, 8, 0</column>
+<column name="conv50_lcssa115_fu_274">8, 0, 8, 0</column>
+<column name="conv52_lcssa117_fu_278">8, 0, 8, 0</column>
+<column name="conv54_lcssa119_fu_282">8, 0, 8, 0</column>
+<column name="conv56_lcssa121_fu_286">8, 0, 8, 0</column>
+<column name="conv58_lcssa123_fu_290">8, 0, 8, 0</column>
+<column name="conv60_lcssa125_fu_294">8, 0, 8, 0</column>
+<column name="conv62_lcssa127_fu_298">8, 0, 8, 0</column>
+<column name="conv64_lcssa129_fu_302">8, 0, 8, 0</column>
+<column name="conv66_lcssa131_fu_306">8, 0, 8, 0</column>
+<column name="conv68_lcssa133_fu_310">8, 0, 8, 0</column>
+<column name="conv70_lcssa135_fu_314">8, 0, 8, 0</column>
+<column name="conv72_lcssa137_fu_318">8, 0, 8, 0</column>
+<column name="conv74_lcssa139_fu_322">8, 0, 8, 0</column>
+<column name="grp_sha2561_Pipeline_VITIS_LOOP_90_1_fu_805_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_sha2561_Pipeline_VITIS_LOOP_92_2_fu_672_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_sha256_final_fu_896_ap_start_reg">1, 0, 1, 0</column>
+<column name="input_r_read_reg_3246">584, 0, 584, 0</column>
+<column name="p_lcssa1215_fu_62">32, 0, 32, 0</column>
+<column name="p_lcssa1317_fu_66">32, 0, 32, 0</column>
+<column name="p_lcssa140_fu_326">32, 0, 32, 0</column>
+<column name="seg_buf_10_fu_110">8, 0, 8, 0</column>
+<column name="seg_buf_11_fu_114">8, 0, 8, 0</column>
+<column name="seg_buf_12_fu_118">8, 0, 8, 0</column>
+<column name="seg_buf_13_fu_122">8, 0, 8, 0</column>
+<column name="seg_buf_14_fu_126">8, 0, 8, 0</column>
+<column name="seg_buf_15_fu_130">8, 0, 8, 0</column>
+<column name="seg_buf_16_fu_134">8, 0, 8, 0</column>
+<column name="seg_buf_17_fu_138">8, 0, 8, 0</column>
+<column name="seg_buf_18_fu_142">8, 0, 8, 0</column>
+<column name="seg_buf_19_fu_146">8, 0, 8, 0</column>
+<column name="seg_buf_1_fu_74">8, 0, 8, 0</column>
+<column name="seg_buf_20_fu_150">8, 0, 8, 0</column>
+<column name="seg_buf_21_fu_154">8, 0, 8, 0</column>
+<column name="seg_buf_22_fu_158">8, 0, 8, 0</column>
+<column name="seg_buf_23_fu_162">8, 0, 8, 0</column>
+<column name="seg_buf_24_fu_166">8, 0, 8, 0</column>
+<column name="seg_buf_25_fu_170">8, 0, 8, 0</column>
+<column name="seg_buf_26_fu_174">8, 0, 8, 0</column>
+<column name="seg_buf_27_fu_178">8, 0, 8, 0</column>
+<column name="seg_buf_28_fu_182">8, 0, 8, 0</column>
+<column name="seg_buf_29_fu_186">8, 0, 8, 0</column>
+<column name="seg_buf_2_fu_78">8, 0, 8, 0</column>
+<column name="seg_buf_30_fu_190">8, 0, 8, 0</column>
+<column name="seg_buf_31_fu_194">8, 0, 8, 0</column>
+<column name="seg_buf_3_fu_82">8, 0, 8, 0</column>
+<column name="seg_buf_4_fu_86">8, 0, 8, 0</column>
+<column name="seg_buf_5_fu_90">8, 0, 8, 0</column>
+<column name="seg_buf_6_fu_94">8, 0, 8, 0</column>
+<column name="seg_buf_7_fu_98">8, 0, 8, 0</column>
+<column name="seg_buf_8_fu_102">8, 0, 8, 0</column>
+<column name="seg_buf_9_fu_106">8, 0, 8, 0</column>
+<column name="seg_buf_fu_70">8, 0, 8, 0</column>
+<column name="sha256ctx_state_0_0_fu_338">32, 0, 32, 0</column>
+<column name="sha256ctx_state_1_0_fu_342">32, 0, 32, 0</column>
+<column name="sha256ctx_state_2_0_fu_346">32, 0, 32, 0</column>
+<column name="sha256ctx_state_3_0_fu_350">32, 0, 32, 0</column>
+<column name="sha256ctx_state_4_0_fu_354">32, 0, 32, 0</column>
+<column name="sha256ctx_state_5_0_fu_358">32, 0, 32, 0</column>
+<column name="sha256ctx_state_6_0_fu_334">32, 0, 32, 0</column>
+<column name="sha256ctx_state_7_0_fu_330">32, 0, 32, 0</column>
+<column name="tmp_reg_3256">1, 0, 1, 0</column>
+<column name="trunc_ln145_2_reg_3518">6, 0, 6, 0</column>
+<column name="trunc_ln145_reg_3251">512, 0, 512, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_return_0">out, 512, ap_ctrl_none, sha2561, return value</column>
+<column name="ap_return_1">out, 6, ap_ctrl_none, sha2561, return value</column>
+<column name="input_r_TDATA">in, 584, axis, input_r, pointer</column>
+<column name="input_r_TVALID">in, 1, axis, input_r, pointer</column>
+<column name="input_r_TREADY">out, 1, axis, input_r, pointer</column>
+</table>
+</item>
+</section>
+</profile>

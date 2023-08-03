@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln886_fu_84_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" VARIABLE="add_ln886" MODULE="sha256_verify_Pipeline_VITIS_LOOP_60_1" LOOP="VITIS_LOOP_60_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="result_V_fu_63_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:1069" VARIABLE="result_V" MODULE="sha256_verify" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

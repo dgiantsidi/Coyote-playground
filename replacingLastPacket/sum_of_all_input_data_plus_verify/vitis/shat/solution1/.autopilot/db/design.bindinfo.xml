@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln886_fu_90_p2" SOURCE="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h:886" VARIABLE="add_ln886" MODULE="sha256_Pipeline_VITIS_LOOP_27_1" LOOP="VITIS_LOOP_27_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

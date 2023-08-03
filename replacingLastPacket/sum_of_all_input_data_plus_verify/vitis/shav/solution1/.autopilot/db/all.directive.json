@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "sha256_verify",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/dimitra\/Coyote-playground\/replacingLastPacket\/sum_of_all_input_data_plus_verify\/vitis\/shav\/solution1\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sha256_verify"
+              }]
+          }
+        },
+        {
+          "functionName": "sha256_verify",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/dimitra\/Coyote-playground\/replacingLastPacket\/sum_of_all_input_data_plus_verify\/vitis\/shav\/solution1\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sha256_verify"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,279 @@
+
+
+================================================================
+== Vitis HLS Report for 'sha2561_Pipeline_VITIS_LOOP_90_1'
+================================================================
+* Date:           Wed Aug  2 23:09:46 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        shat-rsa
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.175 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3330|     3330|  33.300 us|  33.300 us|  3330|  3330|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                             |                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |           Instance          |      Module      |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------+------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_sha256_transform_fu_591  |sha256_transform  |       50|       50|  0.500 us|  0.500 us|   32|   32|      yes|
+        +-----------------------------+------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_90_1  |     3328|     3328|        52|         52|          1|    64|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      216|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|     9362|    51523|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      397|    -|
+|Register             |        -|     -|       70|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     9432|    52136|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|        1|       11|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|        3|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+------------------+---------+----+------+-------+-----+
+    |           Instance          |      Module      | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-----------------------------+------------------+---------+----+------+-------+-----+
+    |mux_647_8_1_1_U139           |mux_647_8_1_1     |        0|   0|     0|    273|    0|
+    |grp_sha256_transform_fu_591  |sha256_transform  |        0|   0|  9362|  51250|    0|
+    +-----------------------------+------------------+---------+----+------+-------+-----+
+    |Total                        |                  |        0|   0|  9362|  51523|    0|
+    +-----------------------------+------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln90_fu_619_p2                     |         +|   0|  0|  14|           7|           1|
+    |add_ln92_fu_769_p2                     |         +|   0|  0|  39|          32|           1|
+    |add_ln95_1_fu_855_p2                   |         +|   0|  0|  39|          32|          10|
+    |add_ln95_fu_841_p2                     |         +|   0|  0|  39|          32|           1|
+    |ap_predicate_op149_call_state2_state1  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln90_fu_613_p2                    |      icmp|   0|  0|  11|           7|           8|
+    |icmp_ln93_fu_775_p2                    |      icmp|   0|  0|  20|          32|           7|
+    |icmp_ln95_fu_835_p2                    |      icmp|   0|  0|  20|          32|          11|
+    |select_ln95_fu_847_p3                  |    select|   0|  0|  32|           1|          32|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0| 216|         176|          72|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+-----+-----------+-----+-----------+
+    |            Name           | LUT | Input Size| Bits| Total Bits|
+    +---------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  229|         53|    1|         53|
+    |ap_done_int                |    9|          2|    1|          2|
+    |ap_sig_allocacmp_i         |    9|          2|    7|         14|
+    |i_5_fu_190                 |    9|          2|    7|         14|
+    |p_out1_o                   |    9|          2|   32|         64|
+    |p_out2_o                   |   14|          3|   32|         96|
+    |p_out_o                    |    9|          2|   32|         64|
+    |sha256ctx_data_address0    |   14|          3|    6|         18|
+    |sha256ctx_data_ce0         |   14|          3|    1|          3|
+    |sha256ctx_data_ce1         |    9|          2|    1|          2|
+    |sha256ctx_state_0_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_1_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_2_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_3_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_4_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_5_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_6_1_out_o  |    9|          2|   32|         64|
+    |sha256ctx_state_7_1_out_o  |    9|          2|   32|         64|
+    +---------------------------+-----+-----------+-----+-----------+
+    |Total                      |  397|         90|  376|        842|
+    +---------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------+----+----+-----+-----------+
+    |                   Name                   | FF | LUT| Bits| Const Bits|
+    +------------------------------------------+----+----+-----+-----------+
+    |add_ln90_reg_974                          |   7|   0|    7|          0|
+    |ap_CS_fsm                                 |  52|   0|   52|          0|
+    |ap_done_reg                               |   1|   0|    1|          0|
+    |grp_sha256_transform_fu_591_ap_start_reg  |   1|   0|    1|          0|
+    |i_5_fu_190                                |   7|   0|    7|          0|
+    |icmp_ln90_reg_970                         |   1|   0|    1|          0|
+    |icmp_ln93_reg_979                         |   1|   0|    1|          0|
+    +------------------------------------------+----+----+-----+-----------+
+    |Total                                     |  70|   0|   70|          0|
+    +------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+----------------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++----------------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  sha2561_Pipeline_VITIS_LOOP_90_1|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  sha2561_Pipeline_VITIS_LOOP_90_1|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  sha2561_Pipeline_VITIS_LOOP_90_1|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  sha2561_Pipeline_VITIS_LOOP_90_1|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  sha2561_Pipeline_VITIS_LOOP_90_1|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  sha2561_Pipeline_VITIS_LOOP_90_1|  return value|
+|conv73_reload                     |   in|    8|     ap_none|                     conv73_reload|        scalar|
+|conv71_reload                     |   in|    8|     ap_none|                     conv71_reload|        scalar|
+|conv69_reload                     |   in|    8|     ap_none|                     conv69_reload|        scalar|
+|conv67_reload                     |   in|    8|     ap_none|                     conv67_reload|        scalar|
+|conv65_reload                     |   in|    8|     ap_none|                     conv65_reload|        scalar|
+|conv63_reload                     |   in|    8|     ap_none|                     conv63_reload|        scalar|
+|conv61_reload                     |   in|    8|     ap_none|                     conv61_reload|        scalar|
+|conv59_reload                     |   in|    8|     ap_none|                     conv59_reload|        scalar|
+|conv57_reload                     |   in|    8|     ap_none|                     conv57_reload|        scalar|
+|conv55_reload                     |   in|    8|     ap_none|                     conv55_reload|        scalar|
+|conv53_reload                     |   in|    8|     ap_none|                     conv53_reload|        scalar|
+|conv51_reload                     |   in|    8|     ap_none|                     conv51_reload|        scalar|
+|conv49_reload                     |   in|    8|     ap_none|                     conv49_reload|        scalar|
+|conv47_reload                     |   in|    8|     ap_none|                     conv47_reload|        scalar|
+|conv45_reload                     |   in|    8|     ap_none|                     conv45_reload|        scalar|
+|conv43_reload                     |   in|    8|     ap_none|                     conv43_reload|        scalar|
+|conv41_reload                     |   in|    8|     ap_none|                     conv41_reload|        scalar|
+|conv39_reload                     |   in|    8|     ap_none|                     conv39_reload|        scalar|
+|conv37_reload                     |   in|    8|     ap_none|                     conv37_reload|        scalar|
+|conv35_reload                     |   in|    8|     ap_none|                     conv35_reload|        scalar|
+|conv33_reload                     |   in|    8|     ap_none|                     conv33_reload|        scalar|
+|conv31_reload                     |   in|    8|     ap_none|                     conv31_reload|        scalar|
+|conv29_reload                     |   in|    8|     ap_none|                     conv29_reload|        scalar|
+|conv27_reload                     |   in|    8|     ap_none|                     conv27_reload|        scalar|
+|conv25_reload                     |   in|    8|     ap_none|                     conv25_reload|        scalar|
+|conv23_reload                     |   in|    8|     ap_none|                     conv23_reload|        scalar|
+|conv21_reload                     |   in|    8|     ap_none|                     conv21_reload|        scalar|
+|conv19_reload                     |   in|    8|     ap_none|                     conv19_reload|        scalar|
+|conv17_reload                     |   in|    8|     ap_none|                     conv17_reload|        scalar|
+|conv15_reload                     |   in|    8|     ap_none|                     conv15_reload|        scalar|
+|conv13_reload                     |   in|    8|     ap_none|                     conv13_reload|        scalar|
+|conv11_reload                     |   in|    8|     ap_none|                     conv11_reload|        scalar|
+|seg_buf_96_reload                 |   in|    8|     ap_none|                 seg_buf_96_reload|        scalar|
+|seg_buf_97_reload                 |   in|    8|     ap_none|                 seg_buf_97_reload|        scalar|
+|seg_buf_98_reload                 |   in|    8|     ap_none|                 seg_buf_98_reload|        scalar|
+|seg_buf_99_reload                 |   in|    8|     ap_none|                 seg_buf_99_reload|        scalar|
+|seg_buf_100_reload                |   in|    8|     ap_none|                seg_buf_100_reload|        scalar|
+|seg_buf_101_reload                |   in|    8|     ap_none|                seg_buf_101_reload|        scalar|
+|seg_buf_102_reload                |   in|    8|     ap_none|                seg_buf_102_reload|        scalar|
+|seg_buf_103_reload                |   in|    8|     ap_none|                seg_buf_103_reload|        scalar|
+|seg_buf_104_reload                |   in|    8|     ap_none|                seg_buf_104_reload|        scalar|
+|seg_buf_105_reload                |   in|    8|     ap_none|                seg_buf_105_reload|        scalar|
+|seg_buf_106_reload                |   in|    8|     ap_none|                seg_buf_106_reload|        scalar|
+|seg_buf_107_reload                |   in|    8|     ap_none|                seg_buf_107_reload|        scalar|
+|seg_buf_108_reload                |   in|    8|     ap_none|                seg_buf_108_reload|        scalar|
+|seg_buf_109_reload                |   in|    8|     ap_none|                seg_buf_109_reload|        scalar|
+|seg_buf_110_reload                |   in|    8|     ap_none|                seg_buf_110_reload|        scalar|
+|seg_buf_111_reload                |   in|    8|     ap_none|                seg_buf_111_reload|        scalar|
+|seg_buf_112_reload                |   in|    8|     ap_none|                seg_buf_112_reload|        scalar|
+|seg_buf_113_reload                |   in|    8|     ap_none|                seg_buf_113_reload|        scalar|
+|seg_buf_114_reload                |   in|    8|     ap_none|                seg_buf_114_reload|        scalar|
+|seg_buf_115_reload                |   in|    8|     ap_none|                seg_buf_115_reload|        scalar|
+|seg_buf_116_reload                |   in|    8|     ap_none|                seg_buf_116_reload|        scalar|
+|seg_buf_117_reload                |   in|    8|     ap_none|                seg_buf_117_reload|        scalar|
+|seg_buf_118_reload                |   in|    8|     ap_none|                seg_buf_118_reload|        scalar|
+|seg_buf_119_reload                |   in|    8|     ap_none|                seg_buf_119_reload|        scalar|
+|seg_buf_120_reload                |   in|    8|     ap_none|                seg_buf_120_reload|        scalar|
+|seg_buf_121_reload                |   in|    8|     ap_none|                seg_buf_121_reload|        scalar|
+|seg_buf_122_reload                |   in|    8|     ap_none|                seg_buf_122_reload|        scalar|
+|seg_buf_123_reload                |   in|    8|     ap_none|                seg_buf_123_reload|        scalar|
+|seg_buf_124_reload                |   in|    8|     ap_none|                seg_buf_124_reload|        scalar|
+|seg_buf_125_reload                |   in|    8|     ap_none|                seg_buf_125_reload|        scalar|
+|seg_buf_126_reload                |   in|    8|     ap_none|                seg_buf_126_reload|        scalar|
+|seg_buf_127_reload                |   in|    8|     ap_none|                seg_buf_127_reload|        scalar|
+|sha256ctx_data_address0           |  out|    6|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_ce0                |  out|    1|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_we0                |  out|    1|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_d0                 |  out|    8|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_q0                 |   in|    8|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_address1           |  out|    6|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_ce1                |  out|    1|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_data_q1                 |   in|    8|   ap_memory|                    sha256ctx_data|         array|
+|sha256ctx_state_5_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_5_1_out|       pointer|
+|sha256ctx_state_5_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_5_1_out|       pointer|
+|sha256ctx_state_5_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_5_1_out|       pointer|
+|sha256ctx_state_4_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_4_1_out|       pointer|
+|sha256ctx_state_4_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_4_1_out|       pointer|
+|sha256ctx_state_4_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_4_1_out|       pointer|
+|sha256ctx_state_3_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_3_1_out|       pointer|
+|sha256ctx_state_3_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_3_1_out|       pointer|
+|sha256ctx_state_3_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_3_1_out|       pointer|
+|sha256ctx_state_2_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_2_1_out|       pointer|
+|sha256ctx_state_2_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_2_1_out|       pointer|
+|sha256ctx_state_2_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_2_1_out|       pointer|
+|sha256ctx_state_1_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_1_1_out|       pointer|
+|sha256ctx_state_1_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_1_1_out|       pointer|
+|sha256ctx_state_1_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_1_1_out|       pointer|
+|sha256ctx_state_0_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_0_1_out|       pointer|
+|sha256ctx_state_0_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_0_1_out|       pointer|
+|sha256ctx_state_0_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_0_1_out|       pointer|
+|sha256ctx_state_6_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_6_1_out|       pointer|
+|sha256ctx_state_6_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_6_1_out|       pointer|
+|sha256ctx_state_6_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_6_1_out|       pointer|
+|sha256ctx_state_7_1_out_i         |   in|   32|     ap_ovld|           sha256ctx_state_7_1_out|       pointer|
+|sha256ctx_state_7_1_out_o         |  out|   32|     ap_ovld|           sha256ctx_state_7_1_out|       pointer|
+|sha256ctx_state_7_1_out_o_ap_vld  |  out|    1|     ap_ovld|           sha256ctx_state_7_1_out|       pointer|
+|p_out_i                           |   in|   32|     ap_ovld|                             p_out|       pointer|
+|p_out_o                           |  out|   32|     ap_ovld|                             p_out|       pointer|
+|p_out_o_ap_vld                    |  out|    1|     ap_ovld|                             p_out|       pointer|
+|p_out1_i                          |   in|   32|     ap_ovld|                            p_out1|       pointer|
+|p_out1_o                          |  out|   32|     ap_ovld|                            p_out1|       pointer|
+|p_out1_o_ap_vld                   |  out|    1|     ap_ovld|                            p_out1|       pointer|
+|p_out2_i                          |   in|   32|     ap_ovld|                            p_out2|       pointer|
+|p_out2_o                          |  out|   32|     ap_ovld|                            p_out2|       pointer|
+|p_out2_o_ap_vld                   |  out|    1|     ap_ovld|                            p_out2|       pointer|
++----------------------------------+-----+-----+------------+----------------------------------+--------------+
+

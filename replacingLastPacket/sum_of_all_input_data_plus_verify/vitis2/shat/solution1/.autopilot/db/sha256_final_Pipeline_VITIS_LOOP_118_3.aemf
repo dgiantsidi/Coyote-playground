@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690453487002">
+  <ports id="1" name="ctx_data" type="PortType" coreName="RAM" coreId="997420912" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="64">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="27" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="28" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="29" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="32" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="35" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="36" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="37" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="38" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="39" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@ports.0"/>
+  <edges id="42" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="45" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="69" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="71" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="72" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="73" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="74" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="75" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <blocks id="5" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="i" originalName="i" coreId="1108940992" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i_write_ln0" coreId="1109218736" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="br_ln0" coreId="1109609408" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="21" name="if.end.loopexit.exitStub" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln0" coreId="1108988688" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="76" pipe_depth="1" RegionName="VITIS_LOOP_118_3">
+    <basic_blocks id="12" name="for.inc" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.end.loopexit.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_2" lineNumber="118" originalName="i" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." coreId="1852403311" contextFuncName="sha256_final" bitwidth="6" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="icmp_ln118" lineNumber="118" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." rtlName="icmp_ln118_fu_56_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="sha256_final" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.61" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="add_ln118" lineNumber="118" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." rtlName="add_ln118_fu_62_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256_final" bitwidth="6" opcode="add" m_display="0" m_delay="0.7" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln118" lineNumber="118" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." coreId="1330007625" contextFuncName="sha256_final" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc.split</controlInputObjs>
+        <controlInputObjs>if.end.loopexit.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="sha1/sha256_impl1.cpp">
+        <validLinenumbers>118</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="19" name="for.inc.split" type="BlockType">
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_4_cast" lineNumber="118" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." rtlName="i_4_cast_fu_68_p1" coreId="1109608752" contextFuncName="sha256_final" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="ctx_data_addr" lineNumber="119" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." coreId="1109905280" contextFuncName="sha256_final" bitwidth="6" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="119" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>ctx_data</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ctx_data_addr_write_ln119" lineNumber="119" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="sha256_final" opcode="store" m_display="0" m_delay="0.66" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="119" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_write_ln118" lineNumber="118" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." coreId="1108748624" contextFuncName="sha256_final" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln118" lineNumber="118" fileName="sha1/sha256_impl1.cpp" fileDirectory=".." coreId="1110013568" contextFuncName="sha256_final" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sha1/sha256_impl1.cpp" linenumber="118" fileDirectory="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2" functionName="sha256_final"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="sha1/sha256_impl1.cpp">
+        <validLinenumbers>118</validLinenumbers>
+        <validLinenumbers>119</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="i_reg_78">
+    <nodeIds>2</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln118_fu_56">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ctx_data_addr_gep_fu_34">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_4_cast_fu_68">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_30">
+    <nodeIds>2</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln118_fu_62">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="i_2_load_fu_53">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_48">
+    <nodeIds>3</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln118_store_fu_73">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="ctx_data">
+    <nodeIds>16</nodeIds>
+  </memoryPorts>
+  <ioPorts name="ctx_data(p0)">
+    <contents name="store">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sha256_final_Pipeline_VITIS_LOOP_118_3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="58" mMaxLatency="58">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>5</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_118_3" mII="1" mDepth="1" mMinTripCount="56" mMaxTripCount="56" mMinLatency="56" mMaxLatency="56" mType="1">
+      <basicBlocks>12</basicBlocks>
+      <basicBlocks>19</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>21</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

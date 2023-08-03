@@ -1,0 +1,112 @@
+
+
+================================================================
+== Synthesis Summary Report of 'sha256'
+================================================================
++ General Information: 
+    * Date:           Tue Jul 25 22:17:52 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        shat
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
+    |               Modules              | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |            |           |     |
+    |               & Loops              | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |    LUT    | URAM|
+    +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
+    |+ sha256                            |     -|  3.60|        -|       -|         -|        -|     -|        no|     -|   -|  1103 (~0%)|  603 (~0%)|    -|
+    | + sha256_Pipeline_VITIS_LOOP_27_1  |     -|  3.60|        -|       -|         -|        -|     -|        no|     -|   -|   515 (~0%)|  552 (~0%)|    -|
+    |  o VITIS_LOOP_27_1                 |     -|  7.30|        -|       -|         1|        1|     -|       yes|     -|   -|           -|          -|    -|
+    +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+--------+--------+
+| Interface | Register Mode | TDATA | TREADY | TVALID |
++-----------+---------------+-------+--------+--------+
+| input_r   | both          | 584   | 1      | 1      |
+| output_r  | both          | 584   | 1      | 1      |
++-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------------+
+| Argument | Direction | Datatype             |
++----------+-----------+----------------------+
+| input    | in        | stream<axisIntf, 0>& |
+| output   | out       | stream<axisIntf, 0>& |
++----------+-----------+----------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | input_r      | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                               | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + sha256                           | 0   |        |           |     |        |         |
+|  + sha256_Pipeline_VITIS_LOOP_27_1 | 0   |        |           |     |        |         |
+|    add_ln886_fu_90_p2              | -   |        | add_ln886 | add | fabric | 0       |
++------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------+----------------------------------------+
+| Type      | Options                     | Location                               |
++-----------+-----------------------------+----------------------------------------+
+| interface | ap_ctrl_none port=return    | sha256.cpp:14 in sha256, return        |
+| interface | axis register port = input  | sha256.cpp:15 in sha256                |
+| interface | axis register port = output | sha256.cpp:16 in sha256                |
+| aggregate | variable=input bit          | sha256.cpp:17 in sha256, input         |
+| aggregate | variable=output bit         | sha256.cpp:18 in sha256, output        |
+| interface | ap_ctrl_none port=return    | sha256.cpp:50 in sha256_verify, return |
+| interface | axis register port = input  | sha256.cpp:51 in sha256_verify         |
+| interface | axis register port = output | sha256.cpp:52 in sha256_verify         |
+| aggregate | variable=input bit          | sha256.cpp:53 in sha256_verify, input  |
+| aggregate | variable=output bit         | sha256.cpp:54 in sha256_verify, output |
++-----------+-----------------------------+----------------------------------------+
+
+

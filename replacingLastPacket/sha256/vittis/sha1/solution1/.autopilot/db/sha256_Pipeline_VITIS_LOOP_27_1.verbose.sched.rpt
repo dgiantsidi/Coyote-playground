@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vitis HLS Report for 'sha256_Pipeline_VITIS_LOOP_27_1'
+================================================================
+* Date:           Tue Jul 25 19:37:26 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        sha1
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.696 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_27_1  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%add_i125 = alloca i32 1"   --->   Operation 4 'alloca' 'add_i125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i584 %input_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.38ns)   --->   "%store_ln0 = store i512 0, i512 %add_i125"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %do.body"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.69>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%add_i125_load = load i512 %add_i125"   --->   Operation 8 'load' 'add_i125_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specloopname_ln145 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 10 'specloopname' 'specloopname_ln145' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%input_r_read = read i584 @_ssdm_op_Read.axis.volatile.i584P128A, i584 %input_r" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 11 'read' 'input_r_read' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%trunc_ln145 = trunc i584 %input_r_read" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 12 'trunc' 'trunc_ln145' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln145_1 = trunc i584 %input_r_read" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 13 'trunc' 'trunc_ln145_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i584.i32, i584 %input_r_read, i32 582" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 14 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (3.30ns)   --->   "%add_ln886 = add i512 %trunc_ln145_1, i512 %add_i125_load"   --->   Operation 15 'add' 'add_ln886' <Predicate = true> <Delay = 3.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln32 = br i1 %tmp, void %do.body.do.body_crit_edge, void %do.end.exitStub" [../../sum_of_all_input_data_plus_verify/vitis/sha256.cpp:32]   --->   Operation 16 'br' 'br_ln32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.38ns)   --->   "%store_ln32 = store i512 %add_ln886, i512 %add_i125" [../../sum_of_all_input_data_plus_verify/vitis/sha256.cpp:32]   --->   Operation 17 'store' 'store_ln32' <Predicate = (!tmp)> <Delay = 0.38>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln32 = br void %do.body" [../../sum_of_all_input_data_plus_verify/vitis/sha256.cpp:32]   --->   Operation 18 'br' 'br_ln32' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%write_ln886 = write void @_ssdm_op_Write.ap_auto.i512P0A, i512 %add_i125_out, i512 %add_i125_load"   --->   Operation 19 'write' 'write_ln886' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%write_ln145 = write void @_ssdm_op_Write.ap_auto.i582P0A, i582 %p_out, i582 %trunc_ln145" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 20 'write' 'write_ln145' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 21 'ret' 'ret_ln0' <Predicate = (tmp)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation ('add_i125') [4]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'add_i125' [6]  (0.387 ns)
+
+ <State 2>: 3.7ns
+The critical path consists of the following:
+	'load' operation ('add_i125_load') on local variable 'add_i125' [9]  (0 ns)
+	'add' operation ('add_ln886') [16]  (3.31 ns)
+	'store' operation ('store_ln32', ../../sum_of_all_input_data_plus_verify/vitis/sha256.cpp:32) of variable 'add_ln886' on local variable 'add_i125' [19]  (0.387 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

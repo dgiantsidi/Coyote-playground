@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="shat" solutionName="solution1" date="2023-07-27T12:24:56.545+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'sha2561_Pipeline_VITIS_LOOP_90_1' (loop 'VITIS_LOOP_90_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform' and 'store' operation ('sha256ctx_data_addr_write_ln91', sha1/sha256_impl1.cpp:91) of variable 'tmp_1', sha1/sha256_impl1.cpp:91 on array 'sha256ctx_data'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="shat" solutionName="solution1" date="2023-07-27T12:24:08.913+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-875] II = 50 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.&#xA;Resolution: For help on HLS 200-875 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-875.html" projectName="shat" solutionName="solution1" date="2023-07-27T12:24:08.911+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-875] II = 49 is infeasible due to multiple pipeline iteration latency = 51 and incompatible II = 32 of 'call' operation ('call_ret2', sha1/sha256_impl1.cpp:94) to 'sha256_transform'.&#xA;Resolution: For help on HLS 200-875 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-875.html" projectName="shat" solutionName="solution1" date="2023-07-27T12:24:08.908+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

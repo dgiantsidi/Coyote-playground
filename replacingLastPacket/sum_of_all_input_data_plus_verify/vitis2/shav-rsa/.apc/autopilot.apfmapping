@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sha256_impl1.hpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha1/sha256_impl1.hpp"/>
+    <originFiles name="sha256_impl1.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha1/sha256_impl1.cpp"/>
+    <originFiles name="sha2561.hpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha1/sha2561.hpp"/>
+    <originFiles name="sha2561.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha1/sha2561.cpp"/>
+    <originFiles name="sha256.hpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha256.hpp"/>
+    <originFiles name="sha256.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha256.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="sha256_tb.cpp" path="/home/dimitra/Coyote-playground/replacingLastPacket/sum_of_all_input_data_plus_verify/vitis2/sha256_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,229 @@
+
+
+================================================================
+== Vitis HLS Report for 'sha256'
+================================================================
+* Date:           Wed Aug  2 23:09:24 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        shat-rsa
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.209 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+------------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) |  Iteration |  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |   Latency  |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+------------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_114_1  |    10400|    20740|  520 ~ 1037|          -|          -|    20|        no|
+        +--------------------+---------+---------+------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 8 
+6 --> 7 
+7 --> 5 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%R_V_1 = alloca i32 1"   --->   Operation 10 'alloca' 'R_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 11 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.38ns)   --->   "%store_ln114 = store i6 19, i6 %i" [./sha256.hpp:114]   --->   Operation 12 'store' 'store_ln114' <Predicate = true> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 1.83>
+ST_2 : Operation 13 [2/2] (1.83ns)   --->   "%call_ret = call i518 @sha2561, i584 %input_r" [sha256.cpp:74]   --->   Operation 13 'call' 'call_ret' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 14 [2/2] (0.00ns)   --->   "%processor_rMod_V = call i512 @productMod<512>" [./sha256.hpp:361]   --->   Operation 14 'call' 'processor_rMod_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.30>
+ST_3 : Operation 15 [1/2] (0.30ns)   --->   "%call_ret = call i518 @sha2561, i584 %input_r" [sha256.cpp:74]   --->   Operation 15 'call' 'call_ret' <Predicate = true> <Delay = 0.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%hash_tdata_V = extractvalue i518 %call_ret" [sha256.cpp:74]   --->   Operation 16 'extractvalue' 'hash_tdata_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%hash_tid_V = extractvalue i518 %call_ret" [sha256.cpp:74]   --->   Operation 17 'extractvalue' 'hash_tid_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%processor_rMod_V = call i512 @productMod<512>" [./sha256.hpp:361]   --->   Operation 18 'call' 'processor_rMod_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 19 [2/2] (0.00ns)   --->   "%P_V = call i512 @monProduct<512>, i512 %processor_rMod_V, i512 %hash_tdata_V" [./sha256.hpp:112]   --->   Operation 19 'call' 'P_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 20 [2/2] (0.00ns)   --->   "%R_V = call i512 @monProduct<512>, i512 %processor_rMod_V, i512 1" [./sha256.hpp:113]   --->   Operation 20 'call' 'R_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 4.30>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%spectopmodule_ln61 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [sha256.cpp:61]   --->   Operation 21 'spectopmodule' 'spectopmodule_ln61' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln61 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_11, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0" [sha256.cpp:61]   --->   Operation 22 'specinterface' 'specinterface_ln61' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i584 %input_r, void @empty_10, i32 1, i32 1, void @empty_12, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i584 %input_r"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i584 %output_r, void @empty_10, i32 1, i32 1, void @empty_12, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i584 %output_r"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/2] (3.88ns)   --->   "%P_V = call i512 @monProduct<512>, i512 %processor_rMod_V, i512 %hash_tdata_V" [./sha256.hpp:112]   --->   Operation 27 'call' 'P_V' <Predicate = true> <Delay = 3.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 28 [1/2] (3.88ns)   --->   "%R_V = call i512 @monProduct<512>, i512 %processor_rMod_V, i512 1" [./sha256.hpp:113]   --->   Operation 28 'call' 'R_V' <Predicate = true> <Delay = 3.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 29 [1/1] (0.41ns)   --->   "%store_ln114 = store i512 %R_V, i512 %R_V_1" [./sha256.hpp:114]   --->   Operation 29 'store' 'store_ln114' <Predicate = true> <Delay = 0.41>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln114 = br void %for.body.i.i" [./sha256.hpp:114]   --->   Operation 30 'br' 'br_ln114' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%i_8 = load i6 %i"   --->   Operation 31 'load' 'i_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %i_8, i32 5" [./sha256.hpp:114]   --->   Operation 32 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 20, i64 20, i64 20"   --->   Operation 33 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln114 = br i1 %tmp, void %for.body.i.split.i, void %process.exit" [./sha256.hpp:114]   --->   Operation 34 'br' 'br_ln114' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%R_V_1_load_1 = load i512 %R_V_1" [./sha256.hpp:115]   --->   Operation 35 'load' 'R_V_1_load_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_5 : Operation 36 [2/2] (0.00ns)   --->   "%ref_tmp_i_i = call i512 @monProduct<512>, i512 %R_V_1_load_1, i512 %R_V_1_load_1" [./sha256.hpp:115]   --->   Operation 36 'call' 'ref_tmp_i_i' <Predicate = (!tmp)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%R_V_1_load = load i512 %R_V_1" [./sha256.hpp:120]   --->   Operation 37 'load' 'R_V_1_load' <Predicate = (tmp)> <Delay = 0.00>
+ST_5 : Operation 38 [2/2] (0.00ns)   --->   "%result_V = call i512 @monProduct<512>, i512 %R_V_1_load, i512 1" [./sha256.hpp:120]   --->   Operation 38 'call' 'result_V' <Predicate = (tmp)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 4.30>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln114 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [./sha256.hpp:114]   --->   Operation 39 'specloopname' 'specloopname_ln114' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/2] (3.88ns)   --->   "%ref_tmp_i_i = call i512 @monProduct<512>, i512 %R_V_1_load_1, i512 %R_V_1_load_1" [./sha256.hpp:115]   --->   Operation 40 'call' 'ref_tmp_i_i' <Predicate = true> <Delay = 3.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln825 = trunc i6 %i_8"   --->   Operation 41 'trunc' 'trunc_ln825' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln825 = zext i5 %trunc_ln825"   --->   Operation 42 'zext' 'zext_ln825' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.59ns)   --->   "%shl_ln825 = shl i20 1, i20 %zext_ln825"   --->   Operation 43 'shl' 'shl_ln825' <Predicate = true> <Delay = 0.59> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_48 = bitselect i1 @_ssdm_op_BitSelect.i1.i20.i32, i20 %shl_ln825, i32 16"   --->   Operation 44 'bitselect' 'tmp_48' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln825_1 = trunc i20 %shl_ln825"   --->   Operation 45 'trunc' 'trunc_ln825_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%and_ln = bitconcatenate i17 @_ssdm_op_BitConcatenate.i17.i1.i15.i1, i1 %tmp_48, i15 0, i1 %trunc_ln825_1"   --->   Operation 46 'bitconcatenate' 'and_ln' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.68ns)   --->   "%p_Result_s = icmp_eq  i17 %and_ln, i17 0"   --->   Operation 47 'icmp' 'p_Result_s' <Predicate = true> <Delay = 0.68> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln116 = br i1 %p_Result_s, void %if.then.i.i, void %for.body.i.split.i.for.inc.i.i_crit_edge" [./sha256.hpp:116]   --->   Operation 48 'br' 'br_ln116' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [2/2] (0.00ns)   --->   "%ref_tmp10_i_i = call i512 @monProduct<512>, i512 %ref_tmp_i_i, i512 %P_V" [./sha256.hpp:117]   --->   Operation 49 'call' 'ref_tmp10_i_i' <Predicate = (!p_Result_s)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 50 [1/1] (0.41ns)   --->   "%store_ln116 = store i512 %ref_tmp_i_i, i512 %R_V_1" [./sha256.hpp:116]   --->   Operation 50 'store' 'store_ln116' <Predicate = (p_Result_s)> <Delay = 0.41>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln116 = br void %for.inc.i.i" [./sha256.hpp:116]   --->   Operation 51 'br' 'br_ln116' <Predicate = (p_Result_s)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 4.30>
+ST_7 : Operation 52 [1/2] (3.88ns)   --->   "%ref_tmp10_i_i = call i512 @monProduct<512>, i512 %ref_tmp_i_i, i512 %P_V" [./sha256.hpp:117]   --->   Operation 52 'call' 'ref_tmp10_i_i' <Predicate = (!p_Result_s)> <Delay = 3.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 53 [1/1] (0.41ns)   --->   "%store_ln118 = store i512 %ref_tmp10_i_i, i512 %R_V_1" [./sha256.hpp:118]   --->   Operation 53 'store' 'store_ln118' <Predicate = (!p_Result_s)> <Delay = 0.41>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln118 = br void %for.inc.i.i" [./sha256.hpp:118]   --->   Operation 54 'br' 'br_ln118' <Predicate = (!p_Result_s)> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.70ns)   --->   "%i_9 = add i6 %i_8, i6 63" [./sha256.hpp:114]   --->   Operation 55 'add' 'i_9' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 56 [1/1] (0.38ns)   --->   "%store_ln114 = store i6 %i_9, i6 %i" [./sha256.hpp:114]   --->   Operation 56 'store' 'store_ln114' <Predicate = true> <Delay = 0.38>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln114 = br void %for.body.i.i" [./sha256.hpp:114]   --->   Operation 57 'br' 'br_ln114' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 5> <Delay = 3.88>
+ST_8 : Operation 58 [1/2] (3.88ns)   --->   "%result_V = call i512 @monProduct<512>, i512 %R_V_1_load, i512 1" [./sha256.hpp:120]   --->   Operation 58 'call' 'result_V' <Predicate = true> <Delay = 3.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln174_cast = bitconcatenate i583 @_ssdm_op_BitConcatenate.i583.i1.i6.i64.i512, i1 1, i6 %hash_tid_V, i64 18446744073709551615, i512 %result_V" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 59 'bitconcatenate' 'zext_ln174_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln174 = zext i583 %zext_ln174_cast" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 60 'zext' 'zext_ln174' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 61 [2/2] (0.00ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.axis.volatile.i584P128A, i584 %output_r, i584 %zext_ln174" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 61 'write' 'write_ln174' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 9 <SV = 6> <Delay = 0.00>
+ST_9 : Operation 62 [1/2] (0.00ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.axis.volatile.i584P128A, i584 %output_r, i584 %zext_ln174" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 62 'write' 'write_ln174' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%ret_ln90 = ret" [sha256.cpp:90]   --->   Operation 63 'ret' 'ret_ln90' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation ('i') [4]  (0 ns)
+	'store' operation ('store_ln114', ./sha256.hpp:114) of constant 19 on local variable 'i' [17]  (0.387 ns)
+
+ <State 2>: 1.83ns
+The critical path consists of the following:
+	'call' operation ('call_ret', sha256.cpp:74) to 'sha2561' [11]  (1.83 ns)
+
+ <State 3>: 0.303ns
+The critical path consists of the following:
+	'call' operation ('call_ret', sha256.cpp:74) to 'sha2561' [11]  (0.303 ns)
+
+ <State 4>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('R.V', ./sha256.hpp:113) to 'monProduct<512>' [16]  (3.89 ns)
+	'store' operation ('store_ln114', ./sha256.hpp:114) of variable 'R.V', ./sha256.hpp:113 on local variable 'R.V' [18]  (0.42 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('ref_tmp_i_i', ./sha256.hpp:115) to 'monProduct<512>' [28]  (3.89 ns)
+	'store' operation ('store_ln116', ./sha256.hpp:116) of variable 'ref_tmp_i_i', ./sha256.hpp:115 on local variable 'R.V' [42]  (0.42 ns)
+
+ <State 7>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('ref_tmp10_i_i', ./sha256.hpp:117) to 'monProduct<512>' [38]  (3.89 ns)
+	'store' operation ('store_ln118', ./sha256.hpp:118) of variable 'ref_tmp10_i_i', ./sha256.hpp:117 on local variable 'R.V' [39]  (0.42 ns)
+
+ <State 8>: 3.89ns
+The critical path consists of the following:
+	'call' operation ('result.V', ./sha256.hpp:120) to 'monProduct<512>' [50]  (3.89 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

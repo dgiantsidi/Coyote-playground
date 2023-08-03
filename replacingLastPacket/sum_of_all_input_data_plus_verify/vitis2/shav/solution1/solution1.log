@@ -1,0 +1,63 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 227.172 MB.
+INFO: [HLS 200-10] Analyzing design file 'tweetacl.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha256_impl1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha1/sha2561.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sha256.cpp' ... 
+ERROR: [HLS 207-3734] no viable conversion from 'AXIS_DATA' (aka 'axisIntf') to 'const ap_uint<1>' (sha256.cpp:110:17)
+INFO: [HLS 207-4378] candidate constructor (the implicit copy constructor) not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'const ap_uint<1> &' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:227:8)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'bool' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:327:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'char' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:328:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'signed char' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:329:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'unsigned char' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:330:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'short' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:331:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'unsigned short' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:332:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'int' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:333:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'unsigned int' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:334:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'long' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:335:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'unsigned long' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:336:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'ap_slong' (aka 'long long') for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:337:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'ap_ulong' (aka 'unsigned long long') for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:338:41)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'double' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:340:17)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'float' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:341:17)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'half' (aka '__fp16') for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:342:3)
+INFO: [HLS 207-4378] candidate constructor not viable: no known conversion from 'AXIS_DATA' (aka 'axisIntf') to 'const char *' for 1st argument (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:345:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_uint<_AP_W>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:232:55)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int<_AP_W>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:238:55)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_uint<_AP_W>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:244:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int<_AP_W>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:250:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref<_AP_W, _AP_S>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:266:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:269:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref<_AP_W1, type-parameter-0-1, _AP_W2, type-parameter-0-3>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:272:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:277:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:282:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:288:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:294:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:300:55)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:306:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:312:41)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'axisIntf' (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:318:41)
+INFO: [HLS 207-4414] passing argument to parameter 'din' here (/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:173:74)
+ERROR: [HLS 207-3734] no viable conversion from 'AXIS_DATA' (aka 'axisIntf') to 'const ap_uint<1>' (sha256.cpp:114:15)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.21 seconds. CPU system time: 1.41 seconds. Elapsed time: 11.71 seconds; current allocated memory: 1.035 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

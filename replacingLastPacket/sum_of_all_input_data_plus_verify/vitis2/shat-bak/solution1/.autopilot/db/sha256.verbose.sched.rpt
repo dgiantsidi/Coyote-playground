@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'sha256'
+================================================================
+* Date:           Thu Jul 27 01:32:42 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        shat
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.175 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_Val2_1_loc = alloca i64 1"   --->   Operation 10 'alloca' 'p_Val2_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%signature = alloca i64 1" [sha256.cpp:61]   --->   Operation 11 'alloca' 'signature' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.83>
+ST_2 : Operation 12 [2/2] (1.83ns)   --->   "%call_ret = call i518 @sha2561, i584 %input_r, i584 %output_r" [sha256.cpp:54]   --->   Operation 12 'call' 'call_ret' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 13 [2/2] (0.00ns)   --->   "%call_ln0 = call void @sha256_Pipeline_1, i8 %signature"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.30>
+ST_3 : Operation 14 [1/2] (0.30ns)   --->   "%call_ret = call i518 @sha2561, i584 %input_r, i584 %output_r" [sha256.cpp:54]   --->   Operation 14 'call' 'call_ret' <Predicate = true> <Delay = 0.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%hash_tdata_V = extractvalue i518 %call_ret" [sha256.cpp:54]   --->   Operation 15 'extractvalue' 'hash_tdata_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%buf_tid_V = extractvalue i518 %call_ret" [sha256.cpp:54]   --->   Operation 16 'extractvalue' 'buf_tid_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln0 = call void @sha256_Pipeline_1, i8 %signature"   --->   Operation 17 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 2.85>
+ST_4 : Operation 18 [2/2] (2.85ns)   --->   "%call_ln54 = call void @sha256_Pipeline_VITIS_LOOP_64_1, i512 %hash_tdata_V, i8 %signature" [sha256.cpp:54]   --->   Operation 18 'call' 'call_ln54' <Predicate = true> <Delay = 2.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln54 = call void @sha256_Pipeline_VITIS_LOOP_64_1, i512 %hash_tdata_V, i8 %signature" [sha256.cpp:54]   --->   Operation 19 'call' 'call_ln54' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln0 = call void @sha256_Pipeline_VITIS_LOOP_89_3, i8 %signature, i512 %p_Val2_1_loc"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.98>
+ST_7 : Operation 21 [1/2] (0.98ns)   --->   "%call_ln0 = call void @sha256_Pipeline_VITIS_LOOP_89_3, i8 %signature, i512 %p_Val2_1_loc"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.98> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%p_Val2_1_loc_load = load i512 %p_Val2_1_loc"   --->   Operation 22 'load' 'p_Val2_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i582 @_ssdm_op_BitConcatenate.i582.i6.i576, i6 %buf_tid_V, i576 0" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 23 'bitconcatenate' 'shl_ln2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (0.00ns)   --->   "%or_ln174 = or i582 %shl_ln2, i582 247330401473104534047094713089704592935557324103005993786583690272304831728808305726594637031169498012795797127849235911661333176120265159113792272289946597970173123142615040" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 24 'or' 'or_ln174' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%tmp = partselect i70 @_ssdm_op_PartSelect.i70.i582.i32.i32, i582 %or_ln174, i32 512, i32 581" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 25 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln174_cast = bitconcatenate i583 @_ssdm_op_BitConcatenate.i583.i1.i70.i512, i1 1, i70 %tmp, i512 %p_Val2_1_loc_load" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 26 'bitconcatenate' 'zext_ln174_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln174 = zext i583 %zext_ln174_cast" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 27 'zext' 'zext_ln174' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [2/2] (0.00ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.axis.volatile.i584P128A, i584 %output_r, i584 %zext_ln174" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 28 'write' 'write_ln174' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 29 [1/1] (0.00ns)   --->   "%spectopmodule_ln41 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [sha256.cpp:41]   --->   Operation 29 'spectopmodule' 'spectopmodule_ln41' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln41 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0" [sha256.cpp:41]   --->   Operation 30 'specinterface' 'specinterface_ln41' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i584 %input_r, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i584 %input_r"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i584 %output_r, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i584 %output_r"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 35 [1/2] (0.00ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.axis.volatile.i584P128A, i584 %output_r, i584 %zext_ln174" [/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 35 'write' 'write_ln174' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_9 : Operation 36 [1/1] (0.00ns)   --->   "%ret_ln94 = ret" [sha256.cpp:94]   --->   Operation 36 'ret' 'ret_ln94' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.83ns
+The critical path consists of the following:
+	'call' operation ('call_ret', sha256.cpp:54) to 'sha2561' [11]  (1.83 ns)
+
+ <State 3>: 0.303ns
+The critical path consists of the following:
+	'call' operation ('call_ret', sha256.cpp:54) to 'sha2561' [11]  (0.303 ns)
+
+ <State 4>: 2.85ns
+The critical path consists of the following:
+	'call' operation ('call_ln54', sha256.cpp:54) to 'sha256_Pipeline_VITIS_LOOP_64_1' [15]  (2.85 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0.987ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'sha256_Pipeline_VITIS_LOOP_89_3' [16]  (0.987 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
