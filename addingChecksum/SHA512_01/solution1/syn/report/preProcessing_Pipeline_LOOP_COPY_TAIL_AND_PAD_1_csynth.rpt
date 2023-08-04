@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vitis HLS Report for 'preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1'
+================================================================
+* Date:           Thu Aug  3 15:02:53 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        SHA512_01
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.898 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       16|       16|  64.000 ns|  64.000 ns|   16|   16|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |          Loop Name         |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_COPY_TAIL_AND_PAD_1  |       14|       14|         1|          1|          1|    14|       yes|
+        +----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     5406|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       27|    -|
+|Register             |        -|     -|      518|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      518|     5433|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+------+------------+------------+
+    |       Variable Name      | Operation| DSP| FF|  LUT | Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+------+------------+------------+
+    |add_ln886_fu_282_p2       |         +|   0|  0|    12|           4|           1|
+    |sub_ln674_1_fu_356_p2     |         -|   0|  0|    17|          10|          10|
+    |sub_ln674_2_fu_386_p2     |         -|   0|  0|    17|           9|          10|
+    |sub_ln674_fu_344_p2       |         -|   0|  0|    17|          10|          10|
+    |p_Result_s_fu_412_p2      |       and|   0|  0|   511|         512|         512|
+    |icmp_ln1073_fu_276_p2     |      icmp|   0|  0|     9|           4|           3|
+    |icmp_ln674_fu_320_p2      |      icmp|   0|  0|    11|           9|           9|
+    |lshr_ln674_1_fu_406_p2    |      lshr|   0|  0|  2171|           2|         512|
+    |lshr_ln674_fu_400_p2      |      lshr|   0|  0|  2171|         512|         512|
+    |Hi_fu_314_p2              |        or|   0|  0|     9|           6|           9|
+    |select_ln674_1_fu_370_p3  |    select|   0|  0|   428|           1|         512|
+    |select_ln674_2_fu_378_p3  |    select|   0|  0|    10|           1|          10|
+    |select_ln674_fu_362_p3    |    select|   0|  0|    10|           1|          10|
+    |xor_ln598_fu_300_p2       |       xor|   0|  0|     3|           3|           2|
+    |xor_ln674_fu_350_p2       |       xor|   0|  0|    10|          10|           9|
+    +--------------------------+----------+----+---+------+------------+------------+
+    |Total                     |          |   0|  0|  5406|        1094|        2131|
+    +--------------------------+----------+----+---+------+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                 |   9|          2|    1|          2|
+    |ap_sig_allocacmp_index_V_1  |   9|          2|    4|          8|
+    |index_V_fu_104              |   9|          2|    4|          8|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  27|          6|    9|         18|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |   1|   0|    1|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |b_M_V_1_fu_112  |  64|   0|   64|          0|
+    |b_M_V_2_fu_116  |  64|   0|   64|          0|
+    |b_M_V_3_fu_120  |  64|   0|   64|          0|
+    |b_M_V_4_fu_124  |  64|   0|   64|          0|
+    |b_M_V_5_fu_128  |  64|   0|   64|          0|
+    |b_M_V_6_fu_132  |  64|   0|   64|          0|
+    |b_M_V_7_fu_136  |  64|   0|   64|          0|
+    |b_M_V_fu_108    |  64|   0|   64|          0|
+    |index_V_fu_104  |   4|   0|    4|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           | 518|   0|  518|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++---------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  preProcessing_Pipeline_LOOP_COPY_TAIL_AND_PAD_1|  return value|
+|inp512c_V_2          |   in|  512|     ap_none|                                      inp512c_V_2|        scalar|
+|b_M_V_13_out         |  out|   64|      ap_vld|                                     b_M_V_13_out|       pointer|
+|b_M_V_13_out_ap_vld  |  out|    1|      ap_vld|                                     b_M_V_13_out|       pointer|
+|b_M_V_12_out         |  out|   64|      ap_vld|                                     b_M_V_12_out|       pointer|
+|b_M_V_12_out_ap_vld  |  out|    1|      ap_vld|                                     b_M_V_12_out|       pointer|
+|b_M_V_11_out         |  out|   64|      ap_vld|                                     b_M_V_11_out|       pointer|
+|b_M_V_11_out_ap_vld  |  out|    1|      ap_vld|                                     b_M_V_11_out|       pointer|
+|b_M_V_10_out         |  out|   64|      ap_vld|                                     b_M_V_10_out|       pointer|
+|b_M_V_10_out_ap_vld  |  out|    1|      ap_vld|                                     b_M_V_10_out|       pointer|
+|b_M_V_9_out          |  out|   64|      ap_vld|                                      b_M_V_9_out|       pointer|
+|b_M_V_9_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_9_out|       pointer|
+|b_M_V_8_out          |  out|   64|      ap_vld|                                      b_M_V_8_out|       pointer|
+|b_M_V_8_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_8_out|       pointer|
+|b_M_V_7_out          |  out|   64|      ap_vld|                                      b_M_V_7_out|       pointer|
+|b_M_V_7_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_7_out|       pointer|
+|b_M_V_6_out          |  out|   64|      ap_vld|                                      b_M_V_6_out|       pointer|
+|b_M_V_6_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_6_out|       pointer|
+|b_M_V_5_out          |  out|   64|      ap_vld|                                      b_M_V_5_out|       pointer|
+|b_M_V_5_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_5_out|       pointer|
+|b_M_V_4_out          |  out|   64|      ap_vld|                                      b_M_V_4_out|       pointer|
+|b_M_V_4_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_4_out|       pointer|
+|b_M_V_3_out          |  out|   64|      ap_vld|                                      b_M_V_3_out|       pointer|
+|b_M_V_3_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_3_out|       pointer|
+|b_M_V_2_out          |  out|   64|      ap_vld|                                      b_M_V_2_out|       pointer|
+|b_M_V_2_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_2_out|       pointer|
+|b_M_V_1_out          |  out|   64|      ap_vld|                                      b_M_V_1_out|       pointer|
+|b_M_V_1_out_ap_vld   |  out|    1|      ap_vld|                                      b_M_V_1_out|       pointer|
+|b_M_V_out            |  out|   64|      ap_vld|                                        b_M_V_out|       pointer|
+|b_M_V_out_ap_vld     |  out|    1|      ap_vld|                                        b_M_V_out|       pointer|
++---------------------+-----+-----+------------+-------------------------------------------------+--------------+
+

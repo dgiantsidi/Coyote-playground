@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="DESHA512_01" solutionName="solution1" date="2023-08-03T21:15:12.371+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sha512Top&lt;512u, 512u>' to 'sha512Top_512u_512u_s'." projectName="DESHA512_01" solutionName="solution1" date="2023-08-03T21:14:57.863+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'SHA512Digest&lt;64u, 512u>' to 'SHA512Digest_64u_512u_s'." projectName="DESHA512_01" solutionName="solution1" date="2023-08-03T21:14:57.837+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'SHA512Digest&lt;64u, 512u>_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS' to 'SHA512Digest_64u_512u_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS'." projectName="DESHA512_01" solutionName="solution1" date="2023-08-03T21:14:57.835+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

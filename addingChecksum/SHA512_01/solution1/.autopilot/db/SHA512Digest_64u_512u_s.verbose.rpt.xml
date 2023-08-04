@@ -1,0 +1,180 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'SHA512Digest_64u_512u_s'" level="0">
+<item name = "Date">Thu Aug  3 15:02:56 2023
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">SHA512_01</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 2.768 ns, 1.08 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">168, 168, 0.672 us, 0.672 us, 168, 168, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_SHA512Digest_64u_512u_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS_fu_163">SHA512Digest_64u_512u_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS, 163, 163, 0.652 us, 0.652 us, 163, 163, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_SHA1_DIGEST_NBLK">166, 166, 166, -, -, 1, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 574, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 724, 1770, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 157, -</column>
+<column name="Register">-, -, 1031, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_SHA512Digest_64u_512u_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS_fu_163">SHA512Digest_64u_512u_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS, 0, 0, 724, 1770, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln232_3_fu_317_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_4_fu_322_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_5_fu_327_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_6_fu_332_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_7_fu_337_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_8_fu_342_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_9_fu_347_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln232_fu_312_p2">+, 0, 0, 71, 64, 64</column>
+<column name="ap_block_state2_io">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="a_V_fu_74">9, 2, 64, 128</column>
+<column name="ap_NS_fsm">31, 6, 1, 6</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="b_V_fu_78">9, 2, 64, 128</column>
+<column name="c_V_fu_82">9, 2, 64, 128</column>
+<column name="d_V_fu_86">9, 2, 64, 128</column>
+<column name="e_V_fu_90">9, 2, 64, 128</column>
+<column name="end_nblk_strm233_blk_n">9, 2, 1, 2</column>
+<column name="f_V_fu_94">9, 2, 64, 128</column>
+<column name="g_V_fu_98">9, 2, 64, 128</column>
+<column name="h_V_fu_102">9, 2, 64, 128</column>
+<column name="output_r_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="tid_strm36_blk_n">9, 2, 1, 2</column>
+<column name="tkeep_strm35_blk_n">9, 2, 1, 2</column>
+<column name="w_strm34_read">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="a_V_fu_74">64, 0, 64, 0</column>
+<column name="a_V_load_reg_499">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="b_V_fu_78">64, 0, 64, 0</column>
+<column name="b_V_load_reg_505">64, 0, 64, 0</column>
+<column name="c_V_fu_82">64, 0, 64, 0</column>
+<column name="c_V_load_reg_511">64, 0, 64, 0</column>
+<column name="d_V_fu_86">64, 0, 64, 0</column>
+<column name="d_V_load_reg_517">64, 0, 64, 0</column>
+<column name="e_V_fu_90">64, 0, 64, 0</column>
+<column name="e_V_load_reg_523">64, 0, 64, 0</column>
+<column name="f_V_fu_94">64, 0, 64, 0</column>
+<column name="f_V_load_reg_529">64, 0, 64, 0</column>
+<column name="g_V_fu_98">64, 0, 64, 0</column>
+<column name="g_V_load_reg_535">64, 0, 64, 0</column>
+<column name="grp_SHA512Digest_64u_512u_Pipeline_LOOP_SHA1_UPDATE_80_ROUNDS_fu_163_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_V_fu_102">64, 0, 64, 0</column>
+<column name="h_V_load_reg_541">64, 0, 64, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, SHA512Digest&lt;64u, 512u&gt;, return value</column>
+<column name="w_strm34_dout">in, 64, ap_fifo, w_strm34, pointer</column>
+<column name="w_strm34_num_data_valid">in, 6, ap_fifo, w_strm34, pointer</column>
+<column name="w_strm34_fifo_cap">in, 6, ap_fifo, w_strm34, pointer</column>
+<column name="w_strm34_empty_n">in, 1, ap_fifo, w_strm34, pointer</column>
+<column name="w_strm34_read">out, 1, ap_fifo, w_strm34, pointer</column>
+<column name="end_nblk_strm233_dout">in, 1, ap_fifo, end_nblk_strm233, pointer</column>
+<column name="end_nblk_strm233_num_data_valid">in, 6, ap_fifo, end_nblk_strm233, pointer</column>
+<column name="end_nblk_strm233_fifo_cap">in, 6, ap_fifo, end_nblk_strm233, pointer</column>
+<column name="end_nblk_strm233_empty_n">in, 1, ap_fifo, end_nblk_strm233, pointer</column>
+<column name="end_nblk_strm233_read">out, 1, ap_fifo, end_nblk_strm233, pointer</column>
+<column name="tkeep_strm35_dout">in, 64, ap_fifo, tkeep_strm35, pointer</column>
+<column name="tkeep_strm35_num_data_valid">in, 6, ap_fifo, tkeep_strm35, pointer</column>
+<column name="tkeep_strm35_fifo_cap">in, 6, ap_fifo, tkeep_strm35, pointer</column>
+<column name="tkeep_strm35_empty_n">in, 1, ap_fifo, tkeep_strm35, pointer</column>
+<column name="tkeep_strm35_read">out, 1, ap_fifo, tkeep_strm35, pointer</column>
+<column name="tid_strm36_dout">in, 6, ap_fifo, tid_strm36, pointer</column>
+<column name="tid_strm36_num_data_valid">in, 6, ap_fifo, tid_strm36, pointer</column>
+<column name="tid_strm36_fifo_cap">in, 6, ap_fifo, tid_strm36, pointer</column>
+<column name="tid_strm36_empty_n">in, 1, ap_fifo, tid_strm36, pointer</column>
+<column name="tid_strm36_read">out, 1, ap_fifo, tid_strm36, pointer</column>
+<column name="output_r_TDATA">out, 584, axis, output_r, pointer</column>
+<column name="output_r_TVALID">out, 1, axis, output_r, pointer</column>
+<column name="output_r_TREADY">in, 1, axis, output_r, pointer</column>
+</table>
+</item>
+</section>
+</profile>

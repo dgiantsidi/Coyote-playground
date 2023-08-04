@@ -1,0 +1,579 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4781" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1268:9" msg_body="'xlx_function_allocation' attribute cannot be applied to a statement">
+        <args ClangWarningOption="ignored-attributes"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4781" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1309:9" msg_body="'xlx_function_allocation' attribute cannot be applied to a statement">
+        <args ClangWarningOption="ignored-attributes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:761:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:766:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:769:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:772:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:777:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:780:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:783:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:788:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:793:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:796:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1073:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1136:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1139:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1142:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1268:45" msg_body="Allocation pragma is ignored, because Instances value is not valid function pointer expression">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1309:45" msg_body="Allocation pragma is ignored, because Instances value is not valid function pointer expression">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1357:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_strb_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator=" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:291:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:302:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:327:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:363:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:370:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:378:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:399:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:425:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:107:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b0.M complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:157:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b.M complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:165:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:184:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b0.M complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:192:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:218:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b.M complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessing" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SHR" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:296:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ROTR" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:321:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Ch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:346:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Maj" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:367:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BSIG0" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BSIG1" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SSIG0" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:430:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SSIG1" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:462:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dup_strm" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = 1 max = 1 avg = 1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:463:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dup_strm" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:499:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgSchedule" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = 1 max = 1 avg = 1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:503:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgSchedule" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk.M complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:507:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgSchedule" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = W complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:511:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgSchedule" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:519:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgSchedule" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:578:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SHA512Digest" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = K complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:625:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SHA512Digest" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = H complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:630:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SHA512Digest" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = 1 max = 1 avg = 1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:648:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SHA512Digest" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:701:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SHA512Digest" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:756:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:760:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:761:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:765:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = nblk_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:766:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = nblk_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:768:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = nblk_strm1 depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:769:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = nblk_strm1 core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:771:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = nblk_strm2 depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:772:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = nblk_strm2 core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:776:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = end_nblk_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:777:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = end_nblk_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:779:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = end_nblk_strm1 depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:780:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = end_nblk_strm1 core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:782:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = end_nblk_strm2 depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:783:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = end_nblk_strm2 core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:787:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = w_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:788:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = w_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:792:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = tkeep_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:793:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = tkeep_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:795:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = tid_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:796:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512Top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = tid_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:831:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessingOneTripForHMAC" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:849:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessingOneTripForHMAC" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:855:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessingOneTripForHMAC" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:874:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="preProcessingOneTripForHMAC" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:952:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgScheduleOneTrip" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = K type = ROM_1P impl = LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:955:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgScheduleOneTrip" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = H complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:997:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgScheduleOneTrip" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = W" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1000:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgScheduleOneTrip" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1055:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generateMsgScheduleOneTrip" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1069:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1070:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1072:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1073:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1087:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convert32To64OneRound" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1132:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1135:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = msg_64_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1136:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = msg_64_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = len_64_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1139:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = len_64_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1141:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk_strm depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1142:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384_2in1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = blk_strm core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1268:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384" ARG_PragmaIsValid="1" ARG_PragmaOptions="function instances = internal::HMAC_SHA384_2in1 limit = 1" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1309:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="HMAC_SHA384" ARG_PragmaIsValid="1" ARG_PragmaOptions="function instances = internal::HMAC_SHA384_2in1 limit = 1" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1333:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1334:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port = input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1335:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port = output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1336:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1337:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/kamil/Desktop/DESHA512_01/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sha512_verify" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1348:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1349:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port = input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1350:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register port = output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1351:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1352:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1356:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output2 depth = 32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SHA512CODE/sha512.cpp:1357:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sha512_verify" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output2 core = FIFO_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:432:10" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:432:44" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::SHR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::SHR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:432:27" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:411:10" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:411:42" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::SHR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::SHR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:411:26" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:520:45" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)' into 'xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::SSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)" Caller="xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:520:19" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)' into 'xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::SSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)" Caller="xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:390:10" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:390:44" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:390:27" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:369:10" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:369:44" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:369:27" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)' into 'ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::ROTR&lt;64u&gt;(unsigned int, ap_uint&lt;64u&gt;)" Caller="ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:654:47" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::Maj&lt;64u&gt;(ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;)' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::Maj&lt;64u&gt;(ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;)" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:654:33" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::BSIG0&lt;64u&gt;(ap_uint&lt;64u&gt;)" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:653:51" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::Ch&lt;64u&gt;(ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;)' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::Ch&lt;64u&gt;(ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;, ap_uint&lt;64u&gt;)" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:653:37" msg_body="Inlining function 'ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)'">
+        <args Callee="ap_uint&lt;64u&gt; xf::security::internal::BSIG1&lt;64u&gt;(ap_uint&lt;64u&gt;)" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:217:31" msg_body="Disaggregating variable 'b104'">
+        <args Name="b104"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:183:27" msg_body="Disaggregating variable 'b067'">
+        <args Name="b067"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:156:23" msg_body="Disaggregating variable 'b'">
+        <args Name="b"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:106:27" msg_body="Disaggregating variable 'b0'">
+        <args Name="b0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:521:39" msg_body="Loop 'VITIS_LOOP_521_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_521_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:558:0" msg_body="Unrolling loop 'LOOP_SHA512_EMIT' (SHA512CODE/sha512.cpp:700:9) in function 'xf::security::internal::SHA512Digest&lt;64u, 512u&gt;' completely with a factor of 8">
+        <args Factor="8" LoopLoc="SHA512CODE/sha512.cpp:700:9" LoopName="LOOP_SHA512_EMIT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:494:0" msg_body="Unrolling loop 'VITIS_LOOP_521_1' (SHA512CODE/sha512.cpp:521:39) in function 'xf::security::internal::generateMsgSchedule' completely with a factor of 15">
+        <args Factor="15" LoopLoc="SHA512CODE/sha512.cpp:521:39" LoopName="VITIS_LOOP_521_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:78:0" msg_body="Unrolling loop 'VITIS_LOOP_114_1' (SHA512CODE/sha512.cpp:114:35) in function 'xf::security::internal::preProcessing' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SHA512CODE/sha512.cpp:114:35" LoopName="VITIS_LOOP_114_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:78:0" msg_body="Unrolling loop 'VITIS_LOOP_191_2' (SHA512CODE/sha512.cpp:191:35) in function 'xf::security::internal::preProcessing' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SHA512CODE/sha512.cpp:191:35" LoopName="VITIS_LOOP_191_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:78:0" msg_body="Unrolling loop 'LOOP_PAD_13_ZERO_WORDS' (SHA512CODE/sha512.cpp:164:13) in function 'xf::security::internal::preProcessing' completely with a factor of 13">
+        <args Factor="13" LoopLoc="SHA512CODE/sha512.cpp:164:13" LoopName="LOOP_PAD_13_ZERO_WORDS"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:78:0" msg_body="Inlining function 'axisIntf::axisIntf()' into 'xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;)'">
+        <args Callee="axisIntf::axisIntf()" Caller="xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:558:0" msg_body="Inlining function 'axisIntf::axisIntf()' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)'">
+        <args Callee="axisIntf::axisIntf()" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:1344:0" msg_body="Inlining function 'axisIntf::axisIntf()' into 'sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)'">
+        <args Callee="axisIntf::axisIntf()" Caller="sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:1344:0" msg_body="Inlining function 'void xf::security::sha512x&lt;512u&gt;(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;, axisIntf&amp;)' into 'sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)'">
+        <args Callee="void xf::security::sha512x&lt;512u&gt;(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;, axisIntf&amp;)" Caller="sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:560:0" msg_body="Applying array_partition to '_ZZN2xf8security8internal12SHA512DigestILj64ELj512EEEvRN3hls6streamI7ap_uintILi64EELi0EEERNS4_IbLi0EEES8_RNS4_IS5_ILi6EELi0EEERNS4_I8axisIntfLi0EEEE1K': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZN2xf8security8internal12SHA512DigestILj64ELj512EEEvRN3hls6streamI7ap_uintILi64EELi0EEERNS4_IbLi0EEES8_RNS4_IS5_ILi6EELi0EEERNS4_I8axisIntfLi0EEEE1K"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:217:31" msg_body="Applying array_partition to 'b104': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="b104"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:506:14" msg_body="Applying array_partition to 'W': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="W"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:583:21" msg_body="Applying array_partition to 'H': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="H"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:1355:25" msg_body="Aggregating fifo (hls::stream) variable 'output2' with compact=bit mode in 583-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="583" HwTyName="fifo (hls::stream)" Name="output2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:759:25" msg_body="Aggregating fifo (hls::stream) variable 'blk_strm' with compact=bit mode in 1024-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="1024" HwTyName="fifo (hls::stream)" Name="blk_strm"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:1344:0" msg_body="Aggregating axis (hls::stream) variable 'input' with compact=bit mode in 584-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="584" HwTyName="axis (hls::stream)" Name="input"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="SHA512CODE/sha512.cpp:1344:0" msg_body="Aggregating axis (hls::stream) variable 'output' with compact=bit mode in 8-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="8" HwTyName="axis (hls::stream)" Name="output"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1' into 'xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;) (.1)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.axisIntfs.i584.1" Caller="xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.bits.i1024.s_struct.xf::security::internal::blockTypes.1' into 'xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.bits.i1024.s_struct.xf::security::internal::blockTypes.1" Caller="xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1024.s_struct.xf::security::internal::blockTypes' into 'xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1024.s_struct.xf::security::internal::blockTypes" Caller="xf::security::internal::preProcessing(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, axisIntf&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.xf::security::internal::blockTypes.i1024.1' into 'xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.xf::security::internal::blockTypes.i1024.1" Caller="xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint&lt;64&gt;s' into 'xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.ap_uint&lt;64&gt;s" Caller="xf::security::internal::generateMsgSchedule(hls::stream&lt;xf::security::internal::blockType, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i592.s_struct.axisIntfs' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i592.s_struct.axisIntfs" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.bits.i583.s_struct.axisIntfs.1' into 'void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.bits.i583.s_struct.axisIntfs.1" Caller="void xf::security::internal::SHA512Digest&lt;64u, 512u&gt;(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;bool, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;6&gt;, 0&gt;&amp;, hls::stream&lt;axisIntf, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.axisIntfs.i583.1' into 'sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.axisIntfs.i583.1" Caller="sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.bits.i1.s_struct.ap_uint&lt;1&gt;s.1' into 'sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.bits.i1.s_struct.ap_uint&lt;1&gt;s.1" Caller="sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/share/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s' into 'sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s" Caller="sha512_verify(hls::stream&lt;axisIntf, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;1&gt;, 0&gt;&amp;)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
