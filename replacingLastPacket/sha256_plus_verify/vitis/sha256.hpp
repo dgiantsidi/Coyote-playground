@@ -31,3 +31,8 @@ void sha256(hls::stream<AXIS_DATA>& input,
 
 void sha256_verify(hls::stream<AXIS_DATA>& input,
 		hls::stream<ap_uint<1> >& output);
+
+//ap_axiu
+void compressVectorLeft(AXIS_DATA& input);
+void compressVectors(hls::stream<AXIS_DATA>& input,
+		hls::stream<AXIS_DATA >& output);

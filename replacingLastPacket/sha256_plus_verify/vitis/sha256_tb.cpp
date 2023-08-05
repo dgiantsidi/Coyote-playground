@@ -1,13 +1,10 @@
+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include "sha256.hpp"
-#include "sha256_impl.hpp"
-
-
-
-int main(void) {
-	SHA256_CTX ctx;                   // used to generate software hashes for validation
+int main(void) {                 // used to generate software hashes for validation
 
 	hls::stream<AXIS_DATA  > inStream_t;
 	hls::stream<ap_uint<1>  > verify_stream;
@@ -49,13 +46,13 @@ int main(void) {
 	  		std::cout<<" \n data: "<<std::hex<<dataStream_t2<<std::endl;
 	  	}while(!verify_stream.empty());
 	  	std::cout<<"\nEND\n";
-	  /*
-	  	do {
-	  //		outStream_t.read(dataStream_t);
-	  		outStream_t.read(dataStream_t);
-	  		std::cout<<" data: "<<std::hex<<dataStream_t.tdata<<" keep: "<<dataStream_t.tkeep<<" tlast: "<<dataStream_t.tlast<<std::endl;
-	  	}while(!outStream_t.empty());
+
+//	  	do {
+//	  //		outStream_t.read(dataStream_t);
+//	  		outStream_t.read(dataStream_t);
+//	  		std::cout<<" data: "<<std::hex<<dataStream_t.tdata<<" keep: "<<dataStream_t.tkeep<<" tlast: "<<dataStream_t.tlast<<std::endl;
+//	  	}while(!outStream_t.empty());
 	  	std::cout<<"\nEND\n";
-	  	*/
+
 	return 0;
 }
