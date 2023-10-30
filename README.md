@@ -35,3 +35,11 @@ source /share/xilinx/Vivado/2022.1/settings64.sh
 dimitra@sakura:~/Coyote-latest/Coyote/hw/u280_kamil$ /usr/bin/cmake .. -DFDEV_NAME=u280 -DEXAMPLE=perf_rdma_host
 make shell -j
 ```
+
+```
+sudo FPGA_0_IP_ADDRESS=10.0.0.2 ./main -t 131.159.102.20 -w 1
+sudo FPGA_0_IP_ADDRESS=10.0.0.1 ./main -w 1 
+➜  ~ sudo insmod coyote_drv.ko ip_addr_q0=0a000001 mac_addr_q0=000A350E24D6
+➜  ~ sudo insmod coyote_drv.ko ip_addr_q0=0a000002 mac_addr_q0=000A350E24F2
+```
+
