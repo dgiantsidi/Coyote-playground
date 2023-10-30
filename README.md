@@ -37,6 +37,10 @@ make shell -j
 ```
 
 ```
+make -C $(nix-build -E '(import <nixpkgs> {}).linuxPackages_6_4.kernel.dev' --no-out-link)/lib/modules/*/build M=$(pwd)
+```
+
+```
 sudo FPGA_0_IP_ADDRESS=10.0.0.2 ./main -t 131.159.102.20 -w 1
 sudo FPGA_0_IP_ADDRESS=10.0.0.1 ./main -w 1 
 ➜  ~ sudo insmod coyote_drv.ko ip_addr_q0=0a000001 mac_addr_q0=000A350E24D6
