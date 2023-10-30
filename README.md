@@ -47,7 +47,7 @@ sudo FPGA_0_IP_ADDRESS=10.0.0.1 ./main -w 1
 ➜  ~ sudo insmod coyote_drv.ko ip_addr_q0=0a000002 mac_addr_q0=000A350E24F2
 ```
 
-## Linux driver patch
+## Linux driver patch in fpga_dev.c.
 ```
     // create device class
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6,4,0)
