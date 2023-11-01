@@ -7,19 +7,18 @@
 
 `timescale 1 ns / 1 ps 
 
-module hmac_preProcessingOneTripForHMAC21_Pipeline_VITIS_LOOP_1066_2 (
+module hmac_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3 (
         ap_clk,
         ap_rst,
         ap_start,
         ap_done,
         ap_idle,
         ap_ready,
-        blk_strm1_din,
-        blk_strm1_num_data_valid,
-        blk_strm1_fifo_cap,
-        blk_strm1_full_n,
-        blk_strm1_write,
-        z_rounds_V
+        blk_strm_din,
+        blk_strm_num_data_valid,
+        blk_strm_fifo_cap,
+        blk_strm_full_n,
+        blk_strm_write
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -30,15 +29,14 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [64:0] blk_strm1_din;
-input  [7:0] blk_strm1_num_data_valid;
-input  [7:0] blk_strm1_fifo_cap;
-input   blk_strm1_full_n;
-output   blk_strm1_write;
-input  [4:0] z_rounds_V;
+output  [64:0] blk_strm_din;
+input  [7:0] blk_strm_num_data_valid;
+input  [7:0] blk_strm_fifo_cap;
+input   blk_strm_full_n;
+output   blk_strm_write;
 
 reg ap_idle;
-reg blk_strm1_write;
+reg blk_strm_write;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -48,17 +46,17 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln1066_fu_68_p2;
+wire   [0:0] icmp_ln1073_fu_64_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    blk_strm1_blk_n;
+reg    blk_strm_blk_n;
 wire    ap_block_pp0_stage0;
-reg   [4:0] z_V_fu_42;
-wire   [4:0] z_V_2_fu_74_p2;
+reg   [2:0] z_V_fu_44;
+wire   [2:0] add_ln886_fu_70_p2;
 wire    ap_loop_init;
 reg    ap_block_pp0_stage0_11001;
-reg   [4:0] ap_sig_allocacmp_z_V_1;
+reg   [2:0] ap_sig_allocacmp_z_V_3;
 reg    ap_block_pp0_stage0_01001;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -124,16 +122,16 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln1066_fu_68_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            z_V_fu_42 <= z_V_2_fu_74_p2;
+        if (((icmp_ln1073_fu_64_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            z_V_fu_44 <= add_ln886_fu_70_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            z_V_fu_42 <= 5'd0;
+            z_V_fu_44 <= 3'd0;
         end
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1066_fu_68_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln1073_fu_64_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -174,25 +172,25 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_z_V_1 = 5'd0;
+        ap_sig_allocacmp_z_V_3 = 3'd0;
     end else begin
-        ap_sig_allocacmp_z_V_1 = z_V_fu_42;
+        ap_sig_allocacmp_z_V_3 = z_V_fu_44;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        blk_strm1_blk_n = blk_strm1_full_n;
+        blk_strm_blk_n = blk_strm_full_n;
     end else begin
-        blk_strm1_blk_n = 1'b1;
+        blk_strm_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        blk_strm1_write = 1'b1;
+        blk_strm_write = 1'b1;
     end else begin
-        blk_strm1_write = 1'b0;
+        blk_strm_write = 1'b0;
     end
 end
 
@@ -207,26 +205,28 @@ always @ (*) begin
     endcase
 end
 
+assign add_ln886_fu_70_p2 = (ap_sig_allocacmp_z_V_3 + 3'd1);
+
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((blk_strm1_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
+    ap_block_pp0_stage0_01001 = ((blk_strm_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((blk_strm1_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
+    ap_block_pp0_stage0_11001 = ((blk_strm_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((blk_strm1_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
+    ap_block_pp0_stage0_subdone = ((blk_strm_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state2_pp0_stage0_iter1 = (blk_strm1_full_n == 1'b0);
+    ap_block_state2_pp0_stage0_iter1 = (blk_strm_full_n == 1'b0);
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
@@ -235,10 +235,8 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign blk_strm1_din = 65'd0;
+assign blk_strm_din = 65'd0;
 
-assign icmp_ln1066_fu_68_p2 = ((ap_sig_allocacmp_z_V_1 == z_rounds_V) ? 1'b1 : 1'b0);
+assign icmp_ln1073_fu_64_p2 = ((ap_sig_allocacmp_z_V_3 == 3'd7) ? 1'b1 : 1'b0);
 
-assign z_V_2_fu_74_p2 = (ap_sig_allocacmp_z_V_1 + 5'd1);
-
-endmodule //hmac_preProcessingOneTripForHMAC21_Pipeline_VITIS_LOOP_1066_2
+endmodule //hmac_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3

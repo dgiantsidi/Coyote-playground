@@ -618,6 +618,7 @@ void SHA512Digest(
         0x431d67c49c100d4cUL, 0x4cc5d4becb3e42b6UL, 0x597f299cfc657e2aUL, 0x5fcb6fab3ad6faecUL, 0x6c44198c4a475817UL,
     };
 #pragma HLS array_partition variable = K complete
+#pragma HLS bind_storage variable = K type = ROM_1P impl = LUTRAM
 
     bool end;
 
@@ -1246,6 +1247,7 @@ void generateMsgScheduleOneTrip(hls::stream<ap_uint<64 + 1> >& blk_strm, ap_uint
         0x113f9804bef90daeUL, 0x1b710b35131c471bUL, 0x28db77f523047d84UL, 0x32caab7b40c72493UL, 0x3c9ebe0a15c9bebcUL,
         0x431d67c49c100d4cUL, 0x4cc5d4becb3e42b6UL, 0x597f299cfc657e2aUL, 0x5fcb6fab3ad6faecUL, 0x6c44198c4a475817UL,
     };
+#pragma HLS array_partition variable = K complete
 #pragma HLS bind_storage variable = K type = ROM_1P impl = LUTRAM
 
     ap_uint<64> H[8];

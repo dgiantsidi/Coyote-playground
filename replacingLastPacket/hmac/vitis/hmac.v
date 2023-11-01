@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="hmac_hmac,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcu280-fsvh2892-2L-e,HLS_INPUT_CLOCK=4.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.858000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=27865,HLS_SYN_LUT=18780,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="hmac_hmac,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcu280-fsvh2892-2L-e,HLS_INPUT_CLOCK=4.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.858000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=29927,HLS_SYN_LUT=19170,HLS_VERSION=2022_1}" *)
 
 module hmac (
         ap_clk,
@@ -35,24 +35,24 @@ output   output_r_TVALID;
 input   output_r_TREADY;
 
  reg    ap_rst_n_inv;
-wire   [583:0] grp_HMAC_SHA384_fu_32_output_r_TDATA;
-wire    grp_HMAC_SHA384_fu_32_input_r_TREADY;
-wire    grp_HMAC_SHA384_fu_32_ap_start;
-wire    grp_HMAC_SHA384_fu_32_output_r_TVALID;
-wire    grp_HMAC_SHA384_fu_32_output_r_TREADY;
-wire    grp_HMAC_SHA384_fu_32_ap_done;
-wire    grp_HMAC_SHA384_fu_32_ap_ready;
-wire    grp_HMAC_SHA384_fu_32_ap_idle;
-reg    grp_HMAC_SHA384_fu_32_ap_continue;
-reg    grp_HMAC_SHA384_fu_32_ap_start_reg;
+wire   [583:0] grp_HMAC_SHA384_fu_28_output_r_TDATA;
+wire    grp_HMAC_SHA384_fu_28_input_r_TREADY;
+wire    grp_HMAC_SHA384_fu_28_ap_start;
+wire    grp_HMAC_SHA384_fu_28_output_r_TVALID;
+wire    grp_HMAC_SHA384_fu_28_output_r_TREADY;
+wire    grp_HMAC_SHA384_fu_28_ap_done;
+wire    grp_HMAC_SHA384_fu_28_ap_ready;
+wire    grp_HMAC_SHA384_fu_28_ap_idle;
+reg    grp_HMAC_SHA384_fu_28_ap_continue;
+reg    grp_HMAC_SHA384_fu_28_ap_start_reg;
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state2;
 wire    ap_CS_fsm_state3;
-wire    ap_sync_grp_HMAC_SHA384_fu_32_ap_ready;
-wire    ap_sync_grp_HMAC_SHA384_fu_32_ap_done;
+wire    ap_sync_grp_HMAC_SHA384_fu_28_ap_ready;
+wire    ap_sync_grp_HMAC_SHA384_fu_28_ap_done;
 reg    ap_block_state3_on_subcall_done;
-reg    ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_ready;
-reg    ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_done;
+reg    ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_ready;
+reg    ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_done;
 reg   [3:0] ap_NS_fsm;
 wire    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -71,26 +71,26 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 grp_HMAC_SHA384_fu_32_ap_start_reg = 1'b0;
+#0 grp_HMAC_SHA384_fu_28_ap_start_reg = 1'b0;
 #0 ap_CS_fsm = 4'd1;
-#0 ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_ready = 1'b0;
-#0 ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_done = 1'b0;
+#0 ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_ready = 1'b0;
+#0 ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_done = 1'b0;
 end
 
-hmac_HMAC_SHA384 grp_HMAC_SHA384_fu_32(
+hmac_HMAC_SHA384 grp_HMAC_SHA384_fu_28(
     .input_r_TDATA(input_r_TDATA_int_regslice),
-    .output_r_TDATA(grp_HMAC_SHA384_fu_32_output_r_TDATA),
+    .output_r_TDATA(grp_HMAC_SHA384_fu_28_output_r_TDATA),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .input_r_TVALID(input_r_TVALID_int_regslice),
-    .input_r_TREADY(grp_HMAC_SHA384_fu_32_input_r_TREADY),
-    .ap_start(grp_HMAC_SHA384_fu_32_ap_start),
-    .output_r_TVALID(grp_HMAC_SHA384_fu_32_output_r_TVALID),
-    .output_r_TREADY(grp_HMAC_SHA384_fu_32_output_r_TREADY),
-    .ap_done(grp_HMAC_SHA384_fu_32_ap_done),
-    .ap_ready(grp_HMAC_SHA384_fu_32_ap_ready),
-    .ap_idle(grp_HMAC_SHA384_fu_32_ap_idle),
-    .ap_continue(grp_HMAC_SHA384_fu_32_ap_continue)
+    .input_r_TREADY(grp_HMAC_SHA384_fu_28_input_r_TREADY),
+    .ap_start(grp_HMAC_SHA384_fu_28_ap_start),
+    .output_r_TVALID(grp_HMAC_SHA384_fu_28_output_r_TVALID),
+    .output_r_TREADY(grp_HMAC_SHA384_fu_28_output_r_TREADY),
+    .ap_done(grp_HMAC_SHA384_fu_28_ap_done),
+    .ap_ready(grp_HMAC_SHA384_fu_28_ap_ready),
+    .ap_idle(grp_HMAC_SHA384_fu_28_ap_idle),
+    .ap_continue(grp_HMAC_SHA384_fu_28_ap_continue)
 );
 
 hmac_regslice_both #(
@@ -112,8 +112,8 @@ hmac_regslice_both #(
 regslice_both_output_r_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(grp_HMAC_SHA384_fu_32_output_r_TDATA),
-    .vld_in(grp_HMAC_SHA384_fu_32_output_r_TVALID),
+    .data_in(grp_HMAC_SHA384_fu_28_output_r_TDATA),
+    .vld_in(grp_HMAC_SHA384_fu_28_output_r_TVALID),
     .ack_in(output_r_TREADY_int_regslice),
     .data_out(output_r_TDATA),
     .vld_out(regslice_both_output_r_U_vld_out),
@@ -131,36 +131,36 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_done <= 1'b0;
+        ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_done <= 1'b0;
     end else begin
         if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
-            ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_done <= 1'b0;
-        end else if ((grp_HMAC_SHA384_fu_32_ap_done == 1'b1)) begin
-            ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_done <= 1'b1;
+            ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_done <= 1'b0;
+        end else if ((grp_HMAC_SHA384_fu_28_ap_done == 1'b1)) begin
+            ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_done <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_ready <= 1'b0;
+        ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_ready <= 1'b0;
     end else begin
         if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
-            ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_ready <= 1'b0;
-        end else if ((grp_HMAC_SHA384_fu_32_ap_ready == 1'b1)) begin
-            ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_ready <= 1'b1;
+            ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_ready <= 1'b0;
+        end else if ((grp_HMAC_SHA384_fu_28_ap_ready == 1'b1)) begin
+            ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_ready <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_HMAC_SHA384_fu_32_ap_start_reg <= 1'b0;
+        grp_HMAC_SHA384_fu_28_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state2) | ((ap_sync_grp_HMAC_SHA384_fu_32_ap_ready == 1'b0) & (1'b1 == ap_CS_fsm_state3)))) begin
-            grp_HMAC_SHA384_fu_32_ap_start_reg <= 1'b1;
-        end else if ((grp_HMAC_SHA384_fu_32_ap_ready == 1'b1)) begin
-            grp_HMAC_SHA384_fu_32_ap_start_reg <= 1'b0;
+        if (((1'b1 == ap_CS_fsm_state2) | ((ap_sync_grp_HMAC_SHA384_fu_28_ap_ready == 1'b0) & (1'b1 == ap_CS_fsm_state3)))) begin
+            grp_HMAC_SHA384_fu_28_ap_start_reg <= 1'b1;
+        end else if ((grp_HMAC_SHA384_fu_28_ap_ready == 1'b1)) begin
+            grp_HMAC_SHA384_fu_28_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -187,15 +187,15 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
-        grp_HMAC_SHA384_fu_32_ap_continue = 1'b1;
+        grp_HMAC_SHA384_fu_28_ap_continue = 1'b1;
     end else begin
-        grp_HMAC_SHA384_fu_32_ap_continue = 1'b0;
+        grp_HMAC_SHA384_fu_28_ap_continue = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        input_r_TREADY_int_regslice = grp_HMAC_SHA384_fu_32_input_r_TREADY;
+        input_r_TREADY_int_regslice = grp_HMAC_SHA384_fu_28_input_r_TREADY;
     end else begin
         input_r_TREADY_int_regslice = 1'b0;
     end
@@ -236,20 +236,20 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 always @ (*) begin
-    ap_block_state3_on_subcall_done = ((ap_sync_grp_HMAC_SHA384_fu_32_ap_ready & ap_sync_grp_HMAC_SHA384_fu_32_ap_done) == 1'b0);
+    ap_block_state3_on_subcall_done = ((ap_sync_grp_HMAC_SHA384_fu_28_ap_ready & ap_sync_grp_HMAC_SHA384_fu_28_ap_done) == 1'b0);
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign ap_sync_grp_HMAC_SHA384_fu_32_ap_done = (grp_HMAC_SHA384_fu_32_ap_done | ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_done);
+assign ap_sync_grp_HMAC_SHA384_fu_28_ap_done = (grp_HMAC_SHA384_fu_28_ap_done | ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_done);
 
-assign ap_sync_grp_HMAC_SHA384_fu_32_ap_ready = (grp_HMAC_SHA384_fu_32_ap_ready | ap_sync_reg_grp_HMAC_SHA384_fu_32_ap_ready);
+assign ap_sync_grp_HMAC_SHA384_fu_28_ap_ready = (grp_HMAC_SHA384_fu_28_ap_ready | ap_sync_reg_grp_HMAC_SHA384_fu_28_ap_ready);
 
-assign grp_HMAC_SHA384_fu_32_ap_start = grp_HMAC_SHA384_fu_32_ap_start_reg;
+assign grp_HMAC_SHA384_fu_28_ap_start = grp_HMAC_SHA384_fu_28_ap_start_reg;
 
-assign grp_HMAC_SHA384_fu_32_output_r_TREADY = (output_r_TREADY_int_regslice & ap_CS_fsm_state3);
+assign grp_HMAC_SHA384_fu_28_output_r_TREADY = (output_r_TREADY_int_regslice & ap_CS_fsm_state3);
 
 assign input_r_TREADY = regslice_both_input_r_U_ack_in;
 

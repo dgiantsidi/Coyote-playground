@@ -145,13 +145,13 @@ reg   [63:0] l_V_20_reg_376;
 reg   [63:0] l_V_21_reg_381;
 reg   [63:0] l_V_22_reg_386;
 reg   [63:0] l_V_23_reg_391;
-wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start;
-wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_done;
-wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_idle;
-wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_ready;
-wire   [64:0] grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_din;
-wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_write;
-reg    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start_reg;
+wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start;
+wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_done;
+wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_idle;
+wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_ready;
+wire   [64:0] grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_din;
+wire    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_write;
+reg    grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start_reg;
 wire    ap_CS_fsm_state24;
 wire    ap_CS_fsm_state25;
 reg    ap_block_state1;
@@ -213,21 +213,21 @@ initial begin
 #0 start_once_reg = 1'b0;
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 27'd1;
-#0 grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start_reg = 1'b0;
+#0 grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start_reg = 1'b0;
 end
 
-hmac_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3 grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206(
+hmac_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3 grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start),
-    .ap_done(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_done),
-    .ap_idle(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_idle),
-    .ap_ready(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_ready),
-    .blk_strm_din(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_din),
+    .ap_start(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start),
+    .ap_done(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_done),
+    .ap_idle(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_idle),
+    .ap_ready(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_ready),
+    .blk_strm_din(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_din),
     .blk_strm_num_data_valid(8'd0),
     .blk_strm_fifo_cap(8'd0),
     .blk_strm_full_n(blk_strm_full_n),
-    .blk_strm_write(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_write)
+    .blk_strm_write(grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_write)
 );
 
 always @ (posedge ap_clk) begin
@@ -252,12 +252,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start_reg <= 1'b0;
+        grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state24)) begin
-            grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start_reg <= 1'b1;
-        end else if ((grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_ready == 1'b1)) begin
-            grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start_reg <= 1'b0;
+            grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start_reg <= 1'b1;
+        end else if ((grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_ready == 1'b1)) begin
+            grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -407,7 +407,7 @@ end
 assign ap_ST_fsm_state24_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_done == 1'b0)) begin
+    if ((grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_done == 1'b0)) begin
         ap_ST_fsm_state25_blk = 1'b1;
     end else begin
         ap_ST_fsm_state25_blk = 1'b0;
@@ -570,9 +570,9 @@ always @ (*) begin
     end else if ((~((blk_strm_full_n == 1'b0) | (ap_done_reg == 1'b1) | (real_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
         blk_strm_din = zext_ln232_fu_212_p1;
     end else if ((1'b1 == ap_CS_fsm_state25)) begin
-        blk_strm_din = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_din;
+        blk_strm_din = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_din;
     end else begin
-        blk_strm_din = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_din;
+        blk_strm_din = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_din;
     end
 end
 
@@ -580,7 +580,7 @@ always @ (*) begin
     if ((((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state2)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state27)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state26)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state23)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state22)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state21)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state20)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state19)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state18)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state15)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state14)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state13)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state12)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state11)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state10)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state9)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state8)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state7)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state6)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state5)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state4)) | ((blk_strm_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state3)) | (~((blk_strm_full_n == 1'b0) | (ap_done_reg == 1'b1) | (real_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1)))) begin
         blk_strm_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state25)) begin
-        blk_strm_write = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_blk_strm_write;
+        blk_strm_write = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_blk_strm_write;
     end else begin
         blk_strm_write = 1'b0;
     end
@@ -777,7 +777,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state25;
         end
         ap_ST_fsm_state25 : begin
-            if (((grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state25))) begin
+            if (((grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state25))) begin
                 ap_NS_fsm = ap_ST_fsm_state26;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state25;
@@ -863,7 +863,7 @@ end
 
 assign ap_ready = internal_ap_ready;
 
-assign grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1211_3_fu_206_ap_start_reg;
+assign grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start = grp_preProcessingOneTripForHMAC_223_Pipeline_VITIS_LOOP_1212_3_fu_206_ap_start_reg;
 
 assign l_V_18_fu_292_p1 = res_V_in[63:0];
 
