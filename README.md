@@ -35,3 +35,24 @@ source /share/xilinx/Vivado/2022.1/settings64.sh
 dimitra@sakura:~/Coyote-latest/Coyote/hw/u280_kamil$ /usr/bin/cmake .. -DFDEV_NAME=u280 -DEXAMPLE=perf_rdma_host
 make shell -j
 ```
+
+```
+make -C $(nix-build -E '(import <nixpkgs> {}).linuxPackages_6_4.kernel.dev' --no-out-link)/lib/modules/*/build M=$(pwd)
+```
+
+```
+sudo FPGA_0_IP_ADDRESS=10.0.0.2 ./main -t 131.159.102.20 -w 1
+sudo FPGA_0_IP_ADDRESS=10.0.0.1 ./main -w 1 
+➜  ~ sudo insmod coyote_drv.ko ip_addr_q0=0a000001 mac_addr_q0=000A350E24D6
+➜  ~ sudo insmod coyote_drv.ko ip_addr_q0=0a000002 mac_addr_q0=000A350E24F2
+```
+
+## Linux driver patch in fpga_dev.c.
+```
+    // create device class
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6,4,0)
+    fpga_class = class_create(DEV_NAME);
+#else 
+    fpga_class = class_create(THIS_MODULE, DEV_NAME);
+#endif
+```
