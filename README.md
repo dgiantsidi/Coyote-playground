@@ -39,6 +39,13 @@ make shell -j
 ```
 make -C $(nix-build -E '(import <nixpkgs> {}).linuxPackages_6_4.kernel.dev' --no-out-link)/lib/modules/*/build M=$(pwd)
 ```
+else if linuxPackages_.._ is not the same with `uname -r` just
+do
+
+```
+find /nix -type d -regex ".*linux-6\.3\.5-dev"
+KERNELDIR ?= /nix/store/h2f96f8kgzs3kv6k01l09a4ajz02f6x8-linux-6.3.5-dev/lib/modules/6.3.5/build
+```
 
 ```
 sudo FPGA_0_IP_ADDRESS=10.0.0.2 ./main -t 131.159.102.20 -w 1
