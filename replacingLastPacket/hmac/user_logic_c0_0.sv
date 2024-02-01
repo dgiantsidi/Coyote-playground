@@ -87,7 +87,7 @@ localparam logic [1:0] MODE_LOOPBACK_ATTEST = 2'b01;
 localparam logic [1:0] MODE_LOOPBACK_VERIFY = 2'b10;
 
 // Set by AXI logic below
-(* mark_debug = "true" *) logic [1:0] mode;
+logic [1:0] mode;
 
 // Route AXI-Stream data based on mode
 always_comb begin
@@ -174,27 +174,19 @@ localparam integer ADDR_MSB = $clog2(N_REGS);
 localparam integer AXI_ADDR_BITS = ADDR_LSB + ADDR_MSB;
 
 // Internal registers
-(* mark_debug = "true" *) logic [AXI_ADDR_BITS-1:0] axi_awaddr;
-(* mark_debug = "true" *) logic axi_awready;
-(* mark_debug = "true" *) logic [AXI_ADDR_BITS-1:0] axi_araddr;
-(* mark_debug = "true" *) logic axi_arready;
-(* mark_debug = "true" *) logic [1:0] axi_bresp;
-(* mark_debug = "true" *) logic axi_bvalid;
-(* mark_debug = "true" *) logic axi_wready;
-(* mark_debug = "true" *) logic [AXIL_DATA_BITS-1:0] axi_rdata;
-(* mark_debug = "true" *) logic [1:0] axi_rresp;
-(* mark_debug = "true" *) logic axi_rvalid;
-
-// ILA debugging, can be removed
-(* mark_debug = "true" *) logic axi_arvalid = axi_ctrl.arvalid;
-(* mark_debug = "true" *) logic axi_awvalid = axi_ctrl.awvalid;
-(* mark_debug = "true" *) logic axi_rready = axi_ctrl.rready;
-(* mark_debug = "true" *) logic axi_wvalid = axi_ctrl.wvalid;
-(* mark_debug = "true" *) logic axi_wdata = axi_ctrl.wdata;
-(* mark_debug = "true" *) logic axi_bready = axi_ctrl.bready;
+logic [AXI_ADDR_BITS-1:0] axi_awaddr;
+logic axi_awready;
+logic [AXI_ADDR_BITS-1:0] axi_araddr;
+logic axi_arready;
+logic [1:0] axi_bresp;
+logic axi_bvalid;
+logic axi_wready;
+logic [AXIL_DATA_BITS-1:0] axi_rdata;
+logic [1:0] axi_rresp;
+logic axi_rvalid;
 
 // Registers
-(* mark_debug = "true" *) logic [N_REGS-1:0][AXIL_DATA_BITS-1:0] slv_reg;
+logic [N_REGS-1:0][AXIL_DATA_BITS-1:0] slv_reg;
 logic slv_reg_rden;
 logic slv_reg_wren;
 logic aw_en;
