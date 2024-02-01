@@ -12,6 +12,7 @@ module abcd2 #(
 );
 
 AXI4SR qq1();
+AXI4SR metadata();
 AXI4SR qq2();
 AXI4SR qq2DATA();
 AXI4SR qq2CHECKSUM();
@@ -36,16 +37,39 @@ axisr_data_fifo_512 fifo1 (
     .m_axis_tlast (qq1.tlast)
 );
 
+check_metadata #(
+    .FPGA_ID(64'hC0FFEE0123456789),
+    .CONNECTION_ID(64'hDEADBEEF98765432),
+    .INITIAL_COUNTER_VALUE('0)
+) check_metadata_inst (
+    .s_axis_aclk   (aclk),
+    .s_axis_aresetn(areset),
+
+    .s_axis_tvalid(qq1.tvalid),
+    .s_axis_tready(qq1.tready),
+    .s_axis_tdata (qq1.tdata),
+    .s_axis_tkeep (qq1.tkeep),
+    .s_axis_tid   (qq1.tid),
+    .s_axis_tlast (qq1.tlast),
+
+    .m_axis_tvalid(metadata.tvalid),
+    .m_axis_tready(metadata.tready),
+    .m_axis_tdata (metadata.tdata),
+    .m_axis_tkeep (metadata.tkeep),
+    .m_axis_tid   (metadata.tid),
+    .m_axis_tlast (metadata.tlast)
+);
+
 inputFIFODuplicate dupFifo(
     .clock(aclk),
     .reset(areset),
 
-    .input_axis_tvalid(qq1.tvalid),
-    .input_axis_tready(qq1.tready),
-    .input_axis_tdata (qq1.tdata),
-    .input_axis_tkeep (qq1.tkeep),
-    .input_axis_tid   (qq1.tid),
-    .input_axis_tlast (qq1.tlast),
+    .input_axis_tvalid(metadata.tvalid),
+    .input_axis_tready(metadata.tready),
+    .input_axis_tdata (metadata.tdata),
+    .input_axis_tkeep (metadata.tkeep),
+    .input_axis_tid   (metadata.tid),
+    .input_axis_tlast (metadata.tlast),
 
     .output1_axis_tvalid(qq2DATA.tvalid),
     .output1_axis_tready(qq2DATA.tready),
