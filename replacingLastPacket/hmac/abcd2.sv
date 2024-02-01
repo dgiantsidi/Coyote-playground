@@ -15,6 +15,7 @@ AXI4SR qq1();
 AXI4SR qq2();
 AXI4SR qq2DATA();
 AXI4SR qq2CHECKSUM();
+AXI4SR qq2CHECKSUMout();
 
 axisr_data_fifo_512 fifo1 (
     .s_axis_aclk   (aclk),
@@ -62,9 +63,10 @@ inputFIFODuplicate dupFifo(
 );
 
 logic a;
-wire verify_data;
-wire verify_ready;
-wire verify_valid;
+logic verify_data;
+logic verify_ready;
+logic verify_valid;
+logic [511:0] expected_hmac;
 
 hmac c1 (
     .ap_clk  (aclk),
@@ -74,10 +76,33 @@ hmac c1 (
     .input_r_TVALID(qq2CHECKSUM.tvalid),
     .input_r_TREADY(qq2CHECKSUM.tready),
 
-    .output_r_TREADY(verify_ready),
-    .output_r_TDATA (verify_data),
-    .output_r_TVALID(verify_valid)
+    .output_r_TREADY(qq2CHECKSUMout.tready),
+    .output_r_TDATA ({a, qq2CHECKSUMout.tlast, qq2CHECKSUMout.tid, qq2CHECKSUMout.tkeep, qq2CHECKSUMout.tdata}),
+    .output_r_TVALID(qq2CHECKSUMout.tvalid)
 );
+
+assign qq2CHECKSUMout.tready = verify_ready;
+
+// Compare received HMAC with calculated HMAC
+always_ff @(posedge aclk) begin
+    if(!areset) begin
+        verify_data <= 1'b1; // 0 if HMAC matches
+        verify_valid <= 1'b0;
+    end
+    else begin
+        verify_valid <= 1'b0;
+
+        if (qq2CHECKSUM.tvalid && qq2CHECKSUM.tready && qq2CHECKSUM.tlast) begin
+            expected_hmac <= qq2CHECKSUM.tdata;
+        end
+
+        if (qq2CHECKSUMout.tvalid && qq2CHECKSUMout.tready) begin
+            // 0 if HMAC matches
+            verify_data <= (qq2CHECKSUMout.tdata != expected_hmac);
+            verify_valid <= 1'b1;
+        end
+    end
+end
 
 check_sha d1(
     .clock(aclk),
